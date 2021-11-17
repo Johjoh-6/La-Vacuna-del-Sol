@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="">Accueil</a></li>
                 <li><a href="">Qui sommes nous</a></li>
-                <li><a href="">Contacter</a></li>
+                <li><a href="contact.php">Contacter</a></li>
                 <li><a href="" class="box_header">Inscription</a></li>
             </ul>
         </nav>
