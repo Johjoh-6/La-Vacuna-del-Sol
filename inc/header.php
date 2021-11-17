@@ -15,8 +15,16 @@
 <header id="header">
     <div class="wrap">
         <div class="logo">
-            <img src="" alt="">
+            <img src="asset/img/logo.png" alt="">
         </div>
+        <nav>
+            <ul>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Qui sommes nous</a></li>
+                <li><a href="">Contacter</a></li>
+                <li><a href="" class="box_header">Inscription</a></li>
+            </ul>
+        </nav>
     </div>
 
 </header>
