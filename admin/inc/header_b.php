@@ -45,20 +45,28 @@
             <a class="nav-link" href="index.php">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
-
-            <a class="nav-link" href="manage-user.php">
-                <i class="fas fa-user-md"></i>
-                <span>Gestion utilisateur</span></a>
-
-            <a class="nav-link" href="manage-vaccin.php">
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="management-user.php">
+                <i class="fas fa-users"></i>
+                <span>Gestion Utilisateur</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="management-vaccine.php">
                 <i class="fas fa-syringe"></i>
-                <span>Gestion vaccin</span></a>
-
-            <a class="nav-link" href="list-mail.php">
+                <span>Gestion Vaccin</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="management-testimonial.php">
+                <i class="fas fa-comments"></i>
+                <span>Gestion Avis</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
                 <i class="fas fa-envelope"></i>
                 <span>Boite mail</span></a>
-
         </li>
+
 
     </ul>
     <!-- End of Sidebar -->
