@@ -8,3 +8,53 @@
 body {
     font-family: 'lato';
 }
+
+.wrap {
+    max-width: 1360px;
+    width:100%;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background-color:  var(--bleu);
+    padding: .5rem;
+}
+header .wrap{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .wrap .logo img{
+    width: 50%;
+}
+
+header .wrap nav ul{
+    display: flex;
+}
+header .wrap nav ul li{
+    padding: 1rem;
+}
+
+header .wrap nav ul li .box_header{
+    color: var(--jaune);
+    border: solid 2px;
+    padding: .8rem;
+    border-radius: 1.5rem;
+}
+header .wrap nav ul li a:hover{
+    color: var(--jaune);
+    transition: .5s;
+}
+
+header .wrap nav ul li .box_header:hover{
+ background-color: var(--jaune);
+    transition: .5s;
+    color: white;
+}

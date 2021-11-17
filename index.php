@@ -5,13 +5,10 @@ require ('inc/pdo.php');
 
 
 
-
 include ('inc/header.php');
 ?>
 
 <!--MAIN INDEX USER-->
-
-
 
 
 
