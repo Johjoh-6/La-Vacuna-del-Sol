@@ -13,7 +13,11 @@
 <body>
 <!--Header-->
 <header id="header">
-
+    <div class="wrap">
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+    </div>
 
 </header>
 
