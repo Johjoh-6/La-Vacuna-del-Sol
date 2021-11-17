@@ -7,11 +7,11 @@ require ('inc/pdo.php');
 
 
 include ('inc/header.php');?>
-
+<section id="formulaire">
     <h2>Crée ton compte</h2>
     <form class="wrap_account" action="" method="post">
         <div>
-            <label for="name">Nom</label>
+            <label for="name">Nom: </label>
             <input type="text"
                    name="name"
                    id="name"
@@ -20,7 +20,7 @@ include ('inc/header.php');?>
         </div>
 
         <div>
-            <label for="fname">Prénom</label>
+            <label for="fname">Prénom:</label>
             <input type="text"
                    name="fname"
                    placeholder="Votre Prénom"
@@ -28,19 +28,23 @@ include ('inc/header.php');?>
         </div>
 
         <div>
-            <label for="date">Date de naissance</label>
+            <label for="date">Date de naissance:</label>
             <input type="date"
                    name="date">
         </div>
         <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" value="">
             <span class="error"></span>
         </div>
         <div class="sexe">
-            <label for="sexes">Sexe</label>
-            <input type="radio" name="genre" value="femme"><span>femme</span>
-            <input type="radio" name="genre" value="homme"><span>homme</span>
+            <p>Sexe</p>
+            <label for="femme">
+                <input type="radio" name="genre" value="femme"><span>femme</span>
+            </label>
+            <label for="homme">
+                <input type="radio" name="genre" value="homme"><span>homme</span>
+            </label>
         </div>
 
         <div>
@@ -49,17 +53,14 @@ include ('inc/header.php');?>
                    name="password"
                    placeholder="Mot de passe">
 
-            <label for="mdp2">Confirmer votre mot de passe:</label>
+            <label for="password">Confirmer votre mot de passe:</label>
             <input type="password"
                    name="re_password"
                    placeholder="Mot de passe">
         </div>
-        <div>
-            <button type="submit">Envoyer</button>
-            <a href="index.php" class="ca">Vous avez déjà un compte ?</a>
-        </div>
-
+            <input class ="submit_inscription" type="submit" id="submitted" name="submitted">
+            <p><a href="index.php" class="ca">Vous avez déjà un compte ?</a></p>
     </form>
-
+</section>
 <?php
 include ('inc/footer.php');
