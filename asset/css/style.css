@@ -58,3 +58,96 @@ header .wrap nav ul li .box_header:hover{
     transition: .5s;
     color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer*/
+
+#footer{
+    background-color: black;
+}
+#footer  nav{}
+#footer nav ul{
+    display: flex;
+    gap: 1rem;
+}
+
+#footer .reseau{
+    background-color: white;
+    display: flex;
+}
+#footer .reseau img{
+   width: 10% ;
+}
