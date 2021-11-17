@@ -12,6 +12,5 @@ include ('inc/header.php');
 <!--MAIN INDEX USER-->
 
 
-
 <?php
 include ('inc/footer.php');

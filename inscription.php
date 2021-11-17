@@ -8,10 +8,8 @@ require ('inc/pdo.php');
 
 include ('inc/header.php');?>
 
+    <h2>Crée ton compte</h2>
     <form class="wrap_account" action="" method="post">
-        <h2>Crée ton compte</h2>
-
-
         <div>
             <label for="name">Nom</label>
             <input type="text"
