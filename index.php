@@ -13,10 +13,13 @@ include ('inc/header.php');
 
 <section id="connexion">
     <div class="wrap2">
-        <div class="rond"></div>
-        <div class="fille">
-            <img src="asset/img/accueil.png" alt="">
+        <div class="box">
+            <div class="rond"></div>
+            <div class="hotesse">
+                <img src="asset/img/accueil.png" alt="">
+            </div>
         </div>
+
         <div class="cadre">
             <form action="" method="post" class="wrapform" novalidate>
                 <label for="login">E-mail ou Pseudo</label>
@@ -33,5 +36,55 @@ include ('inc/header.php');
 </section>
 
 
-<?php
-include ('inc/footer.php');
+<section id="details">
+    <div class="wrap3">
+
+        <div class="title">
+            <h2>Vaccinés vous chez la meilleur equipe</h2>
+        </div>
+
+
+        <div class="cards">
+            <div class="card">
+                <img src="https://picsum.photos/100" alt="card">
+                    <h2>Chargée de projet</h2>
+                    <p>Pierre Henry devloppeur depuis 23 ans</p>
+                    <a href="" class="discover">Découvir le profil</a>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/200" alt="card">
+
+                    <h2>Chargée de projet</h2>
+                    <p>Pierre Henry devloppeur depuis 23 ans</p>
+                <a href="" class="discover">Découvir le profil</a>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/500" alt="card">
+                    <h2>Chargée de projet</h2>
+                    <p>Pierre Henry devloppeur depuis 23 ans</p>
+                <a href="" class="discover">Découvir le profil</a>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/800" alt="card">
+                    <h2>Chargée de projet</h2>
+                    <p>Pierre Henry devloppeur depuis 23 ans</p>
+                <a href="" class="discover">Découvir le profil</a>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300" alt="card">
+                    <h2>Chargée de projet</h2>
+                    <p>Pierre Henry devloppeur depuis 23 ans</p>
+                <a href="" class="discover">Découvir le profil</a>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/600" alt="card">
+                    <h2>Chargée de projet</h2>
+                    <p>Pierre Henry devloppeur depuis 23 ans</p>
+                <a href="" class="discover">Découvir le profil</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<?php include ('inc/footer.php');
