@@ -14,6 +14,13 @@ body {
     width:100%;
     margin: 0 auto;
 }
+
+.wrap2 {
+    max-width: 700px;
+    width:100%;
+    margin: 0 40%;
+}
+
 img {
     width: 100%;
 }
@@ -22,9 +29,12 @@ a {
     color: white;
 }
 
+/*************************************HEADER*************************************/
+
 header {
     background-color:  var(--bleu);
     padding: .5rem;
+    margin-bottom: 4rem;
 }
 header .wrap{
   display: flex;
@@ -45,8 +55,8 @@ header .wrap nav ul li{
 header .wrap nav ul li .box_header{
     color: var(--jaune);
     border: solid 2px;
-    padding: .8rem;
-    border-radius: 1.5rem;
+    padding: .6rem;
+    border-radius: .4rem;
 }
 header .wrap nav ul li a:hover{
     color: var(--jaune);
@@ -58,6 +68,49 @@ header .wrap nav ul li .box_header:hover{
     transition: .5s;
     color: white;
 }
+
+
+/**********************************INDEX **********************************************/
+
+#connexion .wrap2 {
+
+}
+
+#connexion .wrap2 .cadre{
+    background-color: var(--bleu);
+    /*border-radius: 10%;*/
+    padding: 2rem;
+    border-radius: 3rem;
+}
+#connexion .wrap2 form{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    max-width: 400px;
+    width:100%;
+    margin: 0 auto;
+}
+#connexion .wrap2 form .input{
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: .1rem;
+    border: none;
+    background-color: #F2F9FC;
+    padding: 1rem;
+}
+#connexion .wrap2 form .input2{
+    padding: .4rem;
+    margin-bottom: 1.5rem;
+}
+#connexion .wrap2 form .submit{
+    width: 60%;
+    background-color: transparent;
+    border: solid 2.5px var(--jaune);
+    font-size: 2rem;
+    color: white;
+    border-radius: .3rem;
+    text-align: center;
+    margin-bottom: 1rem;}
 
 
 
@@ -249,6 +302,7 @@ display: flex;
 
 }
 #footer .reseau img:hover{
+
     width: 20px;
 }
 /*////////////////////////////////////////////////////////////////////////////
@@ -285,3 +339,6 @@ display: flex;
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 //*/
+
+
+
