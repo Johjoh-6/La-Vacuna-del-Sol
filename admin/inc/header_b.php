@@ -32,7 +32,7 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
             <div class="sidebar-brand-icon ">
-                <img src="" alt="logo">
+                <img src="../asset/img/" alt="logo">
             </div>
             <div class="sidebar-brand-text mx-3">La vacuna del sol</div>
         </a>
