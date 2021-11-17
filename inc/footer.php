@@ -1,5 +1,6 @@
 
 <section id="footer">
+    <div class="wrap6">
     <nav>
         <ul>
             <li><a href="#">Mention légale</a></li>
@@ -14,9 +15,11 @@
     </nav>
     <div class="reseau">
         <ul>
-            <li><a href="#"><img src="asset/img/facebook.svg" alt=""></a></li>
-            <li><a href="#"><img src="asset/img/instagram.svg" alt=""></a></li>
+            <li><a href="#"><img src="asset/img/facebook-svgrepo-com (1).svg" alt=""></a></li>
+            <li><a href="#"><img src="asset/img/instagram-svgrepo-com.svg" alt=""></a></li>
+            <li><a href=""><img src="asset/img/twitter-svgrepo-com.svg" alt=""></a></li>
         </ul>
+    </div>
     </div>
 </section>
 
