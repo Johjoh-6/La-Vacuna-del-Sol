@@ -137,18 +137,22 @@ header .wrap nav ul li .box_header:hover{
 
 #footer{
     background-color: black;
-
+padding: .8rem;
 }
 #footer .wrap6{
     display: flex;
     flex-flow: row nowrap;
     margin-top: 0.8rem;
     justify-content: space-between;
+    align-items: center;
+}
+#footer span{
+    color: white;
+    margin-right: 17rem;
 }
 #footer  nav{
 }
 #footer nav ul li{
-    text-align: center;
     color: white;
 
 }
@@ -164,6 +168,9 @@ header .wrap nav ul li .box_header:hover{
 }
 #footer .reseau ul{
 display: flex;
+}
+#footer .reseau ul li{
+    padding-left: 1.5rem;
 }
 #footer .reseau img{
  width: 20px;
