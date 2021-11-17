@@ -16,9 +16,9 @@
 <section id="reseaux_sociaux">
     <div class="reseau">
         <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+            <li><a href="#"><img src="asset/img/facebook.svg" alt=""></a></li>
+            <li><a href="#"><img src="asset/img/snapchat.png" alt=""></a></li>
+            <li><a href="#"><img src="asset/img/instagram.svg" alt=""></a></li>
         </ul>
     </div>
 </section>
