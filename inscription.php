@@ -8,52 +8,59 @@ require ('inc/pdo.php');
 
 include ('inc/header.php');?>
 
-    <form action="" method="post">
+    <form class="wrap_account" action="" method="post">
         <h2>Crée ton compte</h2>
 
 
+        <div>
+            <label for="name">Nom</label>
+            <input type="text"
+                   name="name"
+                   id="name"
+                   placeholder="Votre nom"
+                   value="">
+        </div>
 
-        <label for="names">Nom</label>
-        <input type="text"
-               name="name"
-               placeholder="Votre nom"
-               value=""><br>
+        <div>
+            <label for="fname">Prénom</label>
+            <input type="text"
+                   name="fname"
+                   placeholder="Votre Prénom"
+                   value="">
+        </div>
 
+        <div>
+            <label for="date">Date de naissance</label>
+            <input type="date"
+                   name="date">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="">
+            <span class="error"></span>
+        </div>
+        <div class="sexe">
+            <label for="sexes">Sexe</label>
+            <input type="radio" name="genre" value="femme"><span>femme</span>
+            <input type="radio" name="genre" value="homme"><span>homme</span>
+        </div>
 
-        <label>Prénom</label>
-        <input type="text"
-               name="name"
-               placeholder="Votre Prénom"
-               value=""><br>
+        <div>
+            <label for="mdp">Mot de passe:</label>
+            <input type="password"
+                   name="password"
+                   placeholder="Mot de passe">
 
+            <label for="mdp2">Confirmer votre mot de passe:</label>
+            <input type="password"
+                   name="re_password"
+                   placeholder="Mot de passe">
+        </div>
+        <div>
+            <button type="submit">Envoyer</button>
+            <a href="index.php" class="ca">Vous avez déjà un compte ?</a>
+        </div>
 
-
-
-        <label>Date de naissance</label>
-        <input type="date"
-               name="date"><br>
-
-        <label>Email</label>
-        <input type="email" id="email" name="email" value=""><br>
-        <span class="error"></span>
-
-
-        <label>Sexe</label>
-        <input type="radio" name="Genre" value="Femme"> une femme
-        <input type="radio" name="Genre" value="Homme"> un homme<br>
-
-        <label>Mot de passe:</label>
-        <input type="password"
-               name="password"
-               placeholder="Mot de passe"><br>
-
-        <label>Mot de passe 2:</label>
-        <input type="password"
-               name="re_password"
-               placeholder="Mot de passe"><br>
-
-        <button type="submit">Envoyer</button>
-        <a href="index.php" class="ca">Vous avez déjà un compte ?</a>
     </form>
 
 <?php

@@ -10,7 +10,9 @@ include ('inc/header.php');
 ?>
 
     <!--USER Profil-->
-
+<div>
+    <h2>Profil</h2>
+</div>
 
 
 <?php

@@ -3,6 +3,78 @@
     font-family: "lato";
     src: url("../fonts/Lato-Regular.ttf");
 }
+/* Change*/
+body {
+    background: #1690A7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+*{
+    font-family: 'lato';
+    box-sizing: border-box;
+}
+
+form {
+    width: 700px;
+    border: 2px solid #ccc;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+form > *{
+    width: 49%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+input {
+    display: flex;
+    border: 2px solid #ccc;
+
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+
+.sexe {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    text-align: center;
+}
+label {
+    color: #888;
+    font-size: 18px;
+}
+
+button {
+    float: right;
+    background: #555;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+}
+button:hover{
+    opacity: .7;
+}
+
+
+
+
+
 /* Don't Touch !!!! Set for variable*/
 
 
