@@ -6,16 +6,13 @@ require ('../inc/pdo.php');
 // Check if he got a rank admin!
 
 // Set PHP here
-$title = 'Dashboard';
+
 
 
 
 include ('inc/header_b.php');
 ?>
 
-
-    <h1>vaccin</h1>
-    <a href="404.php">404</a>
 
 
 

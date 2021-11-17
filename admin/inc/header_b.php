@@ -64,7 +64,7 @@
                 <span>Gestion Avis</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="msg_b.php">
                 <i class="fas fa-envelope"></i>
                 <span>Boite mail</span></a>
         </li>
@@ -72,3 +72,7 @@
 
     </ul>
     <!-- End of Sidebar -->
+    <!-- Layout content-->
+    <div id="layoutDrawer_content">
+        <!-- Main page content-->
+        <main>

@@ -6,7 +6,7 @@ require ('../inc/pdo.php');
 // Check if he got a rank admin!
 
 // Set PHP here
-$title = 'Dashboard';
+
 
 
 
