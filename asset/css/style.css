@@ -69,6 +69,7 @@ header .wrap nav ul li .box_header:hover{
     color: white;
 }
 
+
 /**********************************INDEX **********************************************/
 
 #connexion .wrap2 {
@@ -109,6 +110,131 @@ header .wrap nav ul li .box_header:hover{
     color: white;
     border-radius: .3rem;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer*/
+
+#footer{
+    background-color: black;
+padding: .8rem;
+}
+#footer .wrap6{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer span{
+    color: white;
+    margin-right: 17rem;
+}
+#footer  nav{
+}
+#footer nav ul li{
+    color: white;
+
+}
+#footer nav ul li a:hover{
+    color: var(--jaune);
+}
+#footer nav ul{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+/*logo*/
+#footer .reseau{
+
+}
+#footer .reseau ul{
+display: flex;
+}
+#footer .reseau ul li{
+    padding-left: 1.5rem;
+    padding-top: .3rem;
+}
+#footer .reseau img{
+ width: 20px;
+
+
+}
+#footer .reseau img:hover{
+>>>>>>> d837f70c2a19fdefdd7c9e156287bd91b1c6e368
 
 }
