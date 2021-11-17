@@ -14,6 +14,8 @@
 
     <!-- Custom styles for this template-->
     <link href="asset/css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Custom styles perso-->
+    <link href="asset/css/style_b.css" rel="stylesheet">
 
     <link rel="icon" type="image/svg+xml" href="hand-holding-medical-solid.svg">
 
@@ -32,7 +34,7 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
             <div class="sidebar-brand-icon ">
-                <img src="../asset/img/" alt="logo">
+                <img id="logo-header_b" src="../asset/img/logo2.png" alt="logo">
             </div>
             <div class="sidebar-brand-text mx-3">La vacuna del sol</div>
         </a>
