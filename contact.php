@@ -11,7 +11,5 @@ include ('inc/header.php');
 
     <!--Contact -->
 
-
-
 <?php
 include ('inc/footer.php');
