@@ -1,17 +1,20 @@
 <?php
+// Check if he is connected
+session_start();
 require ('../inc/func.php');
 require ('../inc/pdo.php');
+// Check if he got a rank admin!
+
 // Set PHP here
 
 
 
 
-include ('admin/inc/header_b.php');
+include ('inc/header_b.php');
 ?>
 
-    <!--Admin management vaccine-->
 
 
 
 <?php
-include ('admin/inc/footer_b.php');
+include ('inc/footer_b.php');
