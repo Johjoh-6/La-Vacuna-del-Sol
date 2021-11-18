@@ -7,60 +7,66 @@ require ('inc/pdo.php');
 
 
 include ('inc/header.php');?>
-<section id="formulaire">
-    <h2>Crée ton compte</h2>
-    <form class="wrap_account" action="" method="post">
-        <div>
-            <label for="name">Nom: </label>
-            <input type="text"
-                   name="name"
-                   id="name"
-                   placeholder="Votre nom"
-                   value="">
+    <section id="formulaire">
+        <div class="title">
+            <h2>Crée ton compte</h2>
         </div>
+        <form class="wrap_account" action="" method="post">
+            <div>
+                <label for="name">Nom: </label>
+                <input class="input_inscription" type="text"
+                       name="name"
+                       id="name"
+                       placeholder="Votre nom"
+                       value="<?php returnValue('name') ?>">
+            </div>
 
-        <div>
-            <label for="fname">Prénom:</label>
-            <input type="text"
-                   name="fname"
-                   placeholder="Votre Prénom"
-                   value="">
-        </div>
+            <div>
+                <label for="fname">Prénom:</label>
+                <input class="input_inscription" type="text"
+                       name="fname"
+                       placeholder="Votre Prénom"
+                       value="<?php returnValue('fname')?>">
+            </div>
 
-        <div>
-            <label for="date">Date de naissance:</label>
-            <input type="date"
-                   name="date">
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Votre email" value="">
-            <span class="error"></span>
-        </div>
-        <div class="sexe">
-            <p>Sexe</p>
-            <label for="femme">
-                <input type="radio" name="genre" value="femme"><span>femme</span>
-            </label>
-            <label for="homme">
-                <input type="radio" name="genre" value="homme"><span>homme</span>
-            </label>
-        </div>
+            <div>
+                <label for="date">Date de naissance:</label>
+                <input class="input_date" type="date"
+                       name="date" value="<?php returnValue('date') ?>">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input class="input_inscription" type="email" id="email" name="email" placeholder="Votre email" value="<?php returnValue('email') ?>">
+                <span class="error"></span>
+            </div>
+            <div class="sexe">
+                <label class="sex">Sexe:</label>
 
-        <div>
-            <label for="mdp">Mot de passe:</label>
-            <input type="password"
-                   name="password"
-                   placeholder="Mot de passe">
+                <input type="radio" name="sexe" id="femme" value="femme" />
 
-            <label for="password">Confirmer votre mot de passe:</label>
-            <input type="password"
-                   name="re_password"
-                   placeholder="Mot de passe">
-        </div>
-            <input class ="submit_inscription" type="submit" id="submitted" name="submitted">
-            <p><a href="index.php" class="ca">Vous avez déjà un compte ?</a></p>
-    </form>
-</section>
+                <label for="femme">Femme</label>
+
+                <input type="radio" name="sexe" id="homme" value="homme" />
+
+                <label for="homme">Homme</label>
+            </div>
+
+            <div>
+                <label for="mdp">Mot de passe:</label>
+                <input class="input_inscription" type="password"
+                       name="password"
+                       placeholder="Mot de passe" value="<?php ?>">
+
+                <label for="password">Confirmer votre mot de passe:</label>
+                <input class="input_inscription" type="password"
+                       name="re_password"
+                       placeholder="Mot de passe"
+                       value="<?php ?>">
+            </div>
+            <div class="submits">
+                <input class ="submit_inscription" type="submit" id="submitted" name="submitted">
+            </div>
+        </form>
+    </section>
 <?php
 include ('inc/footer.php');

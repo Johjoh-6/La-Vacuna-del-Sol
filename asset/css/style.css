@@ -3,22 +3,337 @@
     font-family: "lato";
     src: url("../fonts/Lato-Regular.ttf");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Change*/
 #formulaire {
     background-image: url(../img/inscription.png);
+    background-size: cover;
     background-repeat: no-repeat;
     font-family: 'lato';
-    background-color:#ffffff;
+    background-color:var(--bleu);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
-}
 
+}
+#formulaire label {
+    color: white;
+    font-size: 18px;
+}
+#formulaire h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 40px;
+    margin-right: 18rem;
+    border: solid 2.5px var(--jaune);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--bleu);
+    color: white;
+}
 .wrap_account {
     width: 700px;
-    margin: 0 auto;
+    margin: 0 10rem -6rem 0;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -28,54 +343,108 @@
 .wrap_account > *{
     width: 49%;
 }
-.submit_inscription {
-    padding: 1rem;
-    width: 20%;
-    justify-content: center;
+.submits {
+    display: flex;
+    margin-top: -3.8rem;
 }
-#formulaire h2 {
-    text-align: center;
-    margin-bottom: 40px;
+.submit_inscription {
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 70%;
+    margin-top: -0.8rem;
+    background: white;
+
+    color: var(--bleu);
+
+    border: 1px solid #eee;
+
+    border-radius: 5px;
+
+
+}
+.submit_inscription:hover {
+
 }
 
-input {
-    color: var(--jaune);
+.title {
+
+}
+.input_inscription{
     display: flex;
-    border: 2px solid var(--jaune);
-    background-color: var(--bleu);
+    /*background-color: transparent;*/
+    border: solid 2.5px var(--jaune);
+    font-size: 1rem;
+    color: black;
     padding: 10px;
-    margin: 10px auto;
+    margin: 10px 0 10px 0;
     border-radius: 5px;
+    cursor: pointer;
+    width: 70%;
+
+
+}
+label.sex {
+    margin-right: 20px;
+    margin-top: -4rem;
+    display:block;
+    width:50px;
+
+}
+
+.sexe label {
+    margin-right: 3.4rem;
+}
+.sexe input{
+    margin-right: 10px;
+}
+.input_date {
+    border: solid 2.5px var(--jaune);
+    font-size: 1rem;
+    color: black;
+    border-radius: .3rem;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    padding: 7px;
+    width:70%;
+}
+input[type='radio']:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+
+}
+input[type='radio']:checked:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
 }
 input::placeholder {
-    color: var(--jaune);
+    /*color: var(--jaune);*/
 
 }
 
-.sexe {
-    display: flex;
 
-}
-.sexe p{
-    color: black;
-    font-size: 18px;
-}
-.sexe span{
-    margin:1rem;
-    margin-left: 2.6rem;
 
-}
-#formulaire label {
-    color: black;
-    font-size: 18px;
-}
-
-.ca {
-    display: flex;
-    justify-content: center;
-}
 input:hover{
-    opacity: .7;
+    background-color: var(--jaune);
+    transition: 1s;
 }
 
 
