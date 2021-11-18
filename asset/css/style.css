@@ -341,6 +341,649 @@ button.active{
     background: #fff;
 }
 
+/* ************************** Change ***************************************************************/
+
+.wrap_accounts {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+}
+
+#formulaire {
+    background-color:var(--bleu);
+
+}
+#formulaire div{
+  margin-bottom: 2rem;
+}
+#formulaire .envoyer{
+    position: absolute;
+    bottom:0;
+    left: 12.55555%;
+    width: 30%;
+    background-color: transparent;
+}
+
+#formulaire label {
+    color: white;
+    font-size: 1.2rem;
+
+}
+#formulaire .wrap_account {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#formulaire form  input {
+    display: flex;
+    border: solid 2.5px var(--jaune);
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    /*margin-bottom: 2rem;*/
+}
+
+#formulaire .sex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+#formulaire  h3{
+    font-size: 1.2rem;
+    color: white;
+}
+
+
+.submit_inscription{
+    text-align: center;
+    background-color: transparent;
+    border: solid 2.5px var(--jaune);
+    font-size: 2rem;
+    color: white;
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    wç
+}
+.submit_inscription:hover{
+background-color: var(--jaune);
+    transition: .5s;
+
+}
+
+
+/*input[type='radio']:checked:after {*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    border-radius: 15px;*/
+/*    position: relative;*/
+/*    background-color: #ffa500;*/
+/*    content: '';*/
+/*    display: inline-block;*/
+/*    visibility: visible;*/
+/*    border: 2px solid white;*/
+/*}*/
+
+/*input:hover{*/
+/*    background-color: var(--jaune);*/
+/*    transition: 1s;*/
+/*}*/
+
+
+
+/* Don't Touch !!!! Set for variable*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

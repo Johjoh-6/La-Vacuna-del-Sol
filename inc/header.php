@@ -24,10 +24,10 @@
         <nav>
             <a class="icon" onclick="myFunction()">&#9776;</a>
             <ul>
-                <li><a href="">Accueil</a></li>
-                <li><a href="">A propos</a></li>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="#details">A propos</a></li>
                 <li><a href="contact.php">Contacter</a></li>
-                <li><a href="" class="box_header">Inscription</a></li>
+                <li><a href="inscription.php" class="box_header">Inscription</a></li>
             </ul>
         </nav>
     </div>
