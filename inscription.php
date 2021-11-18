@@ -8,6 +8,7 @@ require ('inc/pdo.php');
 
 include ('inc/header.php');?>
     <section id="formulaire">
+        <div class="wrap_accounts">
         <div class="title">
             <h2>Crée ton compte</h2>
         </div>
@@ -67,6 +68,7 @@ include ('inc/header.php');?>
                 <input class ="submit_inscription" type="submit" id="submitted" name="submitted">
             </div>
         </form>
+        </div>
     </section>
 <?php
 include ('inc/footer.php');

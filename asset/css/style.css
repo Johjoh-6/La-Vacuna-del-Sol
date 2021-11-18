@@ -301,7 +301,110 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Change*/
+
+.wrap_accounts {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
 #formulaire {
     background-image: url(../img/inscription.png);
     background-size: cover;
@@ -311,8 +414,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     flex-direction: column;
+    height: 120vh;
 
 }
 #formulaire label {
@@ -332,8 +435,7 @@
     color: white;
 }
 .wrap_account {
-    width: 700px;
-    margin: 0 10rem -6rem 0;
+    margin: 0 1rem -6rem 0;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -445,6 +547,7 @@ input::placeholder {
 input:hover{
     background-color: var(--jaune);
     transition: 1s;
+
 }
 
 
