@@ -38,20 +38,20 @@ include ('inc/header.php');
                 <div class="contact2">
                     <div class="emoji_name"><img src="asset/img/avatar-svgrepo-com.svg" alt=""></div>
                     <label for="name" class="label_name"> Votre Nom *
-                        <input type="text" id="name" name="name" class="input" placeholder= "Entre Notre Nom" value="">
+                        <input type="text" id="name" name="name" class="input" placeholder= "Entrez Notre Nom" value="">
                     </label>
                     <span class="error"></span>
 
                     <div class="emoji_mail"><img src="asset/img/mail-svgrepo-com.svg" alt=""></div>
                     <label for="email" class="label_email">Votre E-mail *
-                        <input type="email" id="email" class="input" name="email" placeholder="Entrer Votre E-mail" value="">
+                        <input type="email" id="email" class="input" name="email" placeholder="Entrez Votre E-mail" value="">
                     </label>
                     <span class="error"></span>
                 </div>
 
                 <div class="message">
                     <label for="message" class="label_message">Message
-                        <textarea name="message" id="message" placeholder="Entrer Votre Message"></textarea>
+                        <textarea name="message" id="message" placeholder="Entrez Votre Message"></textarea>
 
                         <span class="error"></span>
                 </div>
