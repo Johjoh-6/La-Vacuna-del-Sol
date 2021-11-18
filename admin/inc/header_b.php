@@ -14,6 +14,8 @@
 
     <!-- Custom styles for this template-->
     <link href="asset/css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Custom styles perso-->
+    <link href="asset/css/style_b.css" rel="stylesheet">
 
     <link rel="icon" type="image/svg+xml" href="hand-holding-medical-solid.svg">
 
@@ -32,7 +34,7 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
             <div class="sidebar-brand-icon ">
-                <img src="" alt="logo">
+                <img id="logo-header_b" src="../asset/img/logo2.png" alt="logo">
             </div>
             <div class="sidebar-brand-text mx-3">La vacuna del sol</div>
         </a>
@@ -45,20 +47,38 @@
             <a class="nav-link" href="index.php">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
-
-            <a class="nav-link" href="manage-user.php">
-                <i class="fas fa-user-md"></i>
-                <span>Gestion utilisateur</span></a>
-
-            <a class="nav-link" href="manage-vaccin.php">
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="management-user.php">
+                <i class="fas fa-users"></i>
+                <span>Gestion Utilisateur</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="management-vaccine.php">
                 <i class="fas fa-syringe"></i>
-                <span>Gestion vaccin</span></a>
-
-            <a class="nav-link" href="list-mail.php">
+                <span>Gestion Vaccin</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="management-testimonial.php">
+                <i class="fas fa-comments"></i>
+                <span>Gestion Avis</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="msg_b.php">
                 <i class="fas fa-envelope"></i>
                 <span>Boite mail</span></a>
-
+        </li>
+        <!--Add disconnect -->
+        <li id="logout_h" class="nav-item">
+            <a  class="nav-link" href="#" >
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Se deconnecter</span>
+            </a>
         </li>
 
     </ul>
     <!-- End of Sidebar -->
+    <!-- Layout content-->
+    <div id="layoutDrawer_content">
+        <!-- Main page content-->
+        <main>
