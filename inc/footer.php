@@ -2,7 +2,7 @@
     <div class="wrap6">
     <nav>
         <ul>
-            <li><a href="#">Mention légale</a></li>
+            <li><a href="legal-mention.php">Mention légale</a></li>
             <li><a href="contact.php">Nous contacter</a></li>
             <li><a href="tel:+33658564"> Appelez nous </a></li>
         </ul>
