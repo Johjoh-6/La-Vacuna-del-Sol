@@ -4,7 +4,6 @@ require ('inc/pdo.php');
 // Set PHP here
 
 
-
 include ('inc/header.php');
 ?>
 
@@ -33,7 +32,6 @@ include ('inc/header.php');
         </div>
     </div>
 </section>
-
 
 <section id="details">
     <div class="wrap3">
@@ -135,7 +133,5 @@ include ('inc/header.php');
         </div>
     </div>
 </section>
-
-    <!--testimonial area-->
 
 <?php include ('inc/footer.php');
