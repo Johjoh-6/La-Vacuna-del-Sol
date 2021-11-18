@@ -68,7 +68,13 @@
                 <i class="fas fa-envelope"></i>
                 <span>Boite mail</span></a>
         </li>
-
+        <!--Add disconnect -->
+        <li id="logout_h" class="nav-item">
+            <a  class="nav-link" href="#" >
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Se deconnecter</span>
+            </a>
+        </li>
 
     </ul>
     <!-- End of Sidebar -->
