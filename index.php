@@ -18,6 +18,7 @@ include ('inc/header.php');
             </div>
         </div>
 
+
         <div class="cadre">
             <form action="" method="post" class="wrapform" novalidate>
                 <label for="login">E-mail ou Pseudo</label>
