@@ -179,6 +179,225 @@ header .wrap nav ul li .box_header:hover{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -214,27 +433,155 @@ header .wrap nav ul li .box_header:hover{
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 //*/
-
-/*contact*/
+/* texte contact et animation*/
 .text_contact{
     display: flex;
     justify-content: center;
-    margin-bottom: 5rem;
+    font-size: 3rem;
+    margin: 3rem;
 }
-.text_contact h1{
+.text_contact span{
     background-color: var(--bleu);
-    border-style: solid;
-    border-color: #263A75;
+    height: 6rem;
+    width: 14rem;
+    text-align: center;
+    border-radius: 7%;
+    box-shadow: 5px 4px 40px 6px rgba(241,193,17,1);
 
 }
+
+
+#contact_head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    height: 6rem;
+    width: 14rem;
+    background: white;
+    border-radius: 7%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    transition: 1s box-shadow;
+}
+
+#contact_head:hover {
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+#contact_head:hover::before, #contact_head:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 6rem;
+    width: 14rem;
+    background: var(--bleu);
+    border-radius: 7%;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+}
+
+#contact_head:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+    0% {
+        top: -5px;
+        left: 0;
+    }
+    12% {
+        top: -2px;
+        left: 2px;
+    }
+    25% {
+        top: 0;
+        left: 5px;
+    }
+    37% {
+        top: 2px;
+        left: 2px;
+    }
+    50% {
+        top: 5px;
+        left: 0;
+    }
+    62% {
+        top: 2px;
+        left: -2px;
+    }
+    75% {
+        top: 0;
+        left: -5px;
+    }
+    87% {
+        top: -2px;
+        left: -2px;
+    }
+    100% {
+        top: -5px;
+        left: 0;
+    }
+}
+
+@keyframes counterclockwise {
+    0% {
+        top: -5px;
+        right: 0;
+    }
+    12% {
+        top: -2px;
+        right: 2px;
+    }
+    25% {
+        top: 0;
+        right: 5px;
+    }
+    37% {
+        top: 2px;
+        right: 2px;
+    }
+    50% {
+        top: 5px;
+        right: 0;
+    }
+    62% {
+        top: 2px;
+        right: -2px;
+    }
+    75% {
+        top: 0;
+        right: -5px;
+    }
+    87% {
+        top: -2px;
+        right: -2px;
+    }
+    100% {
+        top: -5px;
+        right: 0;
+    }
+}
+
+/*formulaire*/
+
 #contact{
     display: flex;
     justify-content: center;
     position: relative;
+    margin-bottom: 4rem;
 }
+
 label {
     margin: 2rem;
 
+}
+form{
+    background-color: white;
 }
 label .name{
     margin-bottom: 2rem;
@@ -301,10 +648,14 @@ input ,textarea {padding: .6rem;
     margin-top: 1rem;
     margin-left: 18rem;
     margin-bottom: 2rem;
-    background: linear-gradient(0deg, rgba(7,226,190,1) 0%, rgba(217,231,210,1) 100%, rgba(28,233,241,1) 100%);
+    background: linear-gradient(0deg, var(--jaune) 0%,white 100%, var(--jaune) 100%);
+    border-radius: 7%;
+    border: none;
 }
 #submit:hover{
-    opacity: 50%;
+    opacity: 40%;
+    transition: .5s;
+    cursor: pointer;
 }
 .input{
     width: 100%;
@@ -313,6 +664,10 @@ input ,textarea {padding: .6rem;
     border: none;
     background-color: #F2F9FC;
     padding: 1rem;
+}
+.input:hover{
+    opacity: 50%;
+    background-color: var(--jaune);
 }
 
 /*////////////////////////////////////////////////////////////////////////////
@@ -436,6 +791,5 @@ input ,textarea {padding: .6rem;
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 //*/
-
 
 
