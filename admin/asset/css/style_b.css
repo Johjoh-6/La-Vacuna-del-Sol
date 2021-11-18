@@ -2,6 +2,7 @@
     --blue: #0C8195;
     --blue-hover: #0f499d;
     --yellow: #F1C111;
+    --yellow-hover: #ffae00;
 }
 
 /*********************** Header and Footer back ***********************************/
@@ -77,4 +78,19 @@ footer{
 .btn-secondary:hover {
     background-color: var(--blue-hover);
     border-color:  var(--blue-hover);
+}
+.btn-info{
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+.btn-info:hover{
+    background-color: var(--yellow-hover);
+    border-color: var(--yellow-hover);
+}
+thead tr {
+    background-color: var(--yellow);
+}
+thead tr th {
+    color: white;
+    text-transform: capitalize;
 }

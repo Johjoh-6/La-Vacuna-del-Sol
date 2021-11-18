@@ -102,3 +102,13 @@ function getDb($table){
     $query->execute();
     return $query->fetchAll();
 }
+
+function tableName($table){
+    $tablesList = ['vds_msg' => 'Message', 'vds_testimonial'=> 'Avis', 'vds_users' => 'Utilisateur', 'vds_vaccin' =>'Vaccin', 'vds_user_vaccin' => 'Find name'];
+    foreach ($tablesList as $tableList => $value) {
+        if ($tableList == $table){
+
+            return $value;
+        }
+        }
+}
