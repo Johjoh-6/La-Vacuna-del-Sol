@@ -29,7 +29,11 @@ body {
     max-width: 900px;
     width:100%;
     margin: 0 auto;
-
+}
+.wrap6{
+    max-width: 1600px;
+    width:100%;
+    margin: 0 auto;
 }
 img {
     width: 100%;
@@ -45,6 +49,7 @@ header {
     background-color:  var(--bleu);
     padding: .5rem;
     margin-bottom: 4rem;
+
 }
 header .wrap{
   display: flex;
@@ -54,12 +59,23 @@ header .wrap{
 header .wrap .logo img{
     width: 50%;
 }
+header .wrap .icon{
+    display: none;
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--jaune);
+    position: absolute;
+    right: 0;
+    top: 3%;
+    cursor: pointer;
+}
 
 header .wrap nav ul{
     display: flex;
 }
 header .wrap nav ul li{
     padding: 1rem;
+    font-size: 1.1rem;
 }
 
 header .wrap nav ul li .box_header{
@@ -86,11 +102,7 @@ header .wrap nav ul li .box_header:hover{
 #connexion .wrap2 {
     position: relative;
 }
-/*#connexion .wrap2 .box{*/
-/*    position: relative;*/
-/*    background-color: red;*/
-/*    width: 115%;*/
-/*}*/
+
 #connexion .wrap2 .box .rond{
     background-color: var(--jaune);
     width: 410px;
@@ -119,8 +131,11 @@ header .wrap nav ul li .box_header:hover{
     flex-direction: column;
     color: white;
     max-width: 400px;
-    width:100%;
+    width: 100%;
     margin: 0 auto;
+}
+#connexion .wrap2 form label{
+    margin-bottom: .5rem;
 }
 #connexion .wrap2 form .input{
     width: 100%;
@@ -135,8 +150,6 @@ header .wrap nav ul li .box_header:hover{
 #connexion .wrap2 form .input2{
     padding: .4rem;
     margin-bottom: 1.5rem;
-
-
 }
 #connexion .wrap2 form .input2:hover{
     background-color: var(--jaune);
@@ -243,7 +256,6 @@ header .wrap nav ul li .box_header:hover{
 #slider {
     background-color: #2B2929;
     padding: 4rem 0 8rem 0;
-
 }
 .container{
     position: relative;
@@ -263,7 +275,6 @@ header .wrap nav ul li .box_header:hover{
 }
 
 #slider .card{
-
     min-height: 100%;
     background: #fff;
     border-radius: .3rem;
@@ -272,21 +283,7 @@ header .wrap nav ul li .box_header:hover{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin: 0 auto;
-}
-
-
-
-.client-name{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    padding: 5px 20px;
-    background: #fff;
-    text-transform: capitalize;
-    font-size: 14px;
+    margin: 0 1rem;
 }
 
 .card-body{
@@ -344,24 +341,6 @@ button.active{
     background: #fff;
 }
 
-@media (max-width: 800px){
-    .container{
-        width: 50%;
-        margin: auto;
-    }
-    .card{
-        flex-direction: column;
-    }
-    .card-thumb{
-        width: 100%;
-        border-radius: 10px;
-    }
-    .card-body{
-        width: 100%;
-        min-height: auto;
-        margin-left: 0;
-    }
-}
 
 
 
@@ -487,46 +466,38 @@ button.active{
         /*position: sticky;*/
         /*top: 100vh;*/
     background-color: black;
-padding: .8rem;
+    padding: .8rem;
 }
 #footer .wrap6{
     display: flex;
-    flex-flow: row nowrap;
-    margin: 0.8rem;
     justify-content: space-between;
     align-items: center;
 }
-#footer span{
-    color: white;
-    margin-right: 17rem;
-}
-#footer  nav{
-}
-#footer nav ul li{
+#footer .copy{
     color: white;
 }
+
 #footer nav ul li a:hover{
     color: var(--jaune);
 }
 #footer nav ul{
     display: flex;
-    flex-flow: row nowrap;
-    gap: 1rem;
     justify-content: space-between;
 }
+#footer nav ul li{
+   padding: .5rem;
+}
+
 /*logo*/
 
 #footer .reseau ul{
 display: flex;
+    align-items: center;
 }
 #footer .reseau ul li{
-    padding-left: 1.5rem;
-    padding-top: .3rem;
+  padding: .5rem;
 }
 #footer .reseau img{
- width: 20px;
-}
-#footer .reseau img:hover{
-    width: 20px;
+ width: 1.4rem;
 }
 
