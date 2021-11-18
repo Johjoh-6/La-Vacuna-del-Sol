@@ -27,7 +27,7 @@ if(!empty($_POST['submitted'])) {
 }
 include ('inc/header.php');
 ?>
-
+<!--FINIR LE PHPé-->
     <!--Contact -->
     <div class="text_contact">
         <span id="contact_head">Contact</span>

@@ -574,6 +574,7 @@ header .wrap nav ul li .box_header:hover{
     justify-content: center;
     position: relative;
     margin-bottom: 4rem;
+    background-color: var(--bleu);
 }
 
 label {
