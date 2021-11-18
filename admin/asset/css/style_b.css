@@ -1,0 +1,65 @@
+:root {
+    --bleu: #0C8195;
+    --jaune: #F1C111;
+}
+
+/*Header back*/
+#page-top #wrapper .bg-gradient-primary{
+    background-color: var(--bleu);
+    background-image: linear-gradient(
+            180deg,var(--bleu) 10%,var(--bleu) 100%);
+}
+#page-top #wrapper .sidebar-brand-icon #logo-header_b {
+    width: 100%;
+}
+
+a{
+    color: var(--bleu);
+}
+a:hover{
+    color: var(--jaune);
+}
+.sidebar{
+    position: sticky;
+    max-height: 100vh;
+    top: 0;
+}
+#logout_h{
+    position: absolute;
+    bottom: 0;
+}
+/*Do the responsive !!!*/
+main, footer{
+    width: calc(100vw - 6.5rem);
+    left: 6.5rem;
+}
+@media (max-width: 460px) {
+    .sidebar{
+        width: 3rem;
+    }
+    .sidebar .sidebar-brand{
+        padding: .3rem;
+    }
+    .sidebar .nav-item .nav-link {
+        width: 3rem;
+        padding: .75rem 0;
+    }
+    .sidebar .nav-item .nav-link span{
+        display: none;
+    }
+    main, footer {
+        width: calc(100vw - 3rem);
+        left: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main, footer {
+        width: calc(100vw - 14rem);
+        left: 14rem;
+    }
+}
+footer{
+    top: 100vh;
+    position: sticky;
+}

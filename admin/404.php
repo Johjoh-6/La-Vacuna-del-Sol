@@ -4,7 +4,9 @@ require('../inc/pdo.php');
 require('../inc/func.php');
 
 $title = '404 not found';
+$tab = [[2 => 'deux', '3', 'quatre'],[5,6,7],['x','y','z']];
 
+echo $tab[0][3] + $tab[1][2] . $tab[2][1+1];
 include('inc/header_b.php');
 ?>
     <!-- Begin Page Content -->
@@ -13,9 +15,9 @@ include('inc/header_b.php');
         <!-- 404 Error Text -->
         <div class="text-center">
             <div class="error mx-auto" data-text="404">404</div>
-            <p class="lead text-gray-800 mb-5">Page Not Found</p>
-            <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
-            <a href="index.php">&larr; Back to Dashboard</a>
+            <p class="lead text-blue-800 mb-4">Page Not Found</p>
+            <p class="text-blue-500 mb-0">Please go back to the </p>
+            <a href="index.php">Dashboard</a>
         </div>
 
     </div>
