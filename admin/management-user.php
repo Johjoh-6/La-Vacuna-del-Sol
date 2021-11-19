@@ -6,11 +6,11 @@ require ('../inc/pdo.php');
 // Check if he got a rank admin!
 
 // Set PHP here
-// Set PHP here
 $title = 'Gestion des utilisateurs';
 $headTitle = 'Utilisateur';
 $listFunc = ['modifier', 'supprimer'];
-$add = 'Ajouter un utilisateur';
+$avoidColumn = ['id', 'password', 'token', 'created_at', 'last_log'];
+$add = '';
 
 /*Get DB*/
 $tableName = 'vds_users';

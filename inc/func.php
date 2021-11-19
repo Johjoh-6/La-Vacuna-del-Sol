@@ -128,7 +128,98 @@ function samePassword($error, $password1, $password2, $key){
     if ($password1 === $password2){
         return $password1;
     }else {
-        $error['password_confirm'] = 'Mots de passe différent';
+        $error[$key] = 'Mots de passe différent';
     }
     return $error;
+}
+
+function getNameTable ($funcTable){
+        if ($funcTable == 'supprimer') {
+            $name = 'delete';
+        }
+    if ($funcTable == 'modifier') {
+        $name = 'update';
+    }
+    if ($funcTable == 'marquer lu') {
+        $name = 'read';
+    }
+    if ($funcTable == 'publier') {
+        $name = 'publish';
+    }
+    return $name;
+}
+function getTableIcons($funcTable)
+{
+    if ($funcTable == 'supprimer') {
+        $icon = 'fas fa-trash-alt';
+    }
+    if ($funcTable == 'modifier') {
+        $icon = 'fas fa-edit';
+    }
+    if ($funcTable == 'marquer lu') {
+        $icon = 'fas fa-check-square';
+    }
+    if ($funcTable == 'publier') {
+        $icon = 'fas fa-paper-plane';
+    }
+    return $icon;
+}
+function renameKey($key){
+    $name = $key;
+    if ($key == 'name') {
+        $name = 'nom';
+    }
+    if ($key == 'prenom') {
+        $name = 'prenom';
+    }
+    if ($key == 'id_user') {
+        $name = 'nom utilisateurs';
+    }
+    if ($key == 'created_at') {
+        $name = 'crée le';
+    }
+    if ($key == 'content') {
+        $name = 'description';
+    }
+    if ($key == 'last_log') {
+        $name = 'derniere connection';
+    }
+    return $name;
+}
+function valueFormat($key, $value){
+    $valuePrepare =$value;
+    if ($key == 'dob') {
+        $valuePrepare = date('d/m/Y', strtotime($value));
+    }
+    if ($key == 'created_at') {
+        $valuePrepare = date('d/m/Y', strtotime($value));
+    }
+    if ($key == 'last_log') {
+        $valuePrepare = date('d/m/Y', strtotime($value));
+    }
+    return $valuePrepare;
+}
+function showColumnSelectedValue ($key, $value, $avoidColumn){
+                if (!in_array($key, $avoidColumn)) {
+                    $adapt = valueFormat($key, $value);
+                    echo  '<th>'. $adapt. '</th>';
+                }
+}
+function showColumnSelectedKey ($list,$avoidColumn){
+    foreach ($list as $key => $value){
+        if (!in_array($key, $avoidColumn)){
+                $name = renameKey($key);
+                echo  '<th>'. $name . '</th>';
+                 } }
+}
+
+
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
 }

@@ -1,7 +1,6 @@
 <?php
 $listName = $table[0];
 
-
 ?>
 
 <div class="card shadow mb-4">
@@ -13,10 +12,7 @@ $listName = $table[0];
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                 <tr>
-                    <?php foreach ($listName as $key => $value) {
-                        if ($key != 'id'){?>
-                        <th><?= ucfirst($key); ?></th>
-                    <?php } } ?>
+                    <?php showColumnSelectedKey($listName, $avoidColumn); ?>
                     <?php foreach ($listFunc as $funcTable) { ?>
                         <th><?= ucfirst($funcTable); ?></th>
                     <?php } ?>
@@ -24,10 +20,7 @@ $listName = $table[0];
                 </thead>
                 <tfoot>
                 <tr>
-                    <?php foreach ($listName as $key => $value) {
-                    if ($key != 'id'){?>
-                        <th><?= ucfirst($key); ?></th>
-                    <?php } } ?>
+                    <?php showColumnSelectedKey($listName, $avoidColumn); ?>
                     <?php foreach ($listFunc as $funcTable) { ?>
                         <th><?= ucfirst($funcTable); ?></th>
                     <?php } ?>
@@ -36,15 +29,12 @@ $listName = $table[0];
                 <tbody>
                 <?php foreach ($table as $list){ ?>
                 <tr>
-                <?php foreach ($list as $key => $value){
-                if ($key != 'id'){?>
-                    <th><?= $value;?></th>
-                <?php } } ?>
+                    <?php foreach ($list as $key => $value){
+                        showColumnSelectedValue($key, $value, $avoidColumn);
+                    } ?>
                     <?php foreach ($listFunc as $funcTable) {
-                        if ($funcTable == 'supprimer'){ $funcName = 'delete'; $funcIcon = 'fas fa-trash-alt';}
-                        if ($funcTable == 'modifier'){ $funcName = 'update'; $funcIcon = 'fas fa-edit';}
-                        if ($funcTable == 'marquer lu'){ $funcName = 'read'; $funcIcon = 'fas fa-check-square';}
-                        if ($funcTable == 'publier'){ $funcName = 'publish'; $funcIcon = 'fas fa-paper-plane';}
+                        $funcName = getNameTable($funcTable);
+                        $funcIcon = getTableIcons($funcTable);
                         ?>
                         <th class="btn-<?= $funcName; ?>">
                             <div class="my-2"></div>
@@ -62,7 +52,7 @@ $listName = $table[0];
             </table>
         </div>
         <?php if (!empty($add)) { ?>
-        <a href="add.php?table=<?= $tableName?>" class="btn btn-secondary btn-icon-split">
+        <a href="inc/redict.php?table=<?= $tableName?>" class="btn btn-secondary btn-icon-split">
           <span class="icon text-white-50">
            <i class="fas fa-plus"></i>
           </span>

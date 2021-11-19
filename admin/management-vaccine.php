@@ -9,6 +9,7 @@ require ('../inc/pdo.php');
 $title = 'Gestion des vaccins';
 $headTitle = 'Vaccins';
 $listFunc = ['modifier', 'supprimer'];
+$avoidColumn = ['id'];
 $add = 'Ajouter un vaccin';
 
 /* Get DB*/

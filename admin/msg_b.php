@@ -9,6 +9,7 @@ require ('../inc/pdo.php');
 $title = 'Boite mail';
 $headTitle = 'Mail';
 $listFunc = ['marquer lu','publier', 'supprimer'];
+$avoidColumn = ['id'];
 $add = '';
 
 /* Get DB*/

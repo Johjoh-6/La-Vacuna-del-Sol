@@ -2,7 +2,7 @@
 require ('inc/func.php');
 require ('inc/pdo.php');
 // Set PHP here
-
+require ('admin/add-users.php');
 include ('inc/header.php');?>
     <section id="formulaire">
         <div class="wrap_accounts">
@@ -13,15 +13,18 @@ include ('inc/header.php');?>
                     <div>
                         <label for="name">Nom: </label>
                         <input class="input_inscription" type="text" name="name" id="name" placeholder="Votre nom" value="<?php returnValue('name') ?>">
+                        <span class="error"><?= returnError($error, 'name');?></span>
                     </div>
 
                     <div>
-                        <label for="fname">Prénom:</label>
-                        <input class="input_inscription" type="text" name="fname" placeholder="Votre Prénom" value="<?php returnValue('fname')?>">
+                        <label for="prenom">Prénom:</label>
+                        <input class="input_inscription" type="text" name="prenom" placeholder="Votre Prénom" value="<?php returnValue('prenom')?>">
+                        <span class="error"><?= returnError($error, 'prenom');?></span>
                     </div>
                     <div>
-                        <label for="date">Date de naissance:</label>
-                        <input class="input_date" type="date" name="date" value="<?php returnValue('date') ?>">
+                        <label for="dob">Date de naissance:</label>
+                        <input class="input_date" type="date" name="dob" value="<?php echo date('Y-m-d', strtotime(date('Y-m-d')));?>">
+                        <span class="error"><?= returnError($error, 'dob');?></span>
                     </div>
 
                 </div>
@@ -30,22 +33,24 @@ include ('inc/header.php');?>
                     <div class="email">
                         <label for="email">Email:</label>
                         <input class="input_inscription" type="email" id="email" name="email" placeholder="Votre email" value="<?php returnValue('email') ?>">
-                        <span class="error"></span>
+                        <span class="error"><?= returnError($error, 'email');?></span>
                     </div>
                     <div class="mdp">
-                        <label for="mdp">Mot de passe:</label>
-                        <input class="input_inscription" type="password" name="password" placeholder="Mot de passe" value="<?php ?>">
+                        <label for="password">Mot de passe:</label>
+                        <input class="input_inscription" type="password" name="password" placeholder="Mot de passe" >
+                        <span class="error"><?= returnError($error, 'password');?></span>
                     </div>
                     <div class="mdp2">
-                        <label for="password">Confirmer votre mot de passe:</label>
-                        <input class="input_inscription" type="password" name="re_password" placeholder="Mot de passe" value="<?php ?>">
+                        <label for="password_confirm">Confirmer votre mot de passe:</label>
+                        <input class="input_inscription" type="password" name="password_confirm" placeholder="Mot de passe">
+                        <span class="error"><?= returnError($error, 'password_confirm');?></span>
                     </div>
                     <h3>Sex :</h3>
                     <div class="sex">
-                        <label for="femme">Femme</label>
-                        <input type="radio" name="sexe" id="femme" value="femme" />
-                        <label for="homme">Homme</label>
-                        <input type="radio" name="sexe" id="homme" value="homme" />
+                        <label for="sexe">Femme</label>
+                        <input type="radio" name="sexe" id="sexe" value="femme" >
+                        <label for="sexe">Homme</label>
+                        <input type="radio" name="sexe" id="sexe" value="homme" checked>
                     </div>
                 </div>
                 <div class="envoyer">

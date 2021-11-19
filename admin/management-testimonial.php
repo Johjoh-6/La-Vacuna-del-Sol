@@ -10,6 +10,7 @@ require ('../inc/pdo.php');
 $title = 'Gestion des Avis';
 $headTitle = 'Avis';
 $listFunc = ['publier', 'supprimer'];
+$avoidColumn = ['id'];
 $add = '';
 
 /*Get DB*/
