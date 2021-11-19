@@ -113,12 +113,12 @@ header .wrap nav ul li .box_header:hover{
     top: 0;
 }
 
- #connexion .wrap2 .hotesse{
+#connexion .wrap2 .hotesse{
     position: absolute;
-     width: 60%;
-     top: 5%;
-     left: -40%;
- }
+    width: 60%;
+    top: 5%;
+    left: -40%;
+}
 
 #connexion .wrap2 .cadre{
     background-color: var(--bleu);
@@ -185,7 +185,7 @@ header .wrap nav ul li .box_header:hover{
     text-align: center;
 }
 .title {
-     margin-bottom: 2rem;
+    margin-bottom: 2rem;
     padding: 1rem;
     border-bottom: solid 2px var(--jaune);
     margin-bottom: 2rem;
@@ -223,7 +223,7 @@ header .wrap nav ul li .box_header:hover{
 
 }
 #details .wrap3 .cards .card img:hover{
-   filter: grayscale(100%);
+    filter: grayscale(100%);
     transition: .5s;
 }
 #details .wrap3 .cards .card h2{
@@ -357,7 +357,7 @@ button.active{
 
 }
 #formulaire div{
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 #formulaire .envoyer{
     position: absolute;
@@ -410,7 +410,7 @@ button.active{
     cursor: pointer;
 }
 .submit_inscription:hover{
-background-color: var(--jaune);
+    background-color: var(--jaune);
     transition: .5s;
 }
 
@@ -698,82 +698,6 @@ background-color: var(--jaune);
 //////////////////////////////////////////////////////////////////////////////
 //*/
 /*profil*/
-#profil{
-    width: 900px;
-    display: flex;
-    justify-content: center;
-}
-.wrap_profil{
-}
-
-.information_contact{
-    background-color: lime;
-    padding: 2rem;
-    box-shadow: 2px 5px 7px 0px red;
-}
-#profil h1{
-    text-transform: uppercase;
-    background-color: var(--jaune);
-    width: 6rem;
-    height: 2rem;
-    text-align: center;
-}
-.separator_vaccin{
-    background-color: var(--bleu);
-    width: 100%;
-    height: 3px;
-    margin-top: 1rem;
-
-}
-#profil .profil_h3{
-    font-family: lato sans-serif bold;
-    font-weight: bold;
-}
-
-/*vaccin*/
-#vaccin{
-    display: flex;
-    justify-content: end;
-    max-width: 100%;
-    margin-right: 10rem;
-    box-shadow: 2px 5px 7px 0px red;
-
-}
-.wrap_vaccin{
-
-}
-.text_vaccin{
-
-}
-.list_vaccin{
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -891,7 +815,6 @@ background-color: var(--jaune);
     width: 14rem;
     text-align: center;
     border-radius: 7%;
-    box-shadow: 5px 4px 40px 6px rgba(241,193,17,1);
 
 }
 #contact_head {
@@ -1022,14 +945,14 @@ background-color: var(--jaune);
 
 }
 
-label {
+#contact label {
     margin: 2rem;
 
 }
-form{
+#contact form{
     background-color: white;
 }
-label .name{
+#contact label .name{
     margin-bottom: 2rem;
 }
 #contact  .contact2{
@@ -1119,8 +1042,8 @@ input ,textarea {padding: .6rem;
 /* footer*/
 
 #footer{
-        position: sticky;
-        top: 100vh;
+    position: sticky;
+    top: 100vh;
     background-color: black;
     padding: .8rem;
 }
@@ -1717,8 +1640,8 @@ input ,textarea {padding: .6rem;
 /* footer*/
 
 #footer{
-        /*position: sticky;*/
-        /*top: 100vh;*/
+    /*position: sticky;*/
+    /*top: 100vh;*/
     background-color: black;
     padding: .8rem;
 }
@@ -1739,21 +1662,20 @@ input ,textarea {padding: .6rem;
     justify-content: space-between;
 }
 #footer nav ul li{
-   padding: .5rem;
+    padding: .5rem;
 }
 
 /*logo*/
 
 #footer .reseau ul{
-display: flex;
+    display: flex;
     align-items: center;
 }
 #footer .reseau ul li{
-  padding: .5rem;
+    padding: .5rem;
 }
 #footer .reseau img{
- width: 1.4rem;
->>>>>>> master
+    width: 1.4rem;
 }
 
 /*////////////////////////////////////////////////////////////////////////////
