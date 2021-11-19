@@ -54,7 +54,7 @@ function deleteById($id, $table){
         $query->bindValue(':id', $id, PDO::PARAM_INT);
         $query->execute();
         //Change location
-        header('location: ');
+        header("Refresh:0");
     } else{
         abort404();
     }
@@ -86,4 +86,19 @@ function transformDate($column, $key){
 function abort404(){
     header('HTTP/1.1 404 Not Found');
     header('Location: 404.php');
+}
+
+function getDbOrderAsc($table){
+    global $pdo;
+    $sql= "SELECT * FROM  $table ORDER BY name asc";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    return $query->fetchAll();
+}
+function getDb($table){
+    global $pdo;
+    $sql= "SELECT * FROM  $table";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    return $query->fetchAll();
 }

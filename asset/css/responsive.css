@@ -1,0 +1,114 @@
+@media (max-width: 1200px){
+    .wrap2 {
+
+        margin: 0 auto;
+    }
+    #connexion .wrap2 {
+        display: flex;
+        flex-direction: column;
+    }
+    #connexion .wrap2 .hotesse{
+        width: 200px;
+        height: 200px;
+        left: -10%;
+        top: 20%;
+    }
+    #connexion .wrap2 .box .rond{
+        width: 200px;
+        height: 200px;
+        left: -15%;
+        top: 20%;
+    }
+}
+
+@media (max-width: 860px){
+    header .wrap nav ul li{
+        display: none;
+    }
+
+    header .wrap  .icon{
+        display: block;
+    }
+    header.responsive .wrap .logo{
+        display: none;
+    }
+    header.responsive .wrap nav ul li{
+        display: block;
+    }
+    header .wrap nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #connexion .wrap2 .hotesse{
+        width: 175px;
+        height: 175px;
+        left: 60%;
+        top: 55%;
+        transform: scaleX(-1);
+    }
+    #connexion .wrap2 .box .rond{
+        width: 165px;
+        height: 165px;
+        left: 65%;
+        top: 55%;
+    }
+}
+
+
+@media (max-width: 800px){
+    .title h2 {
+        font-size: 1.7rem;
+    }
+    .container{
+        width: 50%;
+        margin: auto;
+    }
+    .card{
+        flex-direction: column;
+    }
+    .card-thumb{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .card-body{
+        width: 100%;
+        min-height: auto;
+        margin-left: 0;
+    }
+
+    #details .wrap3 .cards .card{
+        width: 48.333%;
+    }
+    #footer .wrap6 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 485px){
+    #details .wrap3 .cards .card{
+        width: 100%;
+    }
+    #connexion .wrap2 .hotesse{
+     display: none;
+
+    }
+    #connexion .wrap2 .box .rond{
+        display: none;
+    }
+    #connexion .wrap2 form .input{
+       width: 100%;
+    }
+    #connexion .wrap2 form .input2{
+        width: 100%;
+    }
+    #connexion .wrap2 form .submit{
+        width: 100%;
+    }
+    #footer .wrap6 nav ul{
+        display: flex;
+        flex-direction: column;
+
+    }
+}
