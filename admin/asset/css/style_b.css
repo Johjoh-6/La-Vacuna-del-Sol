@@ -75,7 +75,7 @@ footer{
     background-color: var(--blue);
     border-color:  var(--blue);
 }
-.btn-secondary:hover {
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus {
     background-color: var(--blue-hover);
     border-color:  var(--blue-hover);
 }
@@ -83,7 +83,7 @@ footer{
     background-color: var(--yellow);
     border-color: var(--yellow);
 }
-.btn-info:hover{
+.btn-info:hover, .btn-info:active, .btn-info:focus{
     background-color: var(--yellow-hover);
     border-color: var(--yellow-hover);
 }
@@ -93,4 +93,16 @@ thead tr {
 thead tr th {
     color: white;
     text-transform: capitalize;
+}
+
+th, td {
+    overflow-y: scroll;
+}
+
+th:hover,
+td:hover {
+    text-overflow: clip;
+}
+.badge-counter{
+    right: 10%;
 }

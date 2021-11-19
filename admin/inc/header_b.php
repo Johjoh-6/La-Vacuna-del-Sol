@@ -48,6 +48,8 @@
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
         <li class="nav-item">
             <a class="nav-link" href="management-user.php">
                 <i class="fas fa-users"></i>
@@ -59,18 +61,27 @@
                 <span>Gestion Vaccin</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="management-testimonial.php">
+            <a class="nav-link" href="management-testimonial.php"  id="alertsDropdown" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-comments"></i>
+                <!-- Counter - Alerts -->
+               <!-- <p class="badge badge-danger badge-counter">3+</p>-->
                 <span>Gestion Avis</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="msg_b.php">
+            <a class="nav-link" href="msg_b.php" id="alertsDropdown" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-envelope"></i>
+                <!-- Counter - Alerts -->
+                    <!--<p class="badge badge-danger badge-counter">0</p>-->
+
                 <span>Boite mail</span></a>
         </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
         <!--Add disconnect -->
         <li id="logout_h" class="nav-item">
-            <a  class="nav-link" href="#" >
+            <a  class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Se deconnecter</span>
             </a>

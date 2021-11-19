@@ -11,6 +11,9 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])&& !empty($_GET['table'])) {
     $tableName = $_GET['table'];
     getById($tableName, $id);
     /*Add delete mod*/
+    //deleteById($id, $tableName);
     /*Return to the previous page */
     header('Location: ' . $_SERVER['HTTP_REFERER']);
+} else {
+    abort404();
 }

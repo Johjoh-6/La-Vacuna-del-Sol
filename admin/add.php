@@ -21,7 +21,6 @@ $error = [];
 debug($error);
 
 if ($vaccinDb) {
-    echo $vaccinDb;
     if (!empty($_POST['submitted'])) {
         //For vaccin
         //XSS
@@ -61,7 +60,6 @@ if ($vaccinDb) {
     }
 }
 if ($usersDb) {
-    echo $usersDb;
     if (!empty($_POST['submitted'])) {
         //For users
         //XSS
@@ -103,6 +101,7 @@ if ($usersDb) {
         }
     }
 if ($usersDb == false && $vaccinDb == false) {
+    //redirection is false
     header('location: 404.php');
 }
 
