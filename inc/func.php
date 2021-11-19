@@ -112,3 +112,23 @@ function tableName($table){
         }
         }
 }
+
+function mailValidation($error,$value,$key){
+    if(!empty($value)){
+        if (filter_var($value, FILTER_VALIDATE_EMAIL)==false) {
+            $error[$key]='Veuillez renseigner un email valide';
+        }
+    } else{
+        $error[$key]='Veuillez renseigner ce champ';
+    }
+    return $error;
+}
+
+function samePassword($error, $password1, $password2, $key){
+    if ($password1 === $password2){
+        return $password1;
+    }else {
+        $error['password_confirm'] = 'Mots de passe différent';
+    }
+    return $error;
+}
