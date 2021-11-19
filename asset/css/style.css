@@ -57,8 +57,6 @@ a {
 header {
     background-color:  var(--bleu);
     padding: .5rem;
-    margin-bottom: 4rem;
-
 }
 header .wrap{
     display: flex;
@@ -106,6 +104,7 @@ header .wrap nav ul li .box_header:hover{
 
 /**********************************INDEX **********************************************/
 #connexion {
+    padding-top: 6rem;
     margin-bottom: 6rem;
 }
 #connexion .wrap2 {
@@ -214,6 +213,7 @@ header .wrap nav ul li .box_header:hover{
 #parallax .wrap_para h1{
     font-size: 4rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 .separator {
     background-color: var(--jaune);
@@ -264,6 +264,7 @@ background-color: var(--jaune);
     text-transform: uppercase;
     font-weight: 800;
     text-align: center;
+
 }
 
 #details .wrap3 .cards{
@@ -306,15 +307,15 @@ background-color: var(--jaune);
 .discover {
     color: white;
     background-color: var(--bleu);
-    border: solid 2px var(--bleu);
+    border: solid 2px var(--jaune);
     padding: .5rem;
     border-radius: .5rem;
     margin-bottom: 1rem;
 }
 
 .discover:hover {
-    background-color: transparent;
-    color: var(--bleu);
+    background-color: var(--jaune);
+    color: white;
     transition: .5s;
 }
 /*********************************SLIDER *******************************/
@@ -390,7 +391,6 @@ background-color: var(--jaune);
 
 .indicators button{
     background: none;
-    border: none;
     outline: none;
     width: 15px;
     height: 15px;
@@ -420,6 +420,7 @@ button.active{
 
 #formulaire {
     background-color:var(--bleu);
+    padding: 3rem;
 
 }
 #formulaire div{
@@ -464,7 +465,6 @@ button.active{
     color: white;
 }
 
-
 .submit_inscription{
     text-align: center;
     background-color: transparent;
@@ -481,316 +481,124 @@ background-color: var(--jaune);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//*/
-/*profil*/
-#profil{
-    width: 900px;
+.list_vaccin{
+    background-color: white;
+    max-width: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 3%;
+    border: outset 3px var(--bleu);
+    box-shadow: 2px 5px 7px 0px black;
+}
+#vaccin table{
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/******************VACCIN*/
+#vaccin{
+    background-color: violet;
+    padding: 10rem;
+}
+
+#vaccin .list_vaccin  {
+    margin-bottom: 2rem;
+}
+#vaccin .list_vaccin tr th {
+    padding: 1rem;
+}
+.wrap_vaccin{
+    max-width: 1300px;
+    margin: 0 auto ;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+.text_vaccin{
+    background-color: var(--bleu);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 5%;
+    border: outset 3px black;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+#vaccin table{
+    margin: 0 auto;
+    width: 100%;
+}
+#vaccin .list1 td{
+    width: 20.33333%;
+}
+#vaccin .list2 td{
+    width: 33.33333%;
+}
+
+#vaccin .vaccin_body td{
+    border: solid 1px black;
+    padding: .5rem;
+}
+#vaccin .right{
+    width: 100%;
+}
+
+/***************PROFIL***************************/
+
+
+#profil{
+    padding: 6rem;
 }
 .wrap_profil{
+    max-width: 1200px;
+    margin: 0 auto ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
 }
 
 .information_contact{
-    background-color: lime;
-    padding: 2rem;
-    box-shadow: 2px 5px 7px 0px red;
+    padding: 3rem;
+    margin: 0 auto;
+    /*box-shadow: 2px 2px 5px 0.5px black;*/
+    max-width: 450px;
+    line-height: 3;
+    border-radius: 10%;
+    background-color: white;
+    border: solid 3px var(--bleu);
 }
-#profil h1{
+
+#profil h2{
     text-transform: uppercase;
-    background-color: var(--jaune);
-    width: 6rem;
-    height: 2rem;
     text-align: center;
+    font-size: 4rem;
 }
 .separator_vaccin{
-    background-color: var(--bleu);
+    margin-bottom: 3rem;
+    background-color: var(--jaune);
     width: 100%;
-    height: 3px;
-    margin-top: 1rem;
-
+    height: 2px;
 }
+
 #profil .profil_h3{
-    font-family: lato sans-serif bold;
     font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.information_contact p{
+    text-align: center;
+    font-size: 1.2rem;
 }
 
-/*vaccin*/
-#vaccin{
-    display: flex;
-    justify-content: end;
-    max-width: 100%;
-    margin-right: 10rem;
-    box-shadow: 2px 5px 7px 0px red;
 
+#profil .profil_left {
+    width: 50%;
 }
-.wrap_vaccin{
-
-}
-.text_vaccin{
-
-}
-.list_vaccin{
-
+#profil .profil_right {
+    width: 45%;
 }
 
 
@@ -884,287 +692,97 @@ background-color: var(--jaune);
 
 
 
+/*formulaire*/
+#contact_head {
+    background: url("../img/attente.png") center;
+    background-size: 120%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 10rem;
+}
 
-
-
-/*////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-//*/
-/* texte contact et animation*/
-.text_contact{
+ #contact_head .text_contact{
     display: flex;
     justify-content: center;
     font-size: 3rem;
-    margin: 3rem;
-}
-.text_contact span{
-    background-color: var(--bleu);
-    height: 6rem;
-    width: 14rem;
-    text-align: center;
-    border-radius: 7%;
-    box-shadow: 5px 4px 40px 6px rgba(241,193,17,1);
-
-}
-#contact_head {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 20px auto;
-    height: 6rem;
-    width: 14rem;
-    background: white;
-    border-radius: 7%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: lighter;
-
-    letter-spacing: 2px;
-    transition: 1s box-shadow;
-}
-
-#contact_head:hover {
-    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
-}
-
-#contact_head:hover::before, #contact_head:hover::after {
-    display: block;
-    content: '';
-    position: absolute;
-    height: 6rem;
-    width: 14rem;
-    background: var(--bleu);
-    border-radius: 7%;
-    z-index: -1;
-    animation: 1s clockwise infinite;
-}
-
-#contact_head:hover:after {
-    background: #F3CE5E;
-    animation: 2s counterclockwise infinite;
-}
-
-@keyframes clockwise {
-    0% {
-        top: -5px;
-        left: 0;
-    }
-    12% {
-        top: -2px;
-        left: 2px;
-    }
-    25% {
-        top: 0;
-        left: 5px;
-    }
-    37% {
-        top: 2px;
-        left: 2px;
-    }
-    50% {
-        top: 5px;
-        left: 0;
-    }
-    62% {
-        top: 2px;
-        left: -2px;
-    }
-    75% {
-        top: 0;
-        left: -5px;
-    }
-    87% {
-        top: -2px;
-        left: -2px;
-    }
-    100% {
-        top: -5px;
-        left: 0;
-    }
-}
-
-@keyframes counterclockwise {
-    0% {
-        top: -5px;
-        right: 0;
-    }
-    12% {
-        top: -2px;
-        right: 2px;
-    }
-    25% {
-        top: 0;
-        right: 5px;
-    }
-    37% {
-        top: 2px;
-        right: 2px;
-    }
-    50% {
-        top: 5px;
-        right: 0;
-    }
-    62% {
-        top: 2px;
-        right: -2px;
-    }
-    75% {
-        top: 0;
-        right: -5px;
-    }
-    87% {
-        top: -2px;
-        right: -2px;
-    }
-    100% {
-        top: -5px;
-        right: 0;
-    }
-}
-
-/*formulaire*/
+ }
+ #contact_head h2{
+    color: #121C3A;;
+    text-transform: uppercase;
+ }
 
 #contact{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 4rem;
     background-color: var(--bleu);
-
+    padding: 2rem;
 }
 
-label {
-    margin: 2rem;
-
-}
-form{
-    background-color: white;
-}
-label .name{
-    margin-bottom: 2rem;
-}
-#contact  .contact2{
+.wrap_contact {
+    max-width: 1000px;
+    width:100%;
+    margin: 0 auto;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    gap: 3rem;
-    margin: 2rem;
-}
-
-.emoji_name{
-    position: absolute;
-    width: 20px;
-    right: 48rem;
-    top: 6rem;
-}
-
-.emoji_mail{
-    position: absolute;
-    width: 20px;
-    left: 47rem;
-    top: 6rem;
-}
-textarea{
     display: flex;
-    resize: none;
-    height: 10rem;
-    width: 30rem;
-    margin: auto 0;
-    background-color: #F2F9FC;
-    border: none;
+    flex-direction: column;
+    text-align: center;
 }
+
 #contact form{
-    box-shadow: 12px 0px 15px -1px rgba(0,0,0,0.68);
-    margin: 2rem;
-    border-radius: 2%;
-
+    background-color: white;
+    border-radius: .5rem;
+    padding: 1rem;
+    /*margin-bottom: 6rem;*/
 }
-.contact2{
-
-}
-#contact input{
+#contact form .colonne{
     display: flex;
-    flex-flow: column;
-
-}
-#email{
-    margin-top: 1.5rem;
-}
-#name{
-    margin-top: 1.5rem;
-}
-input ,textarea {padding: .6rem;
-}
-.message{
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
-#submit{
-    display: flex;
-    margin-top: 1rem;
-    margin-left: 18rem;
+#contact  .contact1{
+   display: flex;
+    justify-content: space-around;
     margin-bottom: 2rem;
-    background: linear-gradient(0deg, var(--jaune) 0%,white 100%, var(--jaune) 100%);
-    border-radius: 7%;
-    border: none;
 }
-#submit:hover{
-    opacity: 40%;
-    transition: .5s;
-    cursor: pointer;
+#contact  .contact1 label{
+    margin-bottom: 1rem;
 }
-.input{
-    width: 100%;
+#contact  .contact1 input{
+ padding: 1rem 8rem 1rem 1rem;
+}
+#contact .contact2 {
+  align-items: center;
+}
+#contact .contact2 p{
+    margin-bottom: 1rem;
+}
+#contact .contact2 textarea {
+    width: 82%;
+    height: 200px;
+    font-family: lato;
+    resize: none;
     margin-bottom: 2rem;
-    border-radius: .1rem;
-    border: none;
-    background-color: #F2F9FC;
     padding: 1rem;
 }
-.input:hover{
-    opacity: 50%;
-    background-color: var(--jaune);
+#contact .contact2 input {
+    background-color: var(--bleu);
+    border: solid 2.5px var(--jaune);
+    font-size: 1.2rem;
+    color: white;
+    border-radius: .3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    padding: 1rem 4rem;
 }
+#contact .contact2 input:hover {
+    color: var(--jaune);
+}
+
 
 /* footer*/
 
 #footer{
-        position: sticky;
-        top: 100vh;
+    position: sticky;
+    top: 100vh;
     background-color: black;
     padding: .8rem;
 }
