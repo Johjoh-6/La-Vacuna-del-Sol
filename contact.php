@@ -29,37 +29,44 @@ include ('inc/header.php');
 ?>
 <!--FINIR LE PHPé-->
     <!--Contact -->
+<section id="contact_head">
     <div class="text_contact">
-        <span id="contact_head">Contact</span>
+        <h2 class="title">Contact</h2>
     </div>
-    <div class="bk_contact">
-        <div id="contact">
-            <form action="">
-                <div class="contact2">
-                    <div class="emoji_name"><img src="asset/img/avatar-svgrepo-com.svg" alt=""></div>
-                    <label for="name" class="label_name"> Votre Nom *
-                        <input type="text" id="name" name="name" class="input" placeholder= "Entrez Notre Nom" value="">
-                    </label>
-                    <span class="error"></span>
+</section>
 
-                    <div class="emoji_mail"><img src="asset/img/mail-svgrepo-com.svg" alt=""></div>
-                    <label for="email" class="label_email">Votre E-mail *
-                        <input type="email" id="email" class="input" name="email" placeholder="Entrez Votre E-mail" value="">
-                    </label>
+
+<section id="contact">
+    <div class="wrap_contact">
+
+        <form action="" method="post" class="wrapform" novalidate>
+            <div class="contact1">
+                <div class="nom colonne">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" value="" class="nom" placeholder="&#xf007;  Entrez votre prénom : " style="font-family:Arial, FontAwesome">
                     <span class="error"></span>
                 </div>
-
-                <div class="message">
-                    <label for="message" class="label_message">Message
-                        <textarea name="message" id="message" placeholder="Entrez Votre Message"></textarea>
-
-                        <span class="error"></span>
+                <div class="email colonne">
+                    <label for="email">E-mail :</label>
+                    <input type="email" id="email" name="email" value="" class="input" placeholder="&#xf0e0;  Entrez votre email : " style="font-family:Arial, FontAwesome">
+                    <span class="error"></span>
                 </div>
-                <input type="submit" name="submitted" id="submit"  value="Envoyer le message">
+            </div>
+
+            <div class="contact2 colonne">
+                <p>Message :</p>
+                <textarea name="message" placeholder="Votre message..."><?php if(!empty($_POST['message'])) { echo $_POST['message']; } ?></textarea>
                 <span class="error"></span>
+                <input type="submit" name="submitted" value="Envoyer">
+            </div>
+        </form>
 
-            </form>
-        </div>
     </div>
+</section>
+
+
+
+
+
 
 <?php include ('inc/footer.php')?>

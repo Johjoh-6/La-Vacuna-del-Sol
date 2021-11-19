@@ -4,10 +4,16 @@ require ('inc/pdo.php');
 // Set PHP here
 
 include ('inc/header.php');?>
+
+    <section id="contact_head">
+        <div class="text_contact">
+            <h2 class="title">Crée ton compte</h2>
+        </div>
+    </section>
+
+
     <section id="formulaire">
         <div class="wrap_accounts">
-            <div class="title"><h2>Crée ton compte</h2></div>
-
             <form class="wrap_account" action="" method="post">
                 <div class="form_left">
                     <div>

@@ -1,6 +1,5 @@
-@media (max-width: 1200px){
+@media screen and (max-width: 1200px){
     .wrap2 {
-
         margin: 0 auto;
     }
     #connexion .wrap2 {
@@ -19,9 +18,15 @@
         left: -15%;
         top: 20%;
     }
+
+    #contact_head {
+
+        background-size: 180%;
+    }
+
 }
 
-@media (max-width: 860px){
+@media screen and (max-width: 860px){
     header .wrap nav ul li{
         display: none;
     }
@@ -56,7 +61,7 @@
 }
 
 
-@media (max-width: 800px){
+@media screen and (max-width: 800px){
     .title h2 {
         font-size: 1.7rem;
     }
@@ -84,9 +89,38 @@
         display: flex;
         flex-direction: column;
     }
+
+    #formulaire .wrap_accounts .wrap_account{
+        display: flex;
+        flex-direction: column;
+    }
+    #formulaire .wrap_accounts .wrap_account .sex{
+        display: flex;
+
+        margin-bottom: 1rem;
+    }
+    #formulaire .envoyer{
+       bottom: -10%;
+        left: 0;
+        width: 100%;
+    }
+
+    #contact .contact1 {
+        display: flex;
+        flex-direction: column;
+    }
+    #contact .contact2 textarea {
+        width: 100%;
+    }
+
+    #contact_head {
+        background: url("../img/attente.png") center;
+        background-size: 250%;
+    }
+
 }
 
-@media (max-width: 485px){
+@media screen and (max-width: 485px){
     #details .wrap3 .cards .card{
         width: 100%;
     }
