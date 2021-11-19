@@ -43,6 +43,5 @@
             currentTestimonial = i;
         })
     })</script>
-
 </body>
 </html>
