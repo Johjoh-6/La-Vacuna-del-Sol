@@ -17,8 +17,6 @@ include ('inc/header.php');
                 <img src="asset/img/accueil.png" alt="">
             </div>
         </div>
-
-
         <div class="cadre">
             <form action="" method="post" class="wrapform" novalidate>
                 <label for="login">E-mail ou Pseudo</label>
@@ -33,6 +31,18 @@ include ('inc/header.php');
         </div>
     </div>
 </section>
+
+<section id="parallax">
+    <div class="wrap_para">
+        <h1>Rejoignez nous</h1>
+        <div class="separator"></div>
+        <p>Tout comme nos 11 millions d'autres utilisateurs inscrivez-vous et utiliser la vacuna del sol pour garder la mains sur vos vaccins, benefciez de mails de rappels lorsque un de vos vaccins doit être renouvelé, un service a disposition 7 jours sur 7 de 8h à 21h. </p>
+        <a href="inscription.php">Inscrivez vous ici</a>
+    </div>
+</section>
+
+
+
 
 <section id="details">
     <div class="wrap3">
