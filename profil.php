@@ -77,6 +77,8 @@ include ('inc/header.php');
             </div>
         </div>
     </section>
+=======
+>>>>>>> mathis
 
 
 <?php include ('inc/footer.php');

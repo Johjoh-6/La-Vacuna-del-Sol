@@ -121,12 +121,12 @@ header .wrap nav ul li .box_header:hover{
     top: 0;
 }
 
- #connexion .wrap2 .hotesse{
+#connexion .wrap2 .hotesse{
     position: absolute;
-     width: 60%;
-     top: 5%;
-     left: -40%;
- }
+    width: 60%;
+    top: 5%;
+    left: -40%;
+}
 
 #connexion .wrap2 .cadre{
     background-color: var(--bleu);
@@ -253,7 +253,7 @@ background-color: var(--jaune);
     text-align: center;
 }
 .title {
-     margin-bottom: 2rem;
+    margin-bottom: 2rem;
     padding: 1rem;
     border-bottom: solid 2px var(--jaune);
     margin-bottom: 2rem;
@@ -292,7 +292,7 @@ background-color: var(--jaune);
 
 }
 #details .wrap3 .cards .card img:hover{
-   filter: grayscale(100%);
+    filter: grayscale(100%);
     transition: .5s;
 }
 #details .wrap3 .cards .card h2{
@@ -424,7 +424,7 @@ button.active{
 
 }
 #formulaire div{
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 #formulaire .envoyer{
     position: absolute;
@@ -476,7 +476,7 @@ button.active{
     cursor: pointer;
 }
 .submit_inscription:hover{
-background-color: var(--jaune);
+    background-color: var(--jaune);
     transition: .5s;
 }
 
@@ -545,6 +545,7 @@ background-color: var(--jaune);
 }
 
 /***************PROFIL***************************/
+
 
 
 #profil{
@@ -688,10 +689,6 @@ background-color: var(--jaune);
 
 
 
-
-
-
-
 /*formulaire*/
 #contact_head {
     background: url("../img/attente.png") center;
@@ -701,6 +698,12 @@ background-color: var(--jaune);
     padding: 10rem;
 }
 
+.text_contact span{
+    background-color: var(--bleu);
+    height: 6rem;
+    width: 14rem;
+    text-align: center;
+    border-radius: 7%; }
  #contact_head .text_contact{
     display: flex;
     justify-content: center;
@@ -716,10 +719,24 @@ background-color: var(--jaune);
     padding: 2rem;
 }
 
+
 .wrap_contact {
     max-width: 1000px;
     width:100%;
     margin: 0 auto;
+}
+#contact label {
+    margin: 2rem;
+
+}
+#contact form{
+    background-color: white;
+}
+#contact label .name{
+    margin-bottom: 2rem;
+}
+#contact  .contact2{
+>>>>>>> mathis
     display: flex;
     display: flex;
     flex-direction: column;
@@ -1379,8 +1396,8 @@ background-color: var(--jaune);
 /* footer*/
 
 #footer{
-        /*position: sticky;*/
-        /*top: 100vh;*/
+    /*position: sticky;*/
+    /*top: 100vh;*/
     background-color: black;
     padding: .8rem;
 }
@@ -1401,21 +1418,20 @@ background-color: var(--jaune);
     justify-content: space-between;
 }
 #footer nav ul li{
-   padding: .5rem;
+    padding: .5rem;
 }
 
 /*logo*/
 
 #footer .reseau ul{
-display: flex;
+    display: flex;
     align-items: center;
 }
 #footer .reseau ul li{
-  padding: .5rem;
+    padding: .5rem;
 }
 #footer .reseau img{
- width: 1.4rem;
->>>>>>> master
+    width: 1.4rem;
 }
 
 /*////////////////////////////////////////////////////////////////////////////
