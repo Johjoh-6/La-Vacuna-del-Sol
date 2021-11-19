@@ -632,12 +632,19 @@ button.active{
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 //*/
+/*profil*/
 #profil{
     width: 900px;
     display: flex;
     justify-content: center;
 }
 .wrap_profil{
+}
+
+.information_contact{
+    background-color: lime;
+    padding: 2rem;
+    box-shadow: 2px 5px 7px 0px red;
 }
 #profil h1{
     text-transform: uppercase;
@@ -651,11 +658,31 @@ button.active{
     width: 100%;
     height: 3px;
     margin-top: 1rem;
+
 }
 #profil .profil_h3{
-
+    font-family: lato sans-serif bold;
+    font-weight: bold;
 }
 
+/*vaccin*/
+#vaccin{
+    display: flex;
+    justify-content: end;
+    max-width: 100%;
+    margin-right: 10rem;
+    box-shadow: 2px 5px 7px 0px red;
+
+}
+.wrap_vaccin{
+
+}
+.text_vaccin{
+
+}
+.list_vaccin{
+
+}
 
 
 

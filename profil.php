@@ -19,7 +19,7 @@ include ('inc/header.php');
                 <p>GrosGay</p>
                 <h3 class="profil_h3">Votre prénom</h3>
                 <p>Maxence</p>
-                <h3 class="profil_h3">Votre àge</h3>
+                <h3 class="profil_h3">Votre âge</h3>
                 <p>14 ans</p>
             </div>
         </div>
