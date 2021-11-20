@@ -546,54 +546,62 @@ button.active{
 
 /***************PROFIL***************************/
 
+.text_contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text_contact h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
 
-
+}
 #profil{
-    padding: 6rem;
+    padding: 2rem 0 5rem 0;
 }
 .wrap_profil{
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto ;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items:end;
+    align-items:center;
+}
+.wrap_profil .profil_right{
+    transform: scaleX(-1);
 }
 
-.information_contact{
-    padding: 3rem;
-    margin: 0 auto;
-    /*box-shadow: 2px 2px 5px 0.5px black;*/
-    max-width: 450px;
-    line-height: 3;
-    border-radius: 10%;
-    background-color: white;
+#profil .title_profil {
+    font-size: 1.5rem;
+    border-bottom: solid 1px grey;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#profil .information_contact{
     border: solid 3px var(--bleu);
+    border-radius: 1rem;
+}
+#profil .profil_name {
+    padding: 1rem 0 0 4rem;
+    display: flex;
+    align-items: end;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    max-width: 550px;
 }
 
-#profil h2{
+#profil .information_contact h3{
+    /*margin-bottom: 1rem;*/
+    font-size: 1.5rem;
     text-transform: uppercase;
-    text-align: center;
-    font-size: 4rem;
-}
-.separator_vaccin{
-    margin-bottom: 3rem;
-    background-color: var(--jaune);
-    width: 100%;
-    height: 2px;
-}
-
-#profil .profil_h3{
     font-weight: bold;
-    font-size: 1.2rem;
-    text-align: center;
-    text-transform: uppercase;
 }
-.information_contact p{
-    text-align: center;
+#profil .information_contact p{
+    /*margin-bottom: 2rem;*/
     font-size: 1.2rem;
 }
-
 
 #profil .profil_left {
     width: 50%;

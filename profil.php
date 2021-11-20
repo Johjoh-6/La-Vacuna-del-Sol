@@ -9,27 +9,38 @@ require ('inc/pdo.php');
 include ('inc/header.php');
 ?>
 
+    <div class="text_contact">
+        <h2 class="title">Profil</h2>
+    </div>
     <!--USER Profil-->
     <section id="profil">
         <div class="wrap_profil">
             <div class="profil_left">
-                <div class="profil_h2">
-                    <h2>Profil</h2>
-                </div>
-                <div class="separator_vaccin"></div>
                 <div class="information_contact">
-                    <h3 class="profil_h3">Votre nom :</h3>
-                    <p>lpb</p>
-                    <h3 class="profil_h3">Votre prénom :</h3>
-                    <p>Maxence</p>
-                    <h3 class="profil_h3">Votre âge :</h3>
-                    <p>12 ans</p>
+                    <div class="title_profil">
+                        <h2>Information</h2>
+                    </div>
+                    <div class="profil_name">
+                        <h3 class="profil_h3">Votre nom :</h3>
+                        <p>Benzema</p>
+                    </div>
+                    <div class="profil_name">
+                        <h3 class="profil_h3">Votre prénom :</h3>
+                        <p>Karim</p>
+                    </div>
+                    <div class="profil_name">
+                        <h3 class="profil_h3">Votre email :</h3>
+                        <p>Karim@gmail.com</p>
+                    </div>
+                    <div class="profil_name">
+                        <h3 class="profil_h3">Votre âge :</h3>
+                        <p>33 ans</p>
+                    </div>
                 </div>
             </div>
             <div class="profil_right">
                 <img src="./asset/img/profil.png" alt="">
             </div>
-
         </div>
     </section>
 
@@ -77,8 +88,6 @@ include ('inc/header.php');
             </div>
         </div>
     </section>
-=======
->>>>>>> mathis
 
 
 <?php include ('inc/footer.php');
