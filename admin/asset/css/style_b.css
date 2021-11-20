@@ -96,7 +96,6 @@ thead tr th {
 }
 
 th, td {
-    overflow-y: scroll;
 }
 
 th:hover,

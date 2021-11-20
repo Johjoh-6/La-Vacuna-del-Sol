@@ -61,16 +61,14 @@
                 <span>Gestion Vaccin</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="management-testimonial.php"  id="alertsDropdown" role="button"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link" href="management-testimonial.php" >
                 <i class="fas fa-comments"></i>
                 <!-- Counter - Alerts -->
                <!-- <p class="badge badge-danger badge-counter">3+</p>-->
                 <span>Gestion Avis</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="msg_b.php" id="alertsDropdown" role="button"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link" href="msg_b.php" >
                 <i class="fas fa-envelope"></i>
                 <!-- Counter - Alerts -->
                     <!--<p class="badge badge-danger badge-counter">0</p>-->
