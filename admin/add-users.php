@@ -1,14 +1,7 @@
 <?php
 
-
-/*require '../inc/func.php';
-require '../inc/pdo.php';
-
-*/
-
 $error = [];
-debug($error);
-debug($_POST);
+$succes = false;
 if (!empty($_POST['submitted'])) {
     //For users
     //XSS
@@ -34,7 +27,7 @@ if (!empty($_POST['submitted'])) {
         $query->execute();
         $verifEmail = $query->fetch();
         if(!empty($verifEmail)) {
-            $error['email'] = 'Cett email existe dèjà';
+            $error['email'] = 'Cette email existe déjà';
         }
     }
 
@@ -60,7 +53,7 @@ if (!empty($_POST['submitted'])) {
 
         //executer la query
         $query->execute();
-
+        $succes = true;
     }
 }
 

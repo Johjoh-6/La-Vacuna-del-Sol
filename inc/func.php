@@ -223,3 +223,18 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
+
+
+function showForUpdate ($key, $data){
+    if(!empty($_POST[$key])) {
+        echo $_POST[$key];
+    } else {
+        echo $data;
+    }
+}
+
+function isSelected ($item, $key, $value){
+if ($item[$key] == $value) {
+    echo 'selected';
+}
+}
