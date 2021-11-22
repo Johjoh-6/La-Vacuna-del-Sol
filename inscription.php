@@ -48,7 +48,7 @@ include ('inc/header.php');?>
                     </div>
                     <div class="mdp2">
                         <label for="password_confirm">Confirmer votre mot de passe:</label>
-                        <input class="input_inscription" type="password" name="password_confirm" placeholder="Mot de passe">
+                        <input class="input_inscription" type="password" name="c" placeholder="Mot de passe">
                         <span class="error"><?= returnError($error, 'password_confirm');?></span>
                     </div>
                     <h3>Sex :</h3>

@@ -2,33 +2,40 @@
 require ('inc/func.php');
 require ('inc/pdo.php');
 // Set PHP here
-$errors = [];
-$success = false;
-if(!empty($_POST['submitted'])) {
-    $name     = cleanXss('name');
-    $email     = cleanXss('email');
-    $message    = cleanXss('message');
+$error = [];
+debug($error);
+debug($_POST);
+if (!empty($_POST['submitted'])) {
+    //For users
+    //XSS
 
-    $errors = validInput($errors,$name,'name',2, 200);
-    $errors = validInput($errors,$message,'message',5, 500);
-    $errors = emailValidation($errors,$email,'email');
+    $name = cleanXss('name');
+    $email = cleanXss('email');
+    $content = cleanXss('content');
 
+    // Error
+    $error = validInput($error,$name, 'name', 1, 100);
+    $error = mailValidation($error, $email, 'email');
+    $error = validInput($error,$content,'content', 10, 1000);
 
+        if(count($error)==0){
+    $sql = "INSERT INTO vds_msg (name,content,email) 
+                VALUES (:nam,:content,:email)";
 
-    if(count($errors) == 0) {
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':nam', $name, PDO::PARAM_STR);
+    $query->bindValue(':content', $content, PDO::PARAM_STR);
+    $query->bindValue(':email', $email, PDO::PARAM_STR);
 
-        $sql = "INSERT INTO vds (email,message,created_at)
-                VALUES (:email,:message,NOW())";
-        $query = $pdo->prepare($sql);
-        $query->bindValue(':email',  $email,PDO::PARAM_STR);
-        $query->bindValue(':message',$message, PDO::PARAM_STR);
-        $query->execute();
-    }
+    //executer la query
+    $query->execute();
+
+        }
 }
 include ('inc/header.php');
 ?>
 <!--FINIR LE PHPé-->
-    <!--Contact -->
+<!--Contact -->
 <section id="contact_head">
     <div class="text_contact">
         <h2 class="title">Contact</h2>
@@ -42,25 +49,24 @@ include ('inc/header.php');
         <form action="" method="post" class="wrapform" novalidate>
             <div class="contact1">
                 <div class="nom colonne">
-                    <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name="nom" value="" class="nom" placeholder="&#xf007;  Entrez votre prénom : " style="font-family:Arial, FontAwesome">
-                    <span class="error"></span>
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" value="<?= returnValue('name') ?>" class="nom" placeholder="&#xf007;  Entrez votre prénom : " style="font-family:Arial, FontAwesome">
+                    <span class="error"><?= returnError($error,'name')?> </span>
                 </div>
                 <div class="email colonne">
                     <label for="email">E-mail :</label>
-                    <input type="email" id="email" name="email" value="" class="input" placeholder="&#xf0e0;  Entrez votre email : " style="font-family:Arial, FontAwesome">
-                    <span class="error"></span>
+                    <input type="email" id="email" name="email" value="<?= returnValue('email') ?>" class="input" placeholder="&#xf0e0;  Entrez votre email : " style="font-family:Arial, FontAwesome">
+                    <span class="error"><?= returnError($error,'email')?></span>
                 </div>
             </div>
 
             <div class="contact2 colonne">
                 <p>Message :</p>
-                <textarea name="message" placeholder="Votre message..."><?php if(!empty($_POST['message'])) { echo $_POST['message']; } ?></textarea>
-                <span class="error"></span>
+                <textarea name="content" id="content" placeholder="Votre message..."><?= returnValue('content') ?></textarea>
+                <span class="error"><?= returnError($error,'content')?></span>
                 <input type="submit" name="submitted" value="Envoyer">
             </div>
         </form>
-
     </div>
 </section>
 
