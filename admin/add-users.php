@@ -34,7 +34,7 @@ if (!empty($_POST['submitted'])) {
         $query->execute();
         $verifEmail = $query->fetch();
         if(!empty($verifEmail)) {
-            $error['email'] = 'Cett email existe dèjà';
+            $error['email'] = 'Cette email existe dèjà';
         }
     }
 
