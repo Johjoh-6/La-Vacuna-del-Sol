@@ -3,8 +3,7 @@ require ('inc/func.php');
 require ('inc/pdo.php');
 // Set PHP here
 $error = [];
-debug($error);
-debug($_POST);
+$succes = false;
 if (!empty($_POST['submitted'])) {
     //For users
     //XSS
@@ -19,8 +18,8 @@ if (!empty($_POST['submitted'])) {
     $error = validInput($error,$content,'content', 10, 1000);
 
         if(count($error)==0){
-    $sql = "INSERT INTO vds_msg (name,content,email) 
-                VALUES (:nam,:content,:email)";
+    $sql = "INSERT INTO vds_msg (name,content,email, created_at) 
+                VALUES (:nam,:content,:email, NOW())";
 
     $query = $pdo->prepare($sql);
     $query->bindValue(':nam', $name, PDO::PARAM_STR);
@@ -29,12 +28,12 @@ if (!empty($_POST['submitted'])) {
 
     //executer la query
     $query->execute();
-
+    $succes = true;
         }
 }
 include ('inc/header.php');
 ?>
-<!--FINIR LE PHPé-->
+<!--FINIR LE PHP-->
 <!--Contact -->
 <section id="contact_head">
     <div class="text_contact">
@@ -45,7 +44,12 @@ include ('inc/header.php');
 
 <section id="contact">
     <div class="wrap_contact">
-
+    <?php if ($succes){ ?>
+        <div>
+            <p>Message envoyer !</p>
+            <a href="index.php"><p>Retour sur la page d'accuiel</p></a>
+        </div>
+    <?php }else { ?>
         <form action="" method="post" class="wrapform" novalidate>
             <div class="contact1">
                 <div class="nom colonne">
@@ -67,6 +71,7 @@ include ('inc/header.php');
                 <input type="submit" name="submitted" value="Envoyer">
             </div>
         </form>
+        <?php }?>
     </div>
 </section>
 

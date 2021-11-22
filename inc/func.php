@@ -276,3 +276,25 @@ function joinUserId($join){
     $query->execute();
     return  $query->fetchAll();
 }
+
+function getTestiRandomLimit( $limit){
+    global $pdo;
+    $sql= "SELECT vds_users.id,vds_users.name as name, vds_users.prenom as prenom, vds_testimonial.* 
+    FROM vds_users 
+    INNER JOIN vds_testimonial
+    ON vds_users.id = vds_testimonial.id_user
+    ORDER BY vds_testimonial.created_at LIMIT $limit
+    ";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    return $query->fetchAll();
+}
+
+
+function joinUserVaccin(){
+    global $pdo;
+    $sql= "";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    return  $query->fetchAll();
+}

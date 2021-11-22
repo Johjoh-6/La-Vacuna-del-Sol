@@ -333,9 +333,8 @@ background-color: var(--jaune);
 }
 
 .wrapper{
-    width: 300%;
+    width: 500%;
     /* 300% 'caz we have 3 cards */
-    min-height: 100%;
     display: flex;
     justify-content: space-between;
     transition: 1s;
@@ -343,6 +342,7 @@ background-color: var(--jaune);
 
 #slider .card{
     min-height: 100%;
+    width: 100%;
     background: #fff;
     border-radius: .3rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -351,6 +351,7 @@ background-color: var(--jaune);
     align-items: center;
     padding: 20px;
     margin: 0 1rem;
+
 }
 
 .card-body{
@@ -366,6 +367,9 @@ background-color: var(--jaune);
     font-size: 20px;
     line-height: 30px;
     margin-top: 30px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .rating{
