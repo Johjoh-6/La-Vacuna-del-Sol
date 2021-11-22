@@ -46,46 +46,79 @@ include ('inc/header.php');
 
     <section id="vaccin">
         <div class="wrap_vaccin">
+            <div class="add_vac">
+                <a class="btn" onclick="myFunctions()">Ajoutez un vaccin a votre liste</a>
+                <form action="" class="add_form" id="add">
+                    <div class="colonne">
+                        <label for="vaccin-select">Choisissez un vaccin :</label>
+                        <select name="vaccins" id="vaccin-select">
+                            <option value="">--SVP Choisissez un vaccin--</option>
+                            <option value="aztrazenka">Astrazeneka</option>
+                            <option value="moderna">Moderna</option>
+                            <option value="pfizer">Pfizer</option>
+                            <span class="error"></span>
+                        </select>
+                        <label for="date-add">Date de votre dernier vaccin :</label>
+                        <input class="date-add" type="date" name="dob" value="<?php echo date('Y-m-d', strtotime(date('Y-m-d')));?>">
+                        <span class="error"></span>
+
+                        <input type="submit" name="submitted" value="Envoyer">
+                    </div>
+                </form>
+            </div>
             <div class="right">
                 <div class="text_vaccin">
                     <p>Informations sur vos vaccinations</p>
                 </div>
-                    <table class="list_vaccin list1">
-                        <thead>
-                        <tr class="vaccin_head">
-                            <th></th>
-                            <th>vds_vaccin</th>
-                            <th></th>
-                            <th>vds_user_vaccin</th>
-                        </tr>
-                        </thead>
 
-                        <tbody>
-                        <tr class="vaccin_body">
-                            <td>vaccin</td>
-                            <td>user_date_vaccin</td>
-                            <td>vaccin_rappel</td>
-                            <td>vaccin_rappel_user</td>
-                            <td>vaccin_status</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div class="grid">
+                    <div class="head_grid gridflex">
+                        <h2>Nom du vaccin</h2>
+                        <h2>Date de la derniere dose</h2>
+                        <h2>Séparation entre les doses</h2>
+                        <h2>Votre prochaine dose</h2>
+                        <h2>Obligatoire</h2>
+                    </div>
 
-                 <table class="list_vaccin list2">
-                        <tr class="vaccin_head">
-                            <th></th>
-                            <th>Prochaine dose</th>
-                            <th></th>
-                        </tr>
-                        <tbody>
-                            <tr class="vaccin_body">
-                                <td>vaccin</td>
-                                <td>vaccin_staus</td>
-                                <td>vaccin_rappel</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="body_grid gridflex">
+                            <p>vaccin</p>
+                            <p>user_date_vaccin</p>
+                            <p>vaccin_rappel</p>
+                            <p>vaccin_rappel_user</p>
+                            <p>obligatoire</p>
+                    </div>
             </div>
+                <div class="grid">
+                    <div class="footer_grid gridflex">
+                        <h2>Nom du vaccin</h2>
+                        <h2>Date de la derniere dose</h2>
+                        <h2>Séparation entre les doses</h2>
+                        <h2>Votre prochaine dose</h2>
+                        <h2>Obligatoire</h2>
+                    </div>
+            </div>
+
+           <p class="addnew">Vous souhaitez ajouter un vaccin qui n'est pas sur la liste <a class="btn" onclick="myFunction3()">cliquez ici.</a></p>
+            <form action="" class="add_form" id="ads">
+                <div class="form_add">
+                    <label for="nam_vac">Nom du vaccin :</label>
+                    <input class="nam_vac" type="text" name="nam_vac" placeholder="Le nom de votre vaccin ici" value="">
+                    <span class="error"></span>
+
+                    <label for="desc">Description de votre vaccin :</label>
+                    <textarea name="message" placeholder="Votre description"></textarea>
+                    <span class="error"></span>
+
+                    <label for="date-select">Nombre de mois pour rappels :</label>
+                    <input type="number" name="date-select" placeholder="entrez le nombre de mois ici">
+                    <span class="error"></span>
+                    </select>
+
+
+                    <input class="submit" type="submit" name="submitted" value="Envoyer">
+                </div>
+
+            </form>
         </div>
     </section>
 

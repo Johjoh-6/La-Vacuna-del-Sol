@@ -481,68 +481,6 @@ button.active{
 }
 
 
-.list_vaccin{
-    background-color: white;
-    max-width: 100%;
-    width: 100%;
-    font-size: 1.5rem;
-    text-align: center;
-    border-radius: 3%;
-    border: outset 3px var(--bleu);
-    box-shadow: 2px 5px 7px 0px black;
-}
-#vaccin table{
-    margin: 0 auto;
-    width: 100%;
-}
-
-
-/******************VACCIN*/
-#vaccin{
-    background-color: violet;
-    padding: 10rem;
-}
-
-#vaccin .list_vaccin  {
-    margin-bottom: 2rem;
-}
-#vaccin .list_vaccin tr th {
-    padding: 1rem;
-}
-.wrap_vaccin{
-    max-width: 1300px;
-    margin: 0 auto ;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.text_vaccin{
-    background-color: var(--bleu);
-    text-align: center;
-    margin-bottom: 2rem;
-    border-radius: 5%;
-    border: outset 3px black;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-}
-#vaccin table{
-    margin: 0 auto;
-    width: 100%;
-}
-#vaccin .list1 td{
-    width: 20.33333%;
-}
-#vaccin .list2 td{
-    width: 33.33333%;
-}
-
-#vaccin .vaccin_body td{
-    border: solid 1px black;
-    padding: .5rem;
-}
-#vaccin .right{
-    width: 100%;
-}
 
 /***************PROFIL***************************/
 
@@ -610,94 +548,202 @@ button.active{
     width: 45%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*formulaire*/
+/**************************************VACCIN**************************/
+
+#vaccin{
+    background-color: var(--bleu);
+    padding: 1rem 0 4rem 0;
+}
+.wrap_vaccin{
+    max-width: 1300px;
+    margin: 0 auto ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem;
+}
+
+#vaccin .text_vaccin {
+    border: solid 2px white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+    color: black;
+    background-color: transparent;
+}
+
+#vaccin .grid {
+    display: flex;
+    flex-direction: column;
+}
+
+#vaccin  .gridflex {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /*border: solid 2px black;*/
+}
+#vaccin .head_grid {
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    background-color: #2B2929;
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.59);
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.59);
+    z-index: 22;
+}
+
+
+#vaccin  .body_grid {
+    margin-bottom: 2rem;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+}
+#vaccin  .footer_grid {
+    background-color: #2B2929;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.59);
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.59);
+    z-index: 23;
+}
+#vaccin  h2{
+    font-size: 1.3rem;
+    width: 23.333%;
+    text-align: center;
+    color: white;
+    padding: .5rem;
+}
+#vaccin  p{
+   font-size: 1.3rem;
+    text-align: center;
+    padding: .5rem;
+}
+/*******************************************ADD VAC**********************************/
+
+#vaccin .wrap_vaccin .addnew{
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+
+}
+#vaccin .wrap_vaccin .addnew a{
+    margin-left: .3rem;
+    color: var(--jaune);
+}
+
+#vaccin .add_vac{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+    z-index: 99;
+    flex-direction: column;
+}
+#vaccin .add_vac form{
+    margin: 0 auto;
+    display: none;
+    padding: 0;
+}
+#vaccin .add_vac form .colonne{
+    display: flex;
+    flex-direction: column;
+}
+#vaccin .add_vac form.responsive{
+  display: block;
+}
+#vaccin .add_vac form label{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: var(--jaune);
+}
+#vaccin .add_vac form select{
+    margin-bottom: 1.5rem;
+}
+#vaccin .add_vac form input,#vaccin .add_vac form select{
+    padding: 1rem;
+    border-radius: .3rem;
+    border: none;
+}
+#vaccin .add_vac form input{
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+#vaccin .add_vac form input:hover{
+    background-color: var(--jaune);
+    transition: .5s;
+}
+
+#vaccin .add_vac a{
+    background-color: transparent;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: .3rem;
+    border: solid 2px var(--jaune);
+    width: 100%;
+    text-align: center;
+}
+#vaccin .add_vac a:hover{
+  background-color: var(--jaune);
+    transition: .5s;
+    cursor: pointer;
+}
+#vaccin .addnew{
+    cursor: pointer;
+}
+#vaccin .add_form {
+    display: none;
+}
+#vaccin .add_form .form_add{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#vaccin .add_form.responsive {
+    display: block;
+}
+#vaccin .add_form::placeholder{
+    color: var(--jaune);
+}
+#vaccin .add_form label {
+    color: var(--jaune);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+#vaccin .add_form input,#vaccin .add_form  {
+    padding: 1rem;
+    border-radius: .3rem;
+    border: none;
+    margin-bottom: 2rem;
+}
+#vaccin .add_form .submit{
+    cursor: pointer;
+}
+#vaccin .add_form .submit:hover{
+    background-color: var(--jaune);
+    transition: .5s;
+}
+
+#vaccin .add_form textarea {
+    height: 200px;
+    resize: none;
+    margin-bottom: 1rem;
+    border-radius: .3rem;
+    padding: .5rem;
+    font-family: lato;
+}
+
+
+/***********************************************formulaire de contact*******************************/
 #contact_head {
     background: url("../img/attente.png") center;
     background-size: 120%;
@@ -744,8 +790,6 @@ button.active{
     margin-bottom: 2rem;
 }
 #contact  .contact2{
->>>>>>> mathis
-    display: flex;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -801,474 +845,6 @@ button.active{
 #contact .contact2 input:hover {
     color: var(--jaune);
 }
-
-
-/* footer*/
-
-#footer{
-    position: sticky;
-    top: 100vh;
-    background-color: black;
-    padding: .8rem;
-}
-#footer .wrap6{
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 0.8rem;
-    justify-content: space-between;
-    align-items: center;
-}
-#footer span{
-    color: white;
-    margin-right: 17rem;
-}
-#footer  nav{
-}
-#footer nav ul li{
-    color: white;
-}
-#footer nav ul li a:hover{
-    color: var(--jaune);
-}
-#footer nav ul{
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 1rem;
-    justify-content: space-between;
-}
-/*logo*/
-
-#footer .reseau ul{
-    display: flex;
-}
-#footer .reseau ul li{
-    padding-left: 1.5rem;
-    padding-top: .3rem;
-}
-#footer .reseau img{
-    width: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1441,6 +1017,558 @@ button.active{
 #footer .reseau img{
     width: 1.4rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////

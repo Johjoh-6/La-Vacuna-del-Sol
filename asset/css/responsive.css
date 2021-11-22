@@ -20,48 +20,142 @@
     }
 
     #contact_head {
-
         background-size: 180%;
     }
 
+    #profil .information_contact{
+        padding-right: 1rem;
+    }
 }
 
-@media screen and (max-width: 860px){
-    header .wrap nav ul li{
+@media screen and (max-width: 860px) {
+    header .wrap nav ul li {
         display: none;
     }
 
-    header .wrap  .icon{
+    header .wrap .icon {
         display: block;
     }
-    header.responsive .wrap .logo{
+
+    header.responsive .wrap .logo {
         display: none;
     }
-    header.responsive .wrap nav ul li{
+
+    header.responsive .wrap nav ul li {
         display: block;
     }
-    header .wrap nav ul{
+
+    header .wrap nav ul {
         display: flex;
         flex-direction: column;
     }
 
-    #connexion .wrap2 .hotesse{
+    #connexion .wrap2 .hotesse {
         width: 175px;
         height: 175px;
         left: 60%;
         top: 55%;
         transform: scaleX(-1);
     }
-    #connexion .wrap2 .box .rond{
+
+    #connexion .wrap2 .box .rond {
         width: 165px;
         height: 165px;
         left: 65%;
         top: 55%;
     }
+
+    .wrap_profil {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #profil .profil_name {
+        padding: 1rem 0 0 4rem;
+        display: flex;
+        /*flex-direction: column;*/
+        align-items: flex-start;
+        margin-bottom: 2rem;
+        justify-content: space-between;
+        max-width: 550px;
+    }
+
+    #profil .profil_left {
+        width: 95%;
+    }
+
+    .wrap_profil .profil_right {
+        display: none;
+    }
+
+    #vaccin .grid h2 {
+        font-size: 1rem;
+        /*text-align: left;*/
+    }
+
+    #vaccin .grid p {
+        font-size: 1rem;
+        /*text-align: left;*/
+    }
 }
+    @media screen and (max-width: 640px){
+        #vaccin .grid {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 1rem;
+        }
+        #vaccin .head_grid {
+            display: flex;
+            flex-direction: column;
+            width: 49.333%;
+            border-top-left-radius: .3rem;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: .3rem;
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+        }
 
+        #vaccin  .body_grid {
+            display: flex;
+            flex-direction: column;
+            width: 49.333%;
+            margin-bottom: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: .3rem;
+            border-bottom-right-radius: .3rem;
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+        }
+        #vaccin .footer_grid {
+            display: flex;
+            flex-direction: column;
+            width: 49.333%;
+            border-top-left-radius: .3rem;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: .3rem;
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+        }
 
-@media screen and (max-width: 800px){
+        #vaccin  h2 {
+            font-size: 1.6rem;
+            width: 99.333%;
+            text-align: center;
+            color: white;
+            padding: .5rem;
+        }
+        #vaccin  p{
+            font-size: 1.3rem;
+            text-align: center;
+            width: 99.3333%;
+            padding: .5rem;
+        }
+        #vaccin .addnew {
+            font-size: .8rem;
+        }
+    }
+
+    @media screen and (max-width: 800px){
     .title h2 {
         font-size: 1.7rem;
     }
@@ -90,13 +184,17 @@
         flex-direction: column;
     }
 
+    #vaccin{
+        background-color: var(--bleu);
+        padding: 1rem;
+    }
+
     #formulaire .wrap_accounts .wrap_account{
         display: flex;
         flex-direction: column;
     }
     #formulaire .wrap_accounts .wrap_account .sex{
         display: flex;
-
         margin-bottom: 1rem;
     }
     #formulaire .envoyer{
@@ -117,10 +215,27 @@
         background: url("../img/attente.png") center;
         background-size: 250%;
     }
-
+}
+@media (max-width: 550px){
+    #parallax {
+        display: none;
+    }
+    #profil .profil_name {
+        padding: 0 0 0 1rem;
+    }
+    #profil .profil_name h3 {
+        font-size: 1.1rem;
+    }
+    #profil .profil_name p {
+        font-size: 1rem;
+    }
 }
 
+
 @media screen and (max-width: 485px){
+    #details .wrap3 .cards .card{
+        width: 100%;
+    }
     #details .wrap3 .cards .card{
         width: 100%;
     }
@@ -144,12 +259,31 @@
         display: flex;
         flex-direction: column;
     }
-}
-
-@media (max-width: 550px){
-    #parallax {
-        display: none;
+    #vaccin  .grid h2{
+        font-size: .8rem;
+        padding: .2rem;
     }
-
+    #vaccin  .grid p{
+        font-size: .7rem;
+        text-align: left;
+        width: 99.3333%;
+        padding: 0;
+    }
+    #vaccin .addnew {
+        font-size: .8rem;
+        display: flex;
+        flex-direction: column;
+    }
 }
+
+@media (max-width: 320px){
+    #profil .profil_name {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
 
