@@ -30,11 +30,17 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])&& !empty($_GET['table']) && i
 
             /*If not error*/
             if (count($error) == 0) {
-                $sql = "INSERT INTO vds_vaccin (name, content, rappel,obligatoire, status)
-                VALUES (:nam ,:content,:rappel,:obligatoire,:status)";
+                $sql = "UPDATE vds_vaccin SET 
+                      name = :nam,
+                      content = :content,
+                      rappel = :rappel,
+                      obligatoire = :obligatoire,
+                      status = :status 
+                        WHERE id = :id";
                 // Prepare the request
                 $query = $pdo->prepare($sql);
                 // Injection SQL
+                $query->bindValue(':id', $id, PDO::PARAM_INT);
                 $query->bindValue(':nam', $name, PDO::PARAM_STR);
                 $query->bindValue(':content', $content, PDO::PARAM_STR);
                 $query->bindValue(':rappel', $rappel, PDO::PARAM_INT);
@@ -64,25 +70,35 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])&& !empty($_GET['table']) && i
             $error = validInput($error, $sex, 'sexe', 0, 30);
             $error = validInput($error, $role, 'role', 1, 30);
             $error = mailValidation($error, $email, 'email');
-            if(empty($errors['email'])) {
-                $sql = "SELECT * FROM vds_users WHERE email = :email";
-                $query = $pdo->prepare($sql);
-                $query->bindValue(':email',$email,PDO::PARAM_STR);
-                $query->execute();
-                $verifEmail = $query->fetch();
-                if(!empty($verifEmail)) {
-                    $error['email'] = 'Cette email existe déjà';
+            if ($email != $item['email']) {
+                if (empty($errors['email'])) {
+                    $sql = "SELECT * FROM vds_users WHERE email = :email";
+                    $query = $pdo->prepare($sql);
+                    $query->bindValue(':email', $email, PDO::PARAM_STR);
+                    $query->execute();
+                    $verifEmail = $query->fetch();
+                    if (!empty($verifEmail)) {
+                        $error['email'] = 'Cette email existe déjà';
+                    }
                 }
             }
             debug($error);
+            debug($_POST);
             /*If not error*/
             if (count($error) == 0) {
-                $sql = "INSERT INTO vds_users (name, prenom, dob, sexe, email, role) 
-                VALUES (:nam,:prenom,:dob,:sexe,:email, :rol )";
+                $sql = "UPDATE vds_users SET 
+                      name = :nam,
+                      prenom = :prenom,
+                      dob = :dob,
+                      sexe = :sexe,
+                      email = :email,
+                      role = :rol
+                        WHERE id = :id";
 
                 // Prepare la request
                 $query = $pdo->prepare($sql);
                 // Injection SQL
+                $query->bindValue(':id', $id, PDO::PARAM_INT);
                 $query->bindValue(':nam', $name, PDO::PARAM_STR);
                 $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
                 $query->bindValue(':dob', $dob, PDO::PARAM_STR);
@@ -116,12 +132,39 @@ include ('inc/header_b.php');
     <div class="container-fluid">
 
         <!-- Page Heading -->
+        <?php if ($succes){?>
+            <div class="text-center mt-5" >
+                <div class="h3 mx-auto mb-4 mt-4 text-center text-yellow font-weight-bold">Modification réussi</div>
+                <a onclick="javascript:history.go(-2)" class="btn btn-primary "><p class="text-blue-500 mb-0">Revenir sur la page précedente</p></a>
+            </div>
+        <?php  } else {?>
         <h1 class="h3 mb-4 mt-4 text-center text-yellow font-weight-bold">Modifie</h1>
         <form action="" method="post">
             <label for="name" class="form-label small">Nom : </label>
             <input class="form-control" type="text" placeholder="<?= $item['name'];?>" name="name" aria-label="name" id="name" value="<?= showForUpdate('name', $item['name']);?>">
             <span class="error-input"><?= returnError($error, 'name');?></span>
+            <?php if ($tableName == 'vds_users') { ?>
+            <label for="prenom" class="form-label small">Prenom : </label>
+            <input class="form-control" type="text" placeholder="<?= $item['prenom'];?>" name="prenom" aria-label="prenom" id="prenom" value="<?= showForUpdate('prenom', $item['prenom']);?>">
+            <span class="error-input"><?= returnError($error, 'prenom');?></span>
 
+            <label for="dob" class="form-label small">DOB : </label>
+            <input class="form-control" type="date" placeholder="<?= $item['dob'];?>" name="dob" aria-label="dob" id="dob" value="<?= showForUpdate('dob', $item['dob']);?>">
+            <span class="error-input"><?= returnError($error, 'dob');?></span>
+
+            <label for="sexe" class="form-label small">Sexe : </label>
+                <select class="form-control" aria-label="sexe" name="sexe" id=sexe">
+                    <option value="homme" <?= isSelected($item,'sexe','homme'); ?>>Homme</option>
+                    <option value="femme" <?= isSelected($item,'sexe','femme'); ?>>Femme</option>
+                    <option value="non indiqué" <?= isSelected($item,'sexe','non-indiqué'); ?>>Non indiqué</option>
+                </select>
+            <span class="error-input"><?= returnError($error, 'sexe');?></span>
+
+            <label for="email" class="form-label small">Email : </label>
+            <input class="form-control" type="email" placeholder="<?= $item['email'];?>" name="email" aria-label="email" id="email" value="<?= showForUpdate('email', $item['email']);?>">
+            <span class="error-input"><?= returnError($error, 'email');?></span>
+            <?php }
+                if ($tableName == 'vds_vaccin') { ?>
             <label for="content" class="form-label small">Description</label>
             <div class="input-group"><span class="input-group-text">Description :</span>
                 <textarea class="form-control" aria-label="content" name="content" id="content" ><?= showForUpdate('content', $item['content']);?></textarea>
@@ -135,12 +178,10 @@ include ('inc/header_b.php');
             <label for="obligatoire" class="form-label small">La vaccin est-il obligatoire ?</label>
             <select class="form-control" aria-label="obligatoire" name="obligatoire" id=obligatoire">
                 <option value="obligatoire" <?= isSelected($item,'obligatoire','obligatoire'); ?>>Obligatoire</option>
-                <option value="non-obligatoire" <?= isSelected($item,'obligatoire','non-obligatoire'); ?>>non-obligatoire</option>
-                <option value="non indiqué" <?= isSelected($item,'obligatoire','non-indiqué'); ?>>non indiqué</option>
+                <option value="non-obligatoire" <?= isSelected($item,'obligatoire','non-obligatoire'); ?>>Non-obligatoire</option>
+                <option value="non indiqué" <?= isSelected($item,'obligatoire','non-indiqué'); ?>>Non indiqué</option>
             </select>
             <span class="error-input"><?= returnError($error, 'obligatoire');?></span>
-
-
 
             <label for="status" class="form-label small">Status</label>
             <select class="form-control" aria-label="status" name="status" id="status">
@@ -149,24 +190,19 @@ include ('inc/header_b.php');
                 <option value="attente" <?= isSelected($item,'status','attente'); ?>>En attente</option>
             </select>
             <span class="error-input"><?= returnError($error, 'status');?></span>
-
-            <label for="status" class="form-label small">Role</label>
-            <select class="form-control" aria-label="status" name="status" id="status">
-                <option value="user" <?= isSelected($item,'role','user'); ?>>user</option>
-                <option value="admin" <?= isSelected($item,'role','admin'); ?>>admin</option>
+            <?php }
+                if ($tableName == 'vds_users') { ?>
+            <label for="role" class="form-label small">Role</label>
+            <select class="form-control" aria-label="role" name="role" id="role">
+                <option value="user" <?= isSelected($item,'role','user'); ?>>User</option>
+                <option value="admin" <?= isSelected($item,'role','admin'); ?>>Admin</option>
             </select>
             <span class="error-input"><?= returnError($error, 'status');?></span>
+                <?php } ?>
             <input type="submit" id="submitted" name="submitted" class="btn btn-primary" placeholder="Envoyer">
         </form>
-
+        <?php }?>
         </div>
-
-
-
-
-
-
-
 
 <?php
 include ('inc/footer_b.php');

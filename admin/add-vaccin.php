@@ -62,16 +62,16 @@ include 'inc/header_b.php';
                 <span class="error-input"><?= returnError($error, 'content');?></span>
             </div>
 
-            <label for="rappel" class="form-label small">Année entre deux doses</label>
-            <input class="form-control" type="number" placeholder="Nombre d'année" name="rappel" aria-label="rappel" id="rappel" value="<?= returnValue('rappel');?>" min="0" max="100" >
+            <label for="rappel" class="form-label small">Nombre de mois entre deux doses</label>
+            <input class="form-control" type="number" placeholder="Nombre de mois" name="rappel" aria-label="rappel" id="rappel" value="<?= returnValue('rappel');?>" min="0" max="240" >
             <span class="error-input"><?= returnError($error, 'rappel');?></span>
 
             <label for="obligatoire" class="form-label small">La vaccin est-il obligatoire ?</label>
             <select class="form-control" aria-label="obligatoire" name="obligatoire" id=obligatoire">
                 <option value="">Choisir</option>
                 <option value="obligatoire">Obligatoire</option>
-                <option value="non-obligatoire">non-obligatoire</option>
-                <option value="non indiqué">non indiqué</option>
+                <option value="non-obligatoire">Non-obligatoire</option>
+                <option value="non indiqué">Non indiqué</option>
             </select>
             <span class="error-input"><?= returnError($error, 'obligatoire');?></span>
 
