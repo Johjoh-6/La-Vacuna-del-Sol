@@ -8,13 +8,15 @@ require ('../inc/pdo.php');
 // Set PHP here
 $title = 'Boite mail';
 $headTitle = 'Mail';
-$listFunc = ['marquer lu','publier', 'supprimer'];
-$avoidColumn = ['id'];
+$listFunc = ['marquer lu','repondu', 'supprimer'];
+$avoidColumn = ['id', 'id_user'];
 $add = '';
 
 /* Get DB*/
 $tableName = 'vds_msg';
 $table = getDbOrderAsc($tableName);
+//if contact update
+//$table =  joinUserId('vds_msg');
 
 
 include ('inc/header_b.php');

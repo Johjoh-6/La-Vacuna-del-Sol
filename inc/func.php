@@ -61,17 +61,17 @@ function deleteById($id, $table){
 }
 
 // If null put it in Publish, replace the current value.
-function changeStatus($id, $from, $status  = 'publish', $url){
+function changeStatus($id, $from, $status  = 'publish'){
     if (!empty($id)) {
         global $pdo;
         $sql = "UPDATE $from 
-                SET modified_at= NOW(), status = :status  
+                SET modified_at	= NOW(), status = :status  
                 WHERE  id = :id";
         $query = $pdo->prepare($sql);
         $query->bindValue(':id', $id, PDO::PARAM_INT);
         $query->bindValue(':status', $status, PDO::PARAM_STR);
         $query->execute();
-        header('location: '.$url);
+        header('Location: ' . $_SERVER['HTTP_REFERER']);;
     } else{
         abort404();
     }
@@ -146,6 +146,9 @@ function getNameTable ($funcTable){
     if ($funcTable == 'publier') {
         $name = 'publish';
     }
+    if ($funcTable == 'repondu') {
+        $name = 'answer';
+    }
     return $name;
 }
 function getTableIcons($funcTable)
@@ -157,10 +160,13 @@ function getTableIcons($funcTable)
         $icon = 'fas fa-edit';
     }
     if ($funcTable == 'marquer lu') {
-        $icon = 'fas fa-check-square';
+        $icon = 'fas fa-envelope-open';
     }
     if ($funcTable == 'publier') {
         $icon = 'fas fa-paper-plane';
+    }
+    if ($funcTable == 'repondu') {
+        $icon = 'fas fa-check-square';
     }
     return $icon;
 }
@@ -172,11 +178,12 @@ function renameKey($key){
     if ($key == 'prenom') {
         $name = 'prenom';
     }
-    if ($key == 'id_user') {
-        $name = 'nom utilisateurs';
-    }
+
     if ($key == 'created_at') {
         $name = 'crée le';
+    }
+    if ($key == 'modified_at') {
+        $name = 'modifié le';
     }
     if ($key == 'content') {
         $name = 'description';
@@ -194,9 +201,29 @@ function valueFormat($key, $value){
     if ($key == 'created_at') {
         $valuePrepare = date('d/m/Y', strtotime($value));
     }
+    if ($key == 'modified_at') {
+        $valuePrepare = date('d/m/Y', strtotime($value));
+    }
     if ($key == 'last_log') {
         $valuePrepare = date('d/m/Y', strtotime($value));
     }
+    if ($key == 'status'){
+        switch ($value){
+            case 'draft':
+                $valuePrepare = "Brouillon";
+                break;
+            case 'publish':
+                $valuePrepare = "Publier";
+                break;
+            case 'answered':
+                $valuePrepare = "Répondu";
+                break;
+            case 'read':
+                $valuePrepare = "Lu";
+                break;
+        }
+    }
+
     return $valuePrepare;
 }
 function showColumnSelectedValue ($key, $value, $avoidColumn){
@@ -237,4 +264,15 @@ function isSelected ($item, $key, $value){
 if ($item[$key] == $value) {
     echo 'selected';
 }
+}
+
+function joinUserId($join){
+    global $pdo;
+    $sql= "SELECT vds_users.id,vds_users.name as name, vds_users.prenom as prenom, $join.*
+    FROM vds_users
+    INNER JOIN $join
+    ON vds_users.id = $join.id_user";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    return  $query->fetchAll();
 }

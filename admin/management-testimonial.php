@@ -10,12 +10,13 @@ require ('../inc/pdo.php');
 $title = 'Gestion des Avis';
 $headTitle = 'Avis';
 $listFunc = ['publier', 'supprimer'];
-$avoidColumn = ['id'];
+$avoidColumn = ['id', 'id_user'];
 $add = '';
 
 /*Get DB*/
 $tableName = 'vds_testimonial';
-$table = getDb($tableName);
+
+$table =  joinUserId('vds_testimonial');
 
 
 include ('inc/header_b.php');

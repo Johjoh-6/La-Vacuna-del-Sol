@@ -187,7 +187,6 @@ include ('inc/header_b.php');
             <select class="form-control" aria-label="status" name="status" id="status">
                 <option value="publish" <?= isSelected($item,'status','publish'); ?>>Publier</option>
                 <option value="draft" <?= isSelected($item,'status','draft'); ?>>Brouillon</option>
-                <option value="attente" <?= isSelected($item,'status','attente'); ?>>En attente</option>
             </select>
             <span class="error-input"><?= returnError($error, 'status');?></span>
             <?php }

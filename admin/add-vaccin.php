@@ -82,7 +82,6 @@ include 'inc/header_b.php';
                 <option value="">Choisir</option>
                 <option value="publish">Publier</option>
                 <option value="draft">Brouillon</option>
-                <option value="attente">En attente</option>
             </select>
             <span class="error-input"><?= returnError($error, 'status');?></span>
         <input type="submit" id="submitted" name="submitted" class="btn btn-primary" placeholder="Envoyer">

@@ -9,7 +9,7 @@ require ('../inc/pdo.php');
 $title = 'Gestion des utilisateurs';
 $headTitle = 'Utilisateur';
 $listFunc = ['modifier', 'supprimer'];
-$avoidColumn = ['id', 'password', 'token', 'created_at', 'last_log'];
+$avoidColumn = ['id', 'password', 'token', 'last_log'];
 $add = '';
 
 /*Get DB*/
