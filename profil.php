@@ -1,10 +1,15 @@
 <?php
+session_start();
 require ('inc/func.php');
 require ('inc/pdo.php');
 // Set PHP here
-
-
-
+$id = $_SESSION['user']['id'];
+$user = $_SESSION['user'];
+debug($_SESSION);
+$listVaccinUser = joinUserVaccin($id);
+$vaccinAvailible = getDbOrderAscAndPublish('vds_vaccin');
+debug($vaccinAvailible);
+debug($listVaccinUser);
 
 include ('inc/header.php');
 ?>
@@ -22,19 +27,19 @@ include ('inc/header.php');
                     </div>
                     <div class="profil_name">
                         <h3 class="profil_h3">Votre nom :</h3>
-                        <p>Benzema</p>
+                        <p><?= $user['name'];?></p>
                     </div>
                     <div class="profil_name">
                         <h3 class="profil_h3">Votre prénom :</h3>
-                        <p>Karim</p>
+                        <p><?= $user['prenom'];?></p>
                     </div>
                     <div class="profil_name">
                         <h3 class="profil_h3">Votre email :</h3>
-                        <p>Karim@gmail.com</p>
+                        <p><?= $user['email'];?></p>
                     </div>
                     <div class="profil_name">
                         <h3 class="profil_h3">Votre âge :</h3>
-                        <p>33 ans</p>
+                        <p><?= ageOfUser($user['dob']);?></p>
                     </div>
                 </div>
             </div>
@@ -53,9 +58,9 @@ include ('inc/header.php');
                         <label for="vaccin-select">Choisissez un vaccin :</label>
                         <select name="vaccins" id="vaccin-select">
                             <option value="">--SVP Choisissez un vaccin--</option>
-                            <option value="aztrazenka">Astrazeneka</option>
-                            <option value="moderna">Moderna</option>
-                            <option value="pfizer">Pfizer</option>
+                            <?php foreach ($vaccinAvailible as $vaccin){?>
+                            <option value="<?= $vaccin['id'];?>"><?= ucfirst($vaccin['name']); ?></option>
+                           <?php }?>
                             <span class="error"></span>
                         </select>
                         <label for="date-add">Date de votre dernier vaccin :</label>
@@ -79,16 +84,15 @@ include ('inc/header.php');
                         <h2>Votre prochaine dose</h2>
                         <h2>Obligatoire</h2>
                     </div>
-
+                    <?php foreach ($listVaccinUser as $listVaccin){ ?>
                     <div class="body_grid gridflex">
-                            <p>vaccin</p>
+                            <p><?= $listVaccin['name']?></p>
                             <p>user_date_vaccin</p>
                             <p>vaccin_rappel</p>
                             <p>vaccin_rappel_user</p>
                             <p>obligatoire</p>
                     </div>
-            </div>
-                <div class="grid">
+                    <?php } ?>
                     <div class="footer_grid gridflex">
                         <h2>Nom du vaccin</h2>
                         <h2>Date de la derniere dose</h2>

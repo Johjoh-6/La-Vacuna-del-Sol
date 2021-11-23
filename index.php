@@ -6,6 +6,7 @@ session_start();
 
 require ('inc/connection.php');
 $testimonialRandom = getTestiRandomLimit(5);
+debug($error);
 include ('inc/header.php');
 ?>
 

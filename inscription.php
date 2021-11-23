@@ -13,32 +13,38 @@ include ('inc/header.php');?>
 
 
     <section id="formulaire">
+        <?php if ($succes) { ?>
+            <p class="title">Félicitation</p>
+            <p>SELECT COUNT(id) FROMous avez creer votre compte</p>
+            <a href="index.php">
+                <p>Retour a l'accuiel</p>
+            </a>
+        <?php } else { ?>
         <div class="wrap_accounts">
             <form class="wrap_account" action="" method="post">
                 <div class="form_left">
                     <div>
                         <label for="name">Nom: </label>
-                        <input class="input_inscription" type="text" name="name" id="name" placeholder="Votre nom" value="<?php returnValue('name') ?>">
+                        <input class="input_inscription" type="text" name="name" id="name" placeholder="Votre nom" value="<?= returnValue('name') ?>">
                         <span class="error"><?= returnError($error, 'name');?></span>
                     </div>
 
                     <div>
                         <label for="prenom">Prénom:</label>
-                        <input class="input_inscription" type="text" name="prenom" placeholder="Votre Prénom" value="<?php returnValue('prenom')?>">
+                        <input class="input_inscription" type="text" name="prenom" placeholder="Votre Prénom" value="<?= returnValue('prenom')?>">
                         <span class="error"><?= returnError($error, 'prenom');?></span>
                     </div>
                     <div>
                         <label for="dob">Date de naissance:</label>
-                        <input class="input_date" type="date" name="dob" value="<?php echo date('Y-m-d', strtotime(date('Y-m-d')));?>">
+                        <input class="input_date" type="date" name="dob" value="<?php if (!empty($_POST['dob'])){ echo transformDate($_POST, 'dob');} ;?>">
                         <span class="error"><?= returnError($error, 'dob');?></span>
                     </div>
-
                 </div>
 
                 <div class="form_right">
                     <div class="email">
                         <label for="email">Email:</label>
-                        <input class="input_inscription" type="email" id="email" name="email" placeholder="Votre email" value="<?php returnValue('email') ?>">
+                        <input class="input_inscription" type="email" id="email" name="email" placeholder="Votre email" value="<?= returnValue('email') ?>">
                         <span class="error"><?= returnError($error, 'email');?></span>
                     </div>
                     <div class="mdp">
@@ -48,10 +54,10 @@ include ('inc/header.php');?>
                     </div>
                     <div class="mdp2">
                         <label for="password_confirm">Confirmer votre mot de passe:</label>
-                        <input class="input_inscription" type="password" name="c" placeholder="Mot de passe">
+                        <input class="input_inscription" type="password" name="password_confirm" placeholder="Mot de passe">
                         <span class="error"><?= returnError($error, 'password_confirm');?></span>
                     </div>
-                    <h3>Sex :</h3>
+                    <h3>Sexe :</h3>
                     <div class="sex">
                         <label for="sexe">Femme</label>
                         <input type="radio" name="sexe" id="sexe" value="femme" >
@@ -64,6 +70,7 @@ include ('inc/header.php');?>
                 </div>
             </form>
         </div>
+    <?php } ?>
     </section>
 
 <?php include ('inc/footer.php');

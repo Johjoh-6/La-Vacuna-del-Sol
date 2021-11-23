@@ -32,7 +32,6 @@ if (!empty($_POST['submitted'])) {
     }
 
     $error = validInput($error,$password_confirm, 'password_confirm', 3, 255);
-    debug($error);
     /*If not error*/
     if (count($error) == 0) {
         $token = generateRandomString(100);
