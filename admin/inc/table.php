@@ -36,7 +36,7 @@ $listName = $table[0];
                         $funcName = getNameTable($funcTable);
                         $funcIcon = getTableIcons($funcTable);
                         ?>
-                        <th class="btn-<?= $funcName; ?>">
+                        <td class="btn-<?= $funcName; ?>">
                             <div class="my-2"></div>
                             <a href="<?= $funcName; ?>.php?table=<?= $tableName?>&id=<?php echo $list['id']; ?>" class="btn btn-info" <?php if($funcName == 'delete') { echo 'onclick="return confirm(\'Voulez vous vraiment effacer cet article ?\')" ';} ;?>>
                     <span class="icon text-white-50">
@@ -44,7 +44,7 @@ $listName = $table[0];
                     </span>
                             </a>
 
-                        </th>
+                        </td>
                     <?php } ?>
                 </tr>
                 <?php } ?>

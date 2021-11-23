@@ -1,76 +1,147 @@
 <?php
 // Check if he is connected
 session_start();
-require ('../inc/func.php');
-require ('../inc/pdo.php');
+require('../inc/func.php');
+require('../inc/pdo.php');
+
 // Check if he got a rank admin!
 
-// Set PHP here
-$title = 'Dashboard';
+    $sql= "SELECT COUNT(id) FROM vds_msg WHERE status = 'delivered'";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    $recupMsg = $query->fetch();
+
+    $sql= "SELECT COUNT(id) FROM vds_vaccin";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    $recupVac = $query->fetch();
+
+//    debug($recupVac);
+//    $vac = count($recupVac);
+//    echo $recupVac['COUNT(id)'];
+
+    $sql= "SELECT COUNT(id) FROM vds_testimonial WHERE status = 'draft'";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    $recupTesti = $query->fetch();
+
+//    debug($recupTesti);
+//    echo $recupTesti['COUNT(id)'];
+
+    $sql= "SELECT COUNT(id) FROM vds_users";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    $recupUsers = $query->fetch();
 
 
 
-include ('inc/header_b.php');
+include('inc/header_b.php');
 ?>
-    <h1 class="text-center mt-3 mb-3"><?= $title; ?></h1>
 
-
+    <!-- Begin Page Content -->
     <div class="container-fluid">
+
+        <h1 class="text-center mt-5 mb-4">Bonjour, Admin.</h1>
+        <h3 class="text-center">Comment vous allez aujourd'hui ?</h3>
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mt-4 mb-4 text-gray-800">Voici les données du jour :</h1>
+        </div>
+
         <div class="row">
-            <div class="col-sm-6">
-                <div class="card">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <a href="msg_b.php">
                     <div class="card-body">
-                        <h5 class="card-title">Utilisateur connectés</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Nombres de messages non lu
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupMsg['COUNT(id)'] ?></div>
+                            </div>
+                            <div class="col-auto">
+                               <i class="fas fa-envelope fa-2x text-primary -600"></i>
+                            </div>
+                        </div>
                     </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-sm-6 mb-3">
-                <div class="card">
+
+            <!-- Earnings (Annual) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <a href="management-vaccine.php">
                     <div class="card-body">
-                        <h5 class="card-title">Nombres de vaccins sur le site</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Nombres de vaccin sur le site
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupVac['COUNT(id)'] ?></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-syringe fa-2x text-success -600"></i>
+                            </div>
+                        </div>
                     </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card">
+
+            <!-- Tasks Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <a href="management-testimonial.php">
                     <div class="card-body">
-                        <h5 class="card-title">Nombre de  commentaire en attente</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    Nombre d'avis non lu
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupTesti['COUNT(id)'] ?></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-comments fa-2x text-info -600"></i>
+                            </div>
+                        </div>
                     </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card">
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <a href="management-user.php">
                     <div class="card-body">
-                        <h5 class="card-title">Nombres utilisteurs total du site</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    Nombres utilisteurs total du site
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupUsers['COUNT(id)'] ?></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-users fa-2x text-warning "></i>
+                            </div>
+                        </div>
                     </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="asset/img/undraw_posting_photo.svg" class="d-block w-50" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-            </div>
+
+        <div class="container text-center w-75">
+            <img src="asset/img/dash.png" class="img-fluid w-25" alt="">
         </div>
-    </div>
 
 
-
-
-
-
+        </div>
 
 
 <?php
-include ('inc/footer_b.php');
+include('inc/footer_b.php');
