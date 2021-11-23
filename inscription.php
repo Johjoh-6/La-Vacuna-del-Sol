@@ -11,7 +11,6 @@ include ('inc/header.php');?>
         </div>
     </section>
 
-
     <section id="formulaire">
         <?php if ($succes) { ?>
             <p class="title">Félicitation</p>

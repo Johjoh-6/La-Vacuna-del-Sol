@@ -139,7 +139,7 @@ include ('inc/header_b.php');
             </div>
         <?php  } else {?>
         <h1 class="h3 mb-4 mt-4 text-center text-yellow font-weight-bold">Modifie</h1>
-        <form action="" method="post">
+        <form class="d-flex flex-column" action="" method="post">
             <label for="name" class="form-label small">Nom : </label>
             <input class="form-control" type="text" placeholder="<?= $item['name'];?>" name="name" aria-label="name" id="name" value="<?= showForUpdate('name', $item['name']);?>">
             <span class="error-input"><?= returnError($error, 'name');?></span>
@@ -166,8 +166,8 @@ include ('inc/header_b.php');
             <?php }
                 if ($tableName == 'vds_vaccin') { ?>
             <label for="content" class="form-label small">Description</label>
-            <div class="input-group"><span class="input-group-text">Description :</span>
-                <textarea class="form-control" aria-label="content" name="content" id="content" ><?= showForUpdate('content', $item['content']);?></textarea>
+            <div class="input-group d-flex flex-column"><span class="input-group-text mb-1 ">Description :</span>
+                <textarea class="form-control w-100" aria-label="content" name="content" id="content" ><?= showForUpdate('content', $item['content']);?></textarea>
                 <span class="error-input"><?= returnError($error, 'content');?></span>
             </div>
 

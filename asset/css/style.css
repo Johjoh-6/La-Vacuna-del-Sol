@@ -248,7 +248,6 @@ background-color: var(--jaune);
     background-color: var(--bleu);
     padding: 2rem;
 }
-
 #details .wrap3{
     text-align: center;
 }
@@ -264,60 +263,45 @@ background-color: var(--jaune);
     text-transform: uppercase;
     font-weight: 800;
     text-align: center;
-
 }
-
 #details .wrap3 .cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
 #details .wrap3 .cards .card{
     width: 31.33333%;
+    height: 350px;
     background-color: white;
-    margin-bottom: 2rem;
     border-radius: .3rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto 1rem auto;
     -webkit-box-shadow: 4px 4px 8px -2px rgba(0,0,0,0.75);
     box-shadow: 4px 4px 8px -2px rgba(0,0,0,0.75);
+    padding: 2rem 1rem;
+}
+#details .wrap3 .cards .card:hover{
+    outline: 3px solid #f1c111;
+}
+
+#details .wrap3 .cards .card h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    height: 50px;
 
 }
-#details .wrap3 .cards .card img{
-    border-top-left-radius: .3rem;
-    border-top-right-radius: .3rem;
-
-}
-#details .wrap3 .cards .card img:hover{
-    filter: grayscale(100%);
-    transition: .5s;
-}
-#details .wrap3 .cards .card h2{
+#details .wrap3 .cards .card i{
     font-size: 1.5rem;
-    padding: .5rem 0 0 .5rem;
+    height: 50px;
 }
 #details .wrap3 .cards .card p{
-    font-size: 1rem;
-    padding: .5rem 0 0 .5rem;
-    margin-bottom: 1rem;
-}
-.discover {
-    color: white;
-    background-color: var(--bleu);
-    border: solid 2px var(--jaune);
-    padding: .5rem;
-    border-radius: .5rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
 }
 
-.discover:hover {
-    background-color: var(--jaune);
-    color: white;
-    transition: .5s;
-}
+
+
 /*********************************SLIDER *******************************/
 /* Slick Slider */
 #slider {
@@ -351,7 +335,6 @@ background-color: var(--jaune);
     align-items: center;
     padding: 20px;
     margin: 0 1rem;
-
 }
 
 .card-body{

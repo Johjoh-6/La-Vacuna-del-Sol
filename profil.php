@@ -13,7 +13,6 @@ debug($listVaccinUser);
 
 include ('inc/header.php');
 ?>
-
     <div class="text_contact">
         <h2 class="title">Profil</h2>
     </div>

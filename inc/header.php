@@ -1,9 +1,10 @@
 <?php
-// Check if he is connected
-debug($_SESSION);
 
-
-
+if(!empty($_SESSION['user'])){
+    $connected = true;
+}else {
+    $connected = false;
+}
 
 ?>
 <!doctype html>
@@ -25,22 +26,29 @@ debug($_SESSION);
 <body>
 
 <!--Header-->
-<header id="navbar" class="nav">
-    <div class="wrap">
-        <div class="logo">
-            <img src="asset/img/logo.png" alt="">
-        </div>
-        <nav>
-            <a class="icon" onclick="myFunction()">&#9776;</a>
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="index.php#details">A propos</a></li>
-                <li><a href="contact.php">Contacter</a></li>
-                <li><a href="inscription.php" class="box_header">Inscription</a></li>
-            </ul>
-        </nav>
-    </div>
 
+<header id="navbar" class="nav">
+
+        <div class="wrap">
+            <div class="logo">
+                <img src="asset/img/logo.png" alt="">
+            </div>
+            <nav>
+                <a class="icon" onclick="myFunction()">&#9776;</a>
+                <ul>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="index.php#details">A propos</a></li>
+                    <li><a href="contact.php">Contacter</a></li>
+
+                    <?php if ($connected) { ?>
+                    <li><a href="profil.php">Mon carnet</a></li>
+                    <li><a href="inc/logout.php" class="box_header">Deconnexion</a></li>
+                    <?php } else { ?>
+                        <li><a href="inscription.php" class="box_header">Inscription</a></li>
+                    <?php } ?>
+                </ul>
+            </nav>
+        </div>
 </header>
 
 

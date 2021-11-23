@@ -2,6 +2,7 @@
 require ('inc/func.php');
 require ('inc/pdo.php');
 // Set PHP here
+session_start();
 $error = [];
 $succes = false;
 if (!empty($_POST['submitted'])) {
@@ -40,7 +41,6 @@ include ('inc/header.php');
         <h2 class="title">Contact</h2>
     </div>
 </section>
-
 
 <section id="contact">
     <div class="wrap_contact">
