@@ -25,8 +25,8 @@ if (!empty($_POST['submitted'])) {
 
         /*If not error*/
         if (count($error) == 0) {
-            $sql = "INSERT INTO vds_vaccin (name, content, rappel,obligatoire, status) 
-                VALUES (:nam ,:content,:rappel,:obligatoire,:status)";
+            $sql = "INSERT INTO vds_vaccin (name, content, rappel,obligatoire, status, created_at) 
+                VALUES (:nam ,:content,:rappel,:obligatoire,:status, NOW())";
 
             // Prepare the request
             $query = $pdo->prepare($sql);

@@ -15,7 +15,7 @@ include ('inc/header.php');?>
     <section id="formulaire">
         <?php if ($succes) { ?>
             <p class="title">Félicitation</p>
-            <p>SELECT COUNT(id) FROMous avez creer votre compte</p>
+            <p>Nous avez creer votre compte</p>
             <a href="index.php">
                 <p>Retour a l'accuiel</p>
             </a>

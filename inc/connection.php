@@ -22,7 +22,7 @@ if (!empty($_POST['submitted'])) {
                 'role' => $user['role'],
                 'ip' => $_SERVER['REMOTE_ADDR'] // ::1
             );
-            header('Location: index.php');
+            header('Location: profil.php');
         } else {
             $error['login'] = 'Mots de passe incorect';
         }

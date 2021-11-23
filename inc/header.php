@@ -1,6 +1,6 @@
 <?php
 // Check if he is connected
-debug($_SESSION);
+
 
 
 
