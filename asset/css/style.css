@@ -603,17 +603,16 @@ button.active{
 
 
 #vaccin  .body_grid {
-    margin-bottom: 2rem;
-    border-bottom-left-radius: .3rem;
-    border-bottom-right-radius: .3rem;
     padding: 1rem;
     background-color: white;
     color: black;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
 #vaccin  .footer_grid {
     background-color: #2B2929;
-    border-top-left-radius: .3rem;
-    border-top-right-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
     -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.59);
     box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.59);
     z-index: 23;

@@ -221,6 +221,9 @@ function valueFormat($key, $value){
             case 'read':
                 $valuePrepare = "Lu";
                 break;
+            case 'delivered':
+                $valuePrepare = "Non lu";
+                break;
         }
     }
 
@@ -291,10 +294,64 @@ function getTestiRandomLimit( $limit){
 }
 
 
-function joinUserVaccin(){
+function joinUserVaccin($id){
     global $pdo;
-    $sql= "";
+    $sql= "SELECT /*vds_users.name as name, vds_users.prenom as prenom, vds_users.email as email, vds_users.dob as dob,*/ 
+    vds_vaccin.name as vaccin_name, vds_vaccin.rappel as rappel, vds_vaccin.obligatoire as obligatoire, vds_vaccin.status as status,
+    vds_user_vaccin.*
+    FROM vds_users 
+    INNER JOIN vds_user_vaccin
+    ON vds_users.id = vds_user_vaccin.id_user
+    INNER JOIN vds_vaccin
+    ON vds_vaccin.id = vds_user_vaccin.id_vaccin
+    WHERE id_user = $id
+    ORDER BY vaccin_name";
     $query = $pdo->prepare($sql);
     $query->execute();
     return  $query->fetchAll();
+}
+
+function isLogged()
+{
+    if(!empty($_SESSION['user'])) {
+        if (!empty($_SESSION['user']['id'])) {
+            if (!empty($_SESSION['user']['email'])) {
+                if (!empty($_SESSION['user']['name'])) {
+                    if (!empty($_SESSION['user']['role'])) {
+                        if (!empty($_SESSION['user']['ip'])) {
+                            if ($_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return false;
+}
+
+function isAdmin()
+{
+    if(isLogged()) {
+        if($_SESSION['user']['role'] == 'admin') {
+            return true;
+        }
+    }
+    return false;
+}
+
+function ageOfUser($bithdayDate)
+{
+    $date = new DateTime($bithdayDate);
+    $now = new DateTime();
+    $interval = $now->diff($date);
+    return $interval->y;
+}
+function getDbOrderAscAndPublish($table){
+    global $pdo;
+    $sql= "SELECT * FROM  $table WHERE status = 'publish' ORDER BY name asc";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    return $query->fetchAll();
 }
