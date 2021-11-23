@@ -589,8 +589,6 @@ button.active{
 #vaccin  .gridflex {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    /*border: solid 2px black;*/
 }
 #vaccin .head_grid {
     border-top-left-radius: .3rem;
@@ -608,6 +606,9 @@ button.active{
     color: black;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
+}
+#vaccin  .body_grid > *{
+    width: calc(100% / 5);
 }
 #vaccin  .footer_grid {
     background-color: #2B2929;
