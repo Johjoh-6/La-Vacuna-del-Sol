@@ -1,6 +1,6 @@
 <?php
 // Check if he is connected
-debug($_SESSION);
+//debug($_SESSION);
 
 
 
@@ -40,7 +40,6 @@ debug($_SESSION);
             </ul>
         </nav>
     </div>
-
 </header>
 
 
