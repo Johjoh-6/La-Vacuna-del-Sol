@@ -229,7 +229,7 @@ function valueFormat($key, $value){
 function showColumnSelectedValue ($key, $value, $avoidColumn){
                 if (!in_array($key, $avoidColumn)) {
                     $adapt = valueFormat($key, $value);
-                    echo  '<th>'. $adapt. '</th>';
+                    echo  '<td>'. $adapt. '</td>';
                 }
 }
 function showColumnSelectedKey ($list,$avoidColumn){

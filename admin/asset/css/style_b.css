@@ -5,6 +5,11 @@
     --yellow-hover: #ffae00;
 }
 
+
+body {
+    overflow-x: hidden;
+}
+
 /*********************** Header and Footer back ***********************************/
 #page-top #wrapper .bg-gradient-primary{
     background-color: var(--blue);
@@ -96,6 +101,7 @@ thead tr th {
 }
 
 th, td {
+    max-width: 400px;
 }
 
 th:hover,
