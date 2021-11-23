@@ -6,37 +6,44 @@ session_start();
 
 require ('inc/connection.php');
 $testimonialRandom = getTestiRandomLimit(5);
+
+if(!empty($_SESSION['user'])){
+    $connectedIndex = true;
+}else {
+    $connectedIndex = false;
+}
+
 include ('inc/header.php');
 ?>
-
     <!--MAIN INDEX USER-->
+<?php if ($connectedIndex) { ?>
 
+<?php } else { ?>
     <section id="connexion">
-        <div class="wrap2">
-            <div class="box">
-                <div class="rond"></div>
-                <div class="hotesse">
-                    <img src="asset/img/accueil.png" alt="">
-                </div>
-            </div>
-
-
-            <div class="cadre">
-                <form action="" method="post" class="wrapform" novalidate>
-                    <label for="login">E-mail</label>
-                    <input type="text" id="login" name="login" value="<?= returnValue('login') ?>" class="input" placeholder="&#xf007;  Entrez votre email" style="font-family:Arial, FontAwesome">
-                    <span class="error"><?= returnError($error,'login')?></span>
-
-                    <label for="password">Mot de passe *</label>
-                    <input type="password" id="password" name="password" value="<?= returnValue('password') ?>" class="input" placeholder="&#xf023; Entrez votre mot de passe" style="font-family:Arial, FontAwesome">
-                    <span class="error"><?= returnError($error,'password')?></span>
-                    <input type="submit" name="submitted" value="Connexion" class="submit input2">
-                    <a href="inscription.php" class="submit">Inscription</a>
-                </form>
+    <div class="wrap2">
+        <div class="box">
+            <div class="rond"></div>
+            <div class="hotesse">
+                <img src="asset/img/accueil.png" alt="">
             </div>
         </div>
-    </section>
 
+        <div class="cadre">
+            <form action="" method="post" class="wrapform" novalidate>
+                <label for="login">E-mail</label>
+                <input type="text" id="login" name="login" value="<?= returnValue('login') ?>" class="input" placeholder="&#xf007;  Entrez votre email" style="font-family:Arial, FontAwesome">
+                <span class="error"><?= returnError($error,'login')?></span>
+
+                <label for="password">Mot de passe *</label>
+                <input type="password" id="password" name="password" value="<?= returnValue('password') ?>" class="input" placeholder="&#xf023; Entrez votre mot de passe" style="font-family:Arial, FontAwesome">
+                <span class="error"><?= returnError($error,'password')?></span>
+                <input type="submit" name="submitted" value="Connexion" class="submit input2">
+                <a href="inscription.php" class="submit">Inscription</a>
+            </form>
+        </div>
+    </div>
+<?php } ?>
+    </section>
 
     <section id="parallax">
         <div class="wrap_para">
@@ -47,50 +54,38 @@ include ('inc/header.php');
         </div>
     </section>
 
-
-
     <section id="details">
         <div class="wrap3">
             <div class="title">
-                <h2>Vaccinés vous chez la meilleur equipe</h2>
+                <h2>Vaccinés vous chez la meilleure equipe</h2>
             </div>
             <div class="cards">
                 <div class="card">
-                    <img src="asset/img/img-2.jpeg" alt="card">
-                    <h2>Docteur JO</h2>
-                    <p>Pierre Henry devloppeur depuis 23 ans</p>
-                    <a href="" class="discover">Découvir le profil</a>
+                    <i class="fas fa-bookmark"></i>
+                    <h3>Pourquoi nous choisir ?</h3>
+                   <p>Nous sommes une équipe attentive et à l’écoute de nos utilisateurs et adhérents leur bien-être et leur avis est vital pour nous pour installer un climat de confiance.</p>
                 </div>
                 <div class="card">
-                    <img src="asset/img/img-2.jpeg" alt="card">
-
-                    <h2>Docteur Maxence</h2>
-                    <p>Pierre Henry devloppeur depuis 23 ans</p>
-                    <a href="" class="discover">Découvir le profil</a>
+                    <i class="fas fa-binoculars"></i> <h3>Qu’est -ce que la Vacuna Del Sol ?</h3>
+                    <p>Une équipe professionnelle, nous misons sur l’efficacité et la rapidité afin de répondre aux demandes le plus rapidement, avec notre interface dynamique et fluide pour maximiser l’interactivité avec nos adhérents et les personnes en hésitations.</p>
                 </div>
                 <div class="card">
-                    <img src="asset/img/img-2.jpeg" alt="card">
-                    <h2>Docteur Mathis</h2>
-                    <p>Pierre Henry devloppeur depuis 23 ans</p>
-                    <a href="" class="discover">Découvir le profil</a>
+                    <i class="fas fa-shield-alt"></i> <h3> Une équipe de confiance</h3>
+                    <p>Vos données sont stockées et sécurisées avec nous, chaque jour une veille est faite afin de maximiser le confort de nos utilisateurs.</p>
                 </div>
                 <div class="card">
-                    <img src="asset/img/img-2.jpeg" alt="card">
-                    <h2>Docteur Marie</h2>
-                    <p>Pierre Henry devloppeur depuis 23 ans</p>
-                    <a href="" class="discover">Découvir le profil</a>
+                    <i class="fas fa-comment-medical"></i> <h3>Vaccination</h3>
+                    <p>Grâce à notre carnet de vaccination digital, ne perdez rien sur vos vaccins, vous serez toujours à jour et des rappels se feront afin que vous n’oubliiez rien.</p>
                 </div>
                 <div class="card">
-                    <img src="asset/img/img-2.jpeg" alt="card">
-                    <h2>Docteur Luc</h2>
-                    <p>Pierre Henry devloppeur depuis 23 ans</p>
-                    <a href="" class="discover">Découvir le profil</a>
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3> Nous le faire savoir</h3>
+                   <p> Vos avis nous intéressent, alors n’hésitez pas à laisser des commentaires afin que nous puissions nous améliorer, et vous donner plus de confiance en notre service.</p>
                 </div>
                 <div class="card">
-                    <img src="asset/img/img-2.jpeg" alt="card">
-                    <h2>Docteur Antoine</h2>
-                    <p>Pierre Henry devloppeur depuis 23 ans</p>
-                    <a href="" class="discover">Découvir le profil</a>
+                    <i class="fas fa-desktop"> </i>
+                    <h3>Développeur</h3>
+                    <p>Avec son équipe de développeur la Vacuna Del Sol met tout en œuvre afin de garder au maximum un site dynamique et facile d’accès, votre bien être est notre sourire.</p>
                 </div>
             </div>
         </div>
