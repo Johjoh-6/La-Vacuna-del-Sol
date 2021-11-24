@@ -46,7 +46,7 @@ include ('inc/header.php');
     <div class="wrap_contact">
     <?php if ($succes){ ?>
         <div>
-            <p>Message envoyer !</p>
+            <p>Message envoyé !</p>
             <a href="index.php"><p>Retour sur la page d'accuiel</p></a>
         </div>
     <?php }else { ?>

@@ -24,9 +24,9 @@ if (!empty($_POST['submitted'])) {
             );
             header('Location: profil.php');
         } else {
-            $error['login'] = 'Mots de passe incorect';
+            $error['login'] = 'Mots de passe incorrect';
         }
     } else {
-        $error['login'] = 'Veuillez rentrer un e-mail correct';
+        $error['login'] = 'Veuillez entrer un e-mail correct';
     }
 }

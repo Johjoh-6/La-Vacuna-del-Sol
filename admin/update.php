@@ -138,13 +138,13 @@ include ('inc/header_b.php');
                 <a onclick="javascript:history.go(-2)" class="btn btn-primary "><p class="text-blue-500 mb-0">Revenir sur la page précedente</p></a>
             </div>
         <?php  } else {?>
-        <h1 class="h3 mb-4 mt-4 text-center text-yellow font-weight-bold">Modifie</h1>
+        <h1 class="h3 mb-4 mt-4 text-center text-yellow font-weight-bold">Modifier</h1>
         <form class="d-flex flex-column" action="" method="post">
-            <label for="name" class="form-label small">Nom : </label>
+            <label for="name" class="form-label small"> Nom : </label>
             <input class="form-control" type="text" placeholder="<?= $item['name'];?>" name="name" aria-label="name" id="name" value="<?= showForUpdate('name', $item['name']);?>">
             <span class="error-input"><?= returnError($error, 'name');?></span>
             <?php if ($tableName == 'vds_users') { ?>
-            <label for="prenom" class="form-label small">Prenom : </label>
+            <label for="prenom" class="form-label small"> Prénom : </label>
             <input class="form-control" type="text" placeholder="<?= $item['prenom'];?>" name="prenom" aria-label="prenom" id="prenom" value="<?= showForUpdate('prenom', $item['prenom']);?>">
             <span class="error-input"><?= returnError($error, 'prenom');?></span>
 
@@ -160,7 +160,7 @@ include ('inc/header_b.php');
                 </select>
             <span class="error-input"><?= returnError($error, 'sexe');?></span>
 
-            <label for="email" class="form-label small">Email : </label>
+            <label for="email" class="form-label small"> Email : </label>
             <input class="form-control" type="email" placeholder="<?= $item['email'];?>" name="email" aria-label="email" id="email" value="<?= showForUpdate('email', $item['email']);?>">
             <span class="error-input"><?= returnError($error, 'email');?></span>
             <?php }

@@ -49,7 +49,7 @@ include ('inc/header.php');
         <div class="wrap_para">
             <h1>Rejoignez nous</h1>
             <div class="separator"></div>
-            <p>Tout comme nos 11 millions d'autres utilisateurs inscrivez-vous et utiliser la vacuna del sol pour garder la mains sur vos vaccins, benefciez de mails de rappels lorsque un de vos vaccins doit être renouvelé, un service a disposition 7 jours sur 7 de 8h à 21h. </p>
+            <p>Tout comme nos 11 millions d'utilisateurs inscrivez-vous et utiliser la Vacuna Del Sol pour garder la main sur vos vaccins, bénéficiez de mails de rappels lorsque un de vos vaccins doit être renouvelé, un service à disposition 7 jours sur 7 de 8h à 21h. </p>
             <a href="inscription.php">Inscrivez vous ici</a>
         </div>
     </section>
@@ -57,7 +57,7 @@ include ('inc/header.php');
     <section id="details">
         <div class="wrap3">
             <div class="title">
-                <h2>Vaccinés vous chez la meilleure equipe</h2>
+                <h2>Vaccinez vous chez la meilleure équipe</h2>
             </div>
             <div class="cards">
                 <div class="card">
@@ -94,7 +94,7 @@ include ('inc/header.php');
     <section id="slider">
         <div class="wrap4">
             <div class="title">
-                <h2>Avis de nos client</h2>
+                <h2>Avis de nos clients </h2>
             </div>
             <div class="container">
                 <div class="wrapper">
