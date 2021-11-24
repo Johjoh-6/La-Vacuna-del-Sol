@@ -20,7 +20,7 @@ if (!empty($_POST['submitted'])) {
     $error = validInput($error,$dob, 'dob', 1, 50);
     $error = validInput($error, $sex, 'sexe', 0, 30);
     $error = mailValidation($error, $email, 'email');
-    if(empty($errors['email'])) {
+    if(empty($error['email'])) {
         $sql = "SELECT * FROM vds_users WHERE email = :email";
         $query = $pdo->prepare($sql);
         $query->bindValue(':email',$email,PDO::PARAM_STR);

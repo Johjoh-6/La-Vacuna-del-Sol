@@ -71,7 +71,7 @@
     }
 
     #profil .profil_name {
-        padding: 1rem 0 0 4rem;
+        padding: 1rem 0 0 1rem;
         display: flex;
         /*flex-direction: column;*/
         align-items: flex-start;
@@ -99,43 +99,43 @@
     }
 }
     @media screen and (max-width: 640px){
-        #vaccin .grid {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 1rem;
-        }
-        #vaccin .head_grid {
-            display: flex;
-            flex-direction: column;
-            width: 49.333%;
-            border-top-left-radius: .3rem;
-            border-top-right-radius: 0;
-            border-bottom-left-radius: .3rem;
-            -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-        }
+        /*#vaccin .grid {*/
+        /*    display: flex;*/
+        /*    flex-direction: column;*/
+        /*    margin-bottom: 1rem;*/
+        /*}*/
+        /*#vaccin .head_grid {*/
+        /*    display: flex;*/
+        /*    flex-direction: column;*/
+        /*    width: 49.333%;*/
+        /*    border-top-left-radius: .3rem;*/
+        /*    border-top-right-radius: 0;*/
+        /*    border-bottom-left-radius: .3rem;*/
+        /*    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);*/
+        /*    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);*/
+        /*}*/
 
-        #vaccin  .body_grid {
-            display: flex;
-            flex-direction: column;
-            width: 49.333%;
-            margin-bottom: 0;
-            border-bottom-left-radius: 0;
-            border-top-right-radius: .3rem;
-            border-bottom-right-radius: .3rem;
-            -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-        }
-        #vaccin .footer_grid {
-            display: flex;
-            flex-direction: column;
-            width: 49.333%;
-            border-top-left-radius: .3rem;
-            border-top-right-radius: 0;
-            border-bottom-left-radius: .3rem;
-            -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-        }
+        /*#vaccin  .body_grid {*/
+        /*    display: flex;*/
+        /*    flex-direction: column;*/
+        /*    width: 49.333%;*/
+        /*    margin-bottom: 0;*/
+        /*    border-bottom-left-radius: 0;*/
+        /*    border-top-right-radius: .3rem;*/
+        /*    border-bottom-right-radius: .3rem;*/
+        /*    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);*/
+        /*    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);*/
+        /*}*/
+        /*#vaccin .footer_grid {*/
+        /*    display: flex;*/
+        /*    flex-direction: column;*/
+        /*    width: 49.333%;*/
+        /*    border-top-left-radius: .3rem;*/
+        /*    border-top-right-radius: 0;*/
+        /*    border-bottom-left-radius: .3rem;*/
+        /*    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);*/
+        /*    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);*/
+        /*}*/
 
         #vaccin  h2 {
             font-size: 1.6rem;
@@ -231,6 +231,36 @@
     }
 }
 
+@media screen and (max-width: 600px){
+    #testimonial .wrap_contact  p{
+        font-size: 1.3rem;
+
+    }
+    #testimonial .wrap_contact  form{
+        display: flex;
+        flex-direction: column;
+    }
+    #testimonial .wrap_contact  form label{
+        margin-bottom:1rem;
+        font-size: 1.2rem;
+    }
+    #testimonial .wrap_contact  form textarea{
+        resize: none;
+        height: 200px;
+        width: 100%;
+        padding: 1rem;
+        font-family: lato;
+        margin-bottom: 1rem;
+    }
+    #testimonial .wrap_contact  form input{
+        padding: 1rem;
+        border-radius: .3rem;
+        border: none;
+        font-size: 1rem;
+
+    }
+
+}
 
 @media screen and (max-width: 485px){
     #details .wrap3 .cards .card{

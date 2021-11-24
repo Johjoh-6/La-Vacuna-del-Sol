@@ -3,8 +3,12 @@ session_start();
 require ('inc/func.php');
 require ('inc/pdo.php');
 // Set PHP here
-$id = $_SESSION['user']['id'];
-$user = $_SESSION['user'];
+if (!isLogged()){
+    header('Location: index.php');
+} else {
+    $id = $_SESSION['user']['id'];
+    $user = $_SESSION['user'];
+}
 
 $error = [];
 $succes = false;
@@ -32,19 +36,17 @@ if (!empty($_POST['submitted'])) {
 include ('inc/header.php');
 ?>
 
-
-
     <section id="testimonial">
         <div class="wrap_contact">
             <?php if ($succes){ ?>
-                <div style="background: black">
+                <div class="msg">
                     <p>Message envoyer !</p>
                     <a href="profil.php"><p>Retour a votre profil</p></a>
                 </div>
             <?php }else { ?>
                 <form action="" method="post" class="wrapform" novalidate>
-                    <p>Merci, <?php ucfirst($user['prenom']); ?></p>
-                    <label for="content">Votre avis :</label>
+                    <p>Merci, <?= $user['prenom']; ?>  d'utiliser notre carnet.</p>
+                    <label for="content"> Donnez nous votre avis ci dessous :</label>
                     <textarea name="content" id="content" placeholder="Votre message..."></textarea>
                     <input type="submit" name="submitted" value="Envoyer">
                 </form>

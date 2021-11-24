@@ -3,15 +3,17 @@ session_start();
 require ('inc/func.php');
 require ('inc/pdo.php');
 // Set PHP here
-$id = $_SESSION['user']['id'];
-$user = $_SESSION['user'];
-
+if (!isLogged()){
+    header('Location: index.php');
+} else {
+    $id = $_SESSION['user']['id'];
+    $user = $_SESSION['user'];
+}
 $listVaccinUser = joinUserVaccin($id);
 $vaccinAvailible = getDbOrderAscAndPublish('vds_vaccin');
 
 $error = [];
 $success = false;
-$testimonial = false;
 $newVaccin = false;
 if (!empty($_POST['submitted-vaccin'])) {
     //For add vaccin
@@ -23,7 +25,16 @@ if (!empty($_POST['submitted-vaccin'])) {
     $error = validInput($error,$idVaccin, 'vaccin-select', 0, 99999999999);
     $error = validInput($error,$dateAdd, 'date-add', 1, 200);
     /*If not error*/
-    debug($error);
+    if(empty($error['vaccin-select'])) {
+        $sql = "SELECT * FROM vds_vaccin WHERE id = :id_vaccin";
+        $query = $pdo->prepare($sql);
+        $query->bindValue(':id_vaccin',$idVaccin,PDO::PARAM_STR);
+        $query->execute();
+        $idVerif = $query->fetch();
+        if(empty($idVerif)) {
+            $error['vaccin-select'] = 'Vaccin non disponible';
+        }
+    }
     if (count($error) == 0) {
         $sql = "INSERT INTO vds_user_vaccin (id_user, id_vaccin, vaccin_at, created_at) 
                 VALUES (:id_user, :id_vaccin, :vaccin_at, NOW())";
@@ -39,8 +50,7 @@ if (!empty($_POST['submitted-vaccin'])) {
         //executer la query
         $query->execute();
         $success = true;
-        $testimonial = true;
-        //header("Refresh:0");
+        header("Refresh:0");
     }
 }
 
@@ -134,19 +144,16 @@ include ('inc/header.php');
                         <input type="submit" name="submitted-vaccin" value="Envoyer">
                     </div>
                 </form>
-                <!--Check where to put it -->
-                <?php if ($testimonial){ ?>
-                    <a href="testimonial.php">
-                        <p>Laissez nous un avis</p>
-                    </a>
-                <?php }; ?>
+                    <a href="testimonial.php">Laissez nous un avis   <i class="fas fa-sun"></i></a>
             </div>
             <div class="right">
              <?php if (empty($listVaccinUser)) { ?>
                 <div><p>Vous n'avez pas répertorier de vaccin</p></div>
-            <?php } else { ?>
+            <?php } else {
+             $testimonial = true;
+             ?>
                 <div class="text_vaccin">
-                    <p>Informations sur vos vaccinations</p>
+                    <p>Informations sur vos vaccinations </p>
                 </div>
 
                 <div class="grid">
@@ -164,7 +171,7 @@ include ('inc/header.php');
                     <div class="body_grid gridflex">
                             <p><?= ucfirst($listVaccin['vaccin_name']); ?></p>
                             <p><?= date('d/m/Y', $date); ?></p>
-                            <p><?= $listVaccin['rappel']; ?></p>
+                            <p class=""><?= $listVaccin['rappel']; ?></p>
                             <p><?= date('d/m/Y', strtotime('+'.$listVaccin['rappel'].'month', $date)); ?></p>
                             <p><?= ucfirst($listVaccin['obligatoire']); ?></p>
 
