@@ -135,18 +135,16 @@ include ('inc/header.php');
                     </div>
                 </form>
                 <!--Check where to put it -->
-                <?php if ($testimonial){ ?>
-                    <a href="testimonial.php">
-                        <p>Laissez nous un avis</p>
-                    </a>
-                <?php }; ?>
+
+                    <a href="testimonial.php">Laissez nous un avis   <i class="fas fa-sun"></i></a>
+
             </div>
             <div class="right">
              <?php if (empty($listVaccinUser)) { ?>
                 <div><p>Vous n'avez pas répertorier de vaccin</p></div>
             <?php } else { ?>
                 <div class="text_vaccin">
-                    <p>Informations sur vos vaccinations</p>
+                    <p>Informations sur vos vaccinations </p>
                 </div>
 
                 <div class="grid">
@@ -164,7 +162,7 @@ include ('inc/header.php');
                     <div class="body_grid gridflex">
                             <p><?= ucfirst($listVaccin['vaccin_name']); ?></p>
                             <p><?= date('d/m/Y', $date); ?></p>
-                            <p><?= $listVaccin['rappel']; ?></p>
+                            <p class=""><?= $listVaccin['rappel']; ?></p>
                             <p><?= date('d/m/Y', strtotime('+'.$listVaccin['rappel'].'month', $date)); ?></p>
                             <p><?= ucfirst($listVaccin['obligatoire']); ?></p>
 
