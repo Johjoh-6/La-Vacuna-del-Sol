@@ -446,10 +446,10 @@ button.active{
 
 
 #formulaire .sex {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
+display: flex;
+
 }
+
 #formulaire  h3{
     font-size: 1.2rem;
     color: white;
@@ -1049,15 +1049,16 @@ button.active{
 #footer .reseau ul{
     display: flex;
     align-items: center;
+
 }
-#footer .reseau ul li{
-    padding: .5rem;
-}
-#footer .reseau img{
-    width: 1.4rem;
+#footer .reseau i{
+padding: 1rem;
 }
 
-
+#footer .reseau i:hover{
+    color: #0f499d;
+    opacity: 60%;
+}
 
 
 
