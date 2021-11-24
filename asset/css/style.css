@@ -133,6 +133,7 @@ header .wrap nav ul li .box_header:hover{
     /*border-radius: 10%;*/
     padding: 2rem;
     border-radius: 3rem;
+    box-shadow: 3px 3px 8px 2px
 }
 #connexion .wrap2 form{
     display: flex;
@@ -269,6 +270,59 @@ background-color: var(--jaune);
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.card:hover {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+×
 #details .wrap3 .cards .card{
     width: 31.33333%;
     background-color: white;
@@ -331,12 +385,13 @@ background-color: var(--jaune);
     width: 100%;
     background: #fff;
     border-radius: .3rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 10px 5px var(--bleu);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     margin: 0 1rem;
+
 }
 
 .card-body{
@@ -675,7 +730,12 @@ display: flex;
     background-color: var(--jaune);
     transition: .5s;
 }
+#vaccin select{
+    padding: 1rem;
+    border-radius: .3rem;
+    border: none;
 
+}
 #vaccin .add_vac a{
     background-color: transparent;
     font-size: 1.5rem;
@@ -1059,7 +1119,6 @@ padding: 1rem;
     color: #0f499d;
     opacity: 60%;
 }
-
 
 
 
