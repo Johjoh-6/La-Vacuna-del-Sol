@@ -33,8 +33,6 @@ if(!empty($_SESSION['user'])){
 
 <header id="navbar" class="nav">
 
-
-
         <div class="wrap">
             <div class="logo">
                 <img src="asset/img/logo.png" alt="">
