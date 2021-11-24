@@ -91,6 +91,9 @@ header .wrap nav ul li .box_header{
     padding: .6rem;
     border-radius: .4rem;
 }
+header .wrap nav ul li .admin_link {
+    border: solid 2px var(--yellow);
+}
 header .wrap nav ul li a:hover{
     color: var(--jaune);
     transition: .5s;
@@ -101,7 +104,9 @@ header .wrap nav ul li .box_header:hover{
     transition: .5s;
     color: white;
 }
-
+header .wrap nav ul li .admin_link:hover{
+    background-color: var(--yellow);
+}
 /**********************************INDEX **********************************************/
 #connexion {
     padding-top: 6rem;

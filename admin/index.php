@@ -17,7 +17,7 @@ include('inc/header_b.php');
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
-        <h1 class="text-center mt-5 mb-4">Bonjour, Gros sexe.</h1>
+        <h1 class="text-center mt-5 mb-4">Bonjour, <?= $user['prenom']; ?></h1>
         <h3 class="text-center"> Comment allez-vous aujourd'hui ? </h3>
 
         <!-- Page Heading -->

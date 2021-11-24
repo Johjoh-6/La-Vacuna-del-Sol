@@ -11,6 +11,7 @@ $title = 'Gestion des Avis';
 $headTitle = 'Avis';
 $listFunc = ['publier', 'supprimer'];
 $avoidColumn = ['id', 'id_user'];
+
 $add = '';
 
 /*Get DB*/

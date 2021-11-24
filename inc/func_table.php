@@ -159,3 +159,24 @@ function isSelected ($item, $key, $value){
         echo 'selected';
     }
 }
+/*Paginator*/
+function getArticlesWithLimit($table, $limit = 10, $status = 'all', $offset){
+    global $pdo;
+    if($status == 'all') {
+        $sql = "SELECT * FROM $table ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
+
+    if ($table == 'vds_testimonial'){
+        $sql= "SELECT vds_users.id,vds_users.name as name, vds_users.prenom as prenom,vds_testimonial.*
+    FROM vds_users
+    INNER JOIN vds_testimonial
+    ON vds_users.id = vds_testimonial.id_user";
+    }
+    }
+    else {
+        $sql = "SELECT * FROM $table WHERE status = '$status' ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
+    }
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    return $query->fetchAll();
+
+}

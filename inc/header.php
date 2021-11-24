@@ -1,14 +1,9 @@
 <?php
 
 // Check if he is connected
-
-//debug($_SESSION);
-
-
-if(!empty($_SESSION['user'])){
-    $connected = true;
-}else {
-    $connected = false;
+if (isLogged()){
+    $id = $_SESSION['user']['id'];
+    $user = $_SESSION['user'];
 }
 ?>
 <!doctype html>
@@ -32,24 +27,29 @@ if(!empty($_SESSION['user'])){
 <!--Header-->
 
 <header id="navbar" class="nav">
-
-
-
         <div class="wrap">
             <div class="logo">
-                <img src="asset/img/logo.png" alt="">
+                <a href="index.php">
+                    <img src="asset/img/logo.png" alt="logo">
+                </a>
             </div>
             <nav>
                 <a class="icon" onclick="myFunction()">&#9776;</a>
                 <ul>
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="index.php#details">A propos</a></li>
-                    <li><a href="contact.php">Contacter</a></li>
+                    <?php if (!isAdmin()){?>
+                    <li><a href="contact.php">Contact</a></li>
+                    <?php }?>
 
-                    <?php if ($connected) { ?>
+                    <?php if (isLogged()) { ?>
                     <li><a href="profil.php">Mon carnet</a></li>
+                        <?php if (isAdmin()){?>
+                            <li><a href="admin/index.php" class="box_header admin_link">Admin</a></li>
+                        <?php }?>
                     <li><a href="inc/logout.php" class="box_header">Deconnexion</a></li>
                     <?php } else { ?>
+                        <li><a href="index.php#connexion" class="box_header">Connexion</a></li>
                         <li><a href="inscription.php" class="box_header">Inscription</a></li>
                     <?php } ?>
                 </ul>

@@ -111,3 +111,12 @@ td:hover {
 .badge-counter{
     right: 10%;
 }
+
+.pagination {
+    justify-content: center;
+}
+@media screen  and (max-width: 620px){
+    .responsive_hide{
+        display: none;
+    }
+}
