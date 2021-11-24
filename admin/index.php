@@ -17,8 +17,8 @@ include('inc/header_b.php');
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
-        <h1 class="text-center mt-5 mb-4">Bonjour, Admin.</h1>
-        <h3 class="text-center"> Comment allez-vous aujourd'hui </h3>
+        <h1 class="text-center mt-5 mb-4">Bonjour, Gros sexe.</h1>
+        <h3 class="text-center"> Comment allez-vous aujourd'hui ? </h3>
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -97,7 +97,7 @@ include('inc/header_b.php');
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                    Nombres d'utilisateurs total du site
+                                    Nombres total d'utilisateurs sur le site
                                 </div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupUsers ?></div>
                             </div>

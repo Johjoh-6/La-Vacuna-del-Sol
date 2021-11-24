@@ -135,7 +135,7 @@ include ('inc/header_b.php');
         <?php if ($succes){?>
             <div class="text-center mt-5" >
                 <div class="h3 mx-auto mb-4 mt-4 text-center text-yellow font-weight-bold">Modification réussi</div>
-                <a onclick="javascript:history.go(-2)" class="btn btn-primary "><p class="text-blue-500 mb-0">Revenir sur la page précedente</p></a>
+                <a onclick="javascript:history.go(-2)" class="btn btn-primary "><p class="text-blue-500 mb-0">Revenir sur la page précédente</p></a>
             </div>
         <?php  } else {?>
         <h1 class="h3 mb-4 mt-4 text-center text-yellow font-weight-bold">Modifier</h1>
@@ -191,7 +191,7 @@ include ('inc/header_b.php');
             <span class="error-input"><?= returnError($error, 'status');?></span>
             <?php }
                 if ($tableName == 'vds_users') { ?>
-            <label for="role" class="form-label small">Role</label>
+            <label for="role" class="form-label small">Rôle</label>
             <select class="form-control" aria-label="role" name="role" id="role">
                 <option value="user" <?= isSelected($item,'role','user'); ?>>User</option>
                 <option value="admin" <?= isSelected($item,'role','admin'); ?>>Admin</option>

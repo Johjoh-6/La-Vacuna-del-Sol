@@ -41,7 +41,7 @@ include ('inc/header.php');
             <?php if ($succes){ ?>
                 <div class="msg">
                     <p>Message envoyer !</p>
-                    <a href="profil.php"><p>Retour a votre profil</p></a>
+                    <a href="profil.php"><p>Retour à votre profil</p></a>
                 </div>
             <?php }else { ?>
                 <form action="" method="post" class="wrapform" novalidate>
