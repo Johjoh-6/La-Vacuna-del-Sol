@@ -1,4 +1,7 @@
 <?php
+require ('func_connect.php');
+require ('func_table.php');
+
 //Important to put in the toolbox
 function debug(array $array){
     echo '<pre style="height: 200px; overflow-y: scroll; font-size: .7rem; padding: .6rem; font-family: Consolas,monospace; background: #000000; color: #ffffff;">';
@@ -60,23 +63,7 @@ function deleteById($id, $table){
     }
 }
 
-// If null put it in Publish, replace the current value.
-function changeStatus($id, $from, $status  = 'publish'){
-    if (!empty($id)) {
-        global $pdo;
-        $sql = "UPDATE $from 
-                SET modified_at	= NOW(), status = :status  
-                WHERE  id = :id";
-        $query = $pdo->prepare($sql);
-        $query->bindValue(':id', $id, PDO::PARAM_INT);
-        $query->bindValue(':status', $status, PDO::PARAM_STR);
-        $query->execute();
-        header('Location: ' . $_SERVER['HTTP_REFERER']);;
-    } else{
-        abort404();
-    }
 
-}
 /*Return the date in DD/MM/YYYY*/
 function transformDate($column, $key){
     return date('d/m/y',strtotime($column[$key]));
@@ -88,13 +75,7 @@ function abort404(){
     header('Location: 404.php');
 }
 
-function getDbOrderAsc($table){
-    global $pdo;
-    $sql= "SELECT * FROM  $table ORDER BY name asc";
-    $query = $pdo->prepare($sql);
-    $query->execute();
-    return $query->fetchAll();
-}
+
 function getDb($table){
     global $pdo;
     $sql= "SELECT * FROM  $table";
@@ -103,15 +84,7 @@ function getDb($table){
     return $query->fetchAll();
 }
 
-function tableName($table){
-    $tablesList = ['vds_msg' => 'Message', 'vds_testimonial'=> 'Avis', 'vds_users' => 'Utilisateur', 'vds_vaccin' =>'Vaccin', 'vds_user_vaccin' => 'Find name'];
-    foreach ($tablesList as $tableList => $value) {
-        if ($tableList == $table){
 
-            return $value;
-        }
-        }
-}
 
 function mailValidation($error,$value,$key){
     if(!empty($value)){
@@ -133,115 +106,6 @@ function samePassword($error, $password1, $password2, $key){
     return $error;
 }
 
-function getNameTable ($funcTable){
-        if ($funcTable == 'supprimer') {
-            $name = 'delete';
-        }
-    if ($funcTable == 'modifier') {
-        $name = 'update';
-    }
-    if ($funcTable == 'marquer lu') {
-        $name = 'read';
-    }
-    if ($funcTable == 'publier') {
-        $name = 'publish';
-    }
-    if ($funcTable == 'repondu') {
-        $name = 'answer';
-    }
-    return $name;
-}
-function getTableIcons($funcTable)
-{
-    if ($funcTable == 'supprimer') {
-        $icon = 'fas fa-trash-alt';
-    }
-    if ($funcTable == 'modifier') {
-        $icon = 'fas fa-edit';
-    }
-    if ($funcTable == 'marquer lu') {
-        $icon = 'fas fa-envelope-open';
-    }
-    if ($funcTable == 'publier') {
-        $icon = 'fas fa-paper-plane';
-    }
-    if ($funcTable == 'repondu') {
-        $icon = 'fas fa-check-square';
-    }
-    return $icon;
-}
-function renameKey($key){
-    $name = $key;
-    if ($key == 'name') {
-        $name = 'nom';
-    }
-    if ($key == 'prenom') {
-        $name = 'prenom';
-    }
-
-    if ($key == 'created_at') {
-        $name = 'crée le';
-    }
-    if ($key == 'modified_at') {
-        $name = 'modifié le';
-    }
-    if ($key == 'content') {
-        $name = 'description';
-    }
-    if ($key == 'last_log') {
-        $name = 'derniere connection';
-    }
-    return $name;
-}
-function valueFormat($key, $value){
-    $valuePrepare =$value;
-    if ($key == 'dob') {
-        $valuePrepare = date('d/m/Y', strtotime($value));
-    }
-    if ($key == 'created_at') {
-        $valuePrepare = date('d/m/Y', strtotime($value));
-    }
-    if ($key == 'modified_at') {
-        $valuePrepare = date('d/m/Y', strtotime($value));
-    }
-    if ($key == 'last_log') {
-        $valuePrepare = date('d/m/Y', strtotime($value));
-    }
-    if ($key == 'status'){
-        switch ($value){
-            case 'draft':
-                $valuePrepare = "Brouillon";
-                break;
-            case 'publish':
-                $valuePrepare = "Publier";
-                break;
-            case 'answered':
-                $valuePrepare = "Répondu";
-                break;
-            case 'read':
-                $valuePrepare = "Lu";
-                break;
-            case 'delivered':
-                $valuePrepare = "Non lu";
-                break;
-        }
-    }
-
-    return $valuePrepare;
-}
-function showColumnSelectedValue ($key, $value, $avoidColumn){
-                if (!in_array($key, $avoidColumn)) {
-                    $adapt = valueFormat($key, $value);
-                    echo  '<td>'. $adapt. '</td>';
-                }
-}
-function showColumnSelectedKey ($list,$avoidColumn){
-    foreach ($list as $key => $value){
-        if (!in_array($key, $avoidColumn)){
-                $name = renameKey($key);
-                echo  '<th>'. $name . '</th>';
-                 } }
-}
 
 
 function generateRandomString($length = 10) {
@@ -254,20 +118,6 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
-
-function showForUpdate ($key, $data){
-    if(!empty($_POST[$key])) {
-        echo $_POST[$key];
-    } else {
-        echo $data;
-    }
-}
-
-function isSelected ($item, $key, $value){
-if ($item[$key] == $value) {
-    echo 'selected';
-}
-}
 
 function joinUserId($join){
     global $pdo;
@@ -286,9 +136,10 @@ function getTestiRandomLimit( $limit){
     FROM vds_users 
     INNER JOIN vds_testimonial
     ON vds_users.id = vds_testimonial.id_user
-    ORDER BY vds_testimonial.created_at LIMIT $limit
+    ORDER BY vds_testimonial.created_at LIMIT :limit
     ";
     $query = $pdo->prepare($sql);
+    $query->bindValue(':limit', $limit, PDO::PARAM_INT);
     $query->execute();
     return $query->fetchAll();
 }
@@ -296,50 +147,21 @@ function getTestiRandomLimit( $limit){
 
 function joinUserVaccin($id){
     global $pdo;
-    $sql= "SELECT /*vds_users.name as name, vds_users.prenom as prenom, vds_users.email as email, vds_users.dob as dob,*/ 
-    vds_vaccin.name as vaccin_name, vds_vaccin.rappel as rappel, vds_vaccin.obligatoire as obligatoire, vds_vaccin.status as status,
+    $sql= "SELECT vds_vaccin.name as vaccin_name, vds_vaccin.rappel as rappel, vds_vaccin.obligatoire as obligatoire, vds_vaccin.status as status,
     vds_user_vaccin.*
     FROM vds_users 
     INNER JOIN vds_user_vaccin
     ON vds_users.id = vds_user_vaccin.id_user
     INNER JOIN vds_vaccin
     ON vds_vaccin.id = vds_user_vaccin.id_vaccin
-    WHERE id_user = $id
+    WHERE id_user = :id_user
     ORDER BY vaccin_name";
     $query = $pdo->prepare($sql);
+    $query->bindValue(':id_user', $id, PDO::PARAM_INT);
     $query->execute();
     return  $query->fetchAll();
 }
 
-function isLogged()
-{
-    if(!empty($_SESSION['user'])) {
-        if (!empty($_SESSION['user']['id'])) {
-            if (!empty($_SESSION['user']['email'])) {
-                if (!empty($_SESSION['user']['name'])) {
-                    if (!empty($_SESSION['user']['role'])) {
-                        if (!empty($_SESSION['user']['ip'])) {
-                            if ($_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
-                                return true;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    return false;
-}
-
-function isAdmin()
-{
-    if(isLogged()) {
-        if($_SESSION['user']['role'] == 'admin') {
-            return true;
-        }
-    }
-    return false;
-}
 
 function ageOfUser($bithdayDate)
 {
@@ -354,4 +176,20 @@ function getDbOrderAscAndPublish($table){
     $query = $pdo->prepare($sql);
     $query->execute();
     return $query->fetchAll();
+}
+
+function countTable($table){
+    global $pdo;
+    $sql= "SELECT COUNT(id) FROM $table";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    return $query->fetchColumn();
+}
+function countTableByStatus($table, $value){
+    global $pdo;
+    $sql= "SELECT count(status)  FROM $table WHERE status = :val";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':val', $value, PDO::PARAM_STR);
+    $query->execute();
+    return $query->fetchColumn();
 }

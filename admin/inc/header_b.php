@@ -1,3 +1,11 @@
+<?php
+if (!isAdmin()){
+    header('Location: 403.php');
+} else {
+    $id = $_SESSION['user']['id'];
+    $user = $_SESSION['user'];
+}
+?>
 <!doctype html>
 <html lang="fr">
 <head>

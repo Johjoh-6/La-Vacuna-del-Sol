@@ -3,8 +3,12 @@ session_start();
 require ('inc/func.php');
 require ('inc/pdo.php');
 // Set PHP here
-$id = $_SESSION['user']['id'];
-$user = $_SESSION['user'];
+if (!isLogged()){
+    header('Location: index.php');
+} else {
+    $id = $_SESSION['user']['id'];
+    $user = $_SESSION['user'];
+}
 
 $error = [];
 $succes = false;

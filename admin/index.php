@@ -4,36 +4,12 @@ session_start();
 require('../inc/func.php');
 require('../inc/pdo.php');
 
+
 // Check if he got a rank admin!
-
-    $sql= "SELECT COUNT(id) FROM vds_msg WHERE status = 'delivered'";
-    $query = $pdo->prepare($sql);
-    $query->execute();
-    $recupMsg = $query->fetch();
-
-    $sql= "SELECT COUNT(id) FROM vds_vaccin";
-    $query = $pdo->prepare($sql);
-    $query->execute();
-    $recupVac = $query->fetch();
-
-//    debug($recupVac);
-//    $vac = count($recupVac);
-//    echo $recupVac['COUNT(id)'];
-
-    $sql= "SELECT COUNT(id) FROM vds_testimonial WHERE status = 'draft'";
-    $query = $pdo->prepare($sql);
-    $query->execute();
-    $recupTesti = $query->fetch();
-
-//    debug($recupTesti);
-//    echo $recupTesti['COUNT(id)'];
-
-    $sql= "SELECT COUNT(id) FROM vds_users";
-    $query = $pdo->prepare($sql);
-    $query->execute();
-    $recupUsers = $query->fetch();
-
-
+    $recupMsg = countTableByStatus('vds_msg', 'delivered');
+    $recupVac = countTable('vds_vaccin');
+    $recupTesti = countTableByStatus('vds_testimonial', 'draft');
+    $recupUsers = countTable('vds_users');
 
 include('inc/header_b.php');
 ?>
@@ -60,7 +36,7 @@ include('inc/header_b.php');
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Nombres de messages non lu
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupMsg['COUNT(id)'] ?></div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupMsg ?></div>
                             </div>
                             <div class="col-auto">
                                <i class="fas fa-envelope fa-2x text-primary -600"></i>
@@ -81,7 +57,7 @@ include('inc/header_b.php');
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Nombres de vaccin sur le site
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupVac['COUNT(id)'] ?></div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupVac ?></div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-syringe fa-2x text-success -600"></i>
@@ -102,7 +78,7 @@ include('inc/header_b.php');
                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                     Nombre d'avis non lu
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupTesti['COUNT(id)'] ?></div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupTesti ?></div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-comments fa-2x text-info -600"></i>
@@ -123,7 +99,7 @@ include('inc/header_b.php');
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Nombres utilisteurs total du site
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupUsers['COUNT(id)'] ?></div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $recupUsers ?></div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-users fa-2x text-warning "></i>
