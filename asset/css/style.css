@@ -969,8 +969,8 @@ button.active{
 /* footer*/
 
 #footer{
-    /*position: sticky;*/
-    /*top: 100vh;*/
+    position: sticky;
+    top: 100vh;
     background-color: black;
     padding: .8rem;
 }
