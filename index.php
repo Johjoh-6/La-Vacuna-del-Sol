@@ -7,18 +7,14 @@ session_start();
 require ('inc/connection.php');
 $testimonialRandom = getTestiRandomLimit(5);
 
-if(!empty($_SESSION['user'])){
-    $connectedIndex = true;
-}else {
-    $connectedIndex = false;
+if (isLogged()){
+    $id = $_SESSION['user']['id'];
+    $user = $_SESSION['user'];
 }
-
 include ('inc/header.php');
 ?>
     <!--MAIN INDEX USER-->
-<?php if ($connectedIndex) { ?>
-
-<?php } else { ?>
+<?php if (!isLogged()) { ?>
     <section id="connexion">
     <div class="wrap2">
         <div class="box">
@@ -38,7 +34,7 @@ include ('inc/header.php');
                 <input type="password" id="password" name="password" value="<?= returnValue('password') ?>" class="input" placeholder="&#xf023; Entrez votre mot de passe" style="font-family:Arial, FontAwesome">
                 <span class="error"><?= returnError($error,'password')?></span>
                 <input type="submit" name="submitted" value="Connexion" class="submit input2">
-                <a href="inscription.php" class="submit">Inscription</a>
+                <p class="inscription">Si vous n'êtes pas inscrit <a href="inscription.php">inscrivez vous-ici</a></p>
             </form>
         </div>
     </div>
@@ -50,7 +46,9 @@ include ('inc/header.php');
             <h1>Rejoignez nous</h1>
             <div class="separator"></div>
             <p>Tout comme nos 11 millions d'utilisateurs inscrivez-vous et utiliser la Vacuna Del Sol pour garder la main sur vos vaccins, bénéficiez de mails de rappels lorsque un de vos vaccins doit être renouvelé, un service à disposition 7 jours sur 7 de 8h à 21h. </p>
+            <?php if (!isLogged()){ ?>
             <a href="inscription.php">Inscrivez vous ici</a>
+            <?php } ?>
         </div>
     </section>
 
