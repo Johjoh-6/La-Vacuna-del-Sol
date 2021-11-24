@@ -271,33 +271,35 @@ background-color: var(--jaune);
 }
 #details .wrap3 .cards .card{
     width: 31.33333%;
-    height: 350px;
     background-color: white;
     border-radius: .3rem;
     display: flex;
-    flex-direction: column;
+    flex-flow: nowrap column;
     margin: 0 auto 1rem auto;
     -webkit-box-shadow: 4px 4px 8px -2px rgba(0,0,0,0.75);
     box-shadow: 4px 4px 8px -2px rgba(0,0,0,0.75);
     padding: 2rem 1rem;
+}
+#details .wrap3 .cards .card > *{
+    font-size: 1.3rem;
+    margin-bottom: .3rem;
 }
 #details .wrap3 .cards .card:hover{
     outline: 3px solid #f1c111;
 }
 
 #details .wrap3 .cards .card h3{
-    font-size: 1.3rem;
     font-weight: 600;
-    height: 50px;
-
+    height: 15%;
 }
 #details .wrap3 .cards .card i{
-    font-size: 1.5rem;
-    height: 50px;
+    height: 10%;
+
 }
 #details .wrap3 .cards .card p{
     font-size: 1.1rem;
     text-align: center;
+    height: 75%;
 }
 
 
@@ -967,8 +969,8 @@ button.active{
 /* footer*/
 
 #footer{
-    /*position: sticky;*/
-    /*top: 100vh;*/
+    position: sticky;
+    top: 100vh;
     background-color: black;
     padding: .8rem;
 }

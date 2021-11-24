@@ -11,6 +11,7 @@ $vaccinAvailible = getDbOrderAscAndPublish('vds_vaccin');
 
 $error = [];
 $success = false;
+$testimonial = false;
 $newVaccin = false;
 if (!empty($_POST['submitted-vaccin'])) {
     //For add vaccin
@@ -38,7 +39,8 @@ if (!empty($_POST['submitted-vaccin'])) {
         //executer la query
         $query->execute();
         $success = true;
-        header("Refresh:0");
+        $testimonial = true;
+        //header("Refresh:0");
     }
 }
 
@@ -132,6 +134,12 @@ include ('inc/header.php');
                         <input type="submit" name="submitted-vaccin" value="Envoyer">
                     </div>
                 </form>
+                <!--Check where to put it -->
+                <?php if ($testimonial){ ?>
+                    <a href="testimonial.php">
+                        <p>Laissez nous un avis</p>
+                    </a>
+                <?php }; ?>
             </div>
             <div class="right">
              <?php if (empty($listVaccinUser)) { ?>
