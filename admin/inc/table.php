@@ -6,7 +6,7 @@ use JasonGrimes\Paginator;
 
 $currentPage = 1;
 $offset = 0;
-$itemsPerPage = 10;
+$itemsPerPage = 2;
 
 
 if (!empty($_GET['page']) && is_numeric($_GET['page'])) {

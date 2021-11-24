@@ -163,17 +163,22 @@ function isSelected ($item, $key, $value){
 function getArticlesWithLimit($table, $limit = 10, $status = 'all', $offset){
     global $pdo;
     if($status == 'all') {
-        $sql = "SELECT * FROM $table ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
-
-    if ($table == 'vds_testimonial'){
+        $sql = "SELECT * FROM $table ORDER BY status DESC ,created_at DESC LIMIT $limit OFFSET $offset";
+        if($table == 'vds_users') {
+            $sql = "SELECT * FROM $table ORDER BY role DESC ,created_at DESC LIMIT $limit OFFSET $offset";
+        }
+            if ($table == 'vds_testimonial'){
         $sql= "SELECT vds_users.id,vds_users.name as name, vds_users.prenom as prenom,vds_testimonial.*
     FROM vds_users
     INNER JOIN vds_testimonial
-    ON vds_users.id = vds_testimonial.id_user";
+    ON vds_users.id = vds_testimonial.id_user
+    ORDER BY status DESC ,created_at DESC
+    LIMIT $limit OFFSET $offset
+    ";
     }
     }
     else {
-        $sql = "SELECT * FROM $table WHERE status = '$status' ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
+        $sql = "SELECT * FROM $table WHERE status = '$status' ORDER BY status DESC ,created_at DESC LIMIT $limit OFFSET $offset";
     }
     $query = $pdo->prepare($sql);
     $query->execute();
