@@ -444,6 +444,7 @@ button.active{
     /*margin-bottom: 2rem;*/
 }
 
+
 #formulaire .sex {
     display: flex;
     align-items: center;
@@ -453,9 +454,7 @@ button.active{
     font-size: 1.2rem;
     color: white;
 }
-
 .submit_inscription{
-    text-align: center;
     background-color: transparent;
     border: solid 2.5px var(--jaune);
     font-size: 2rem;
@@ -464,6 +463,7 @@ button.active{
     margin-bottom: 1rem;
     cursor: pointer;
 }
+
 .submit_inscription:hover{
     background-color: var(--jaune);
     transition: .5s;
@@ -511,7 +511,7 @@ button.active{
     border-radius: 1rem;
 }
 #profil .profil_name {
-    padding: 1rem 0 0 4rem;
+    padding: 1rem 0 0 1rem;
     display: flex;
     align-items: end;
     margin-bottom: 2rem;
@@ -532,6 +532,7 @@ button.active{
 
 #profil .profil_left {
     width: 50%;
+    margin-left: 1rem;
 }
 #profil .profil_right {
     width: 45%;
@@ -562,7 +563,7 @@ button.active{
     text-transform: uppercase;
     border-radius: .3rem;
     margin-bottom: 1rem;
-    color: black;
+    color: var(--jaune);
     background-color: transparent;
 }
 
@@ -665,6 +666,11 @@ button.active{
     margin-bottom: 1rem;
     cursor: pointer;
 }
+
+.sexe {
+   background-color: var(--jaune);
+}
+
 #vaccin .add_vac form input:hover{
     background-color: var(--jaune);
     transition: .5s;
@@ -675,9 +681,15 @@ button.active{
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: .3rem;
-    border: solid 2px var(--jaune);
+    border: solid 2px white;
     width: 100%;
     text-align: center;
+    margin-top: 2rem;
+    transition: .5s;
+    align-items: center;
+}
+#vaccin .add_vac i{
+    color: var(--jaune);
 }
 #vaccin .add_vac a:hover{
   background-color: var(--jaune);
@@ -833,6 +845,44 @@ button.active{
 }
 #contact .contact2 input:hover {
     color: var(--jaune);
+}
+
+/********************************TESTIMONIAL*/
+#testimonial {
+    padding: 6rem;
+}
+#testimonial .wrap_contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#testimonial .wrap_contact  p{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#testimonial .wrap_contact  form{
+    display: flex;
+    flex-direction: column;
+}
+#testimonial .wrap_contact  form label{
+  margin-bottom:1rem;
+    font-size: 1.5rem;
+}
+#testimonial .wrap_contact  form textarea{
+    resize: none;
+    height: 200px;
+    width: 100%;
+    padding: 1rem;
+    font-family: lato;
+    margin-bottom: 1rem;
+}
+#testimonial .wrap_contact  form input{
+    padding: 1rem;
+    border-radius: .3rem;
+    border: none;
+    font-size: 1.2rem;
+
 }
 
 

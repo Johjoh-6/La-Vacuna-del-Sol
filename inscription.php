@@ -59,13 +59,13 @@ include ('inc/header.php');?>
                     <h3>Sexe :</h3>
                     <div class="sex">
                         <label for="sexe">Femme</label>
-                        <input type="radio" name="sexe" id="sexe" value="femme" >
+                        <input type="radio" name="sexe" class="sexe" id="sexe" value="femme" >
                         <label for="sexe">Homme</label>
-                        <input type="radio" name="sexe" id="sexe" value="homme" checked>
+                        <input type="radio" name="sexe" id="sexe" class="sexe" value="homme" checked>
                     </div>
                 </div>
                 <div class="envoyer">
-                    <input class ="submit_inscription" type="submit" id="submitted" name="submitted">
+                    <input class ="submit_inscription" type="submit" id="submitted" value="Danser" name="submitted">
                 </div>
             </form>
         </div>
