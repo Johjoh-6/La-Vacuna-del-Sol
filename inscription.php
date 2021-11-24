@@ -65,7 +65,7 @@ include ('inc/header.php');?>
                     </div>
                 </div>
                 <div class="envoyer">
-                    <input class ="submit_inscription" type="submit" id="submitted" name="submitted">
+                    <input class ="submit_inscription" type="submit" id="submitted" name="submitted" value="Inscription">
                 </div>
             </form>
         </div>

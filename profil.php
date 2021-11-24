@@ -143,16 +143,16 @@ include ('inc/header.php');
             </div>
             <div class="right">
              <?php if (empty($listVaccinUser)) { ?>
-                <div><p>Vous n'avez pas répertorier de vaccin</p></div>
+                <div><p>Vous n'avez pas répertorié de vaccin</p></div>
             <?php } else { ?>
                 <div class="text_vaccin">
-                    <p>Informations sur vos vaccinations</p>
+                    <p>Les informations sur vos vaccinations</p>
                 </div>
 
                 <div class="grid">
                     <div class="head_grid gridflex">
                         <h2>Nom du vaccin</h2>
-                        <h2>Date de la derniere dose</h2>
+                        <h2>Date de la dernière dose</h2>
                         <h2>Séparation entre les doses (mois*)</h2>
                         <h2>Votre prochaine dose</h2>
                         <h2>Obligatoire</h2>
@@ -172,7 +172,7 @@ include ('inc/header.php');
                     <?php } ?>
                     <div class="footer_grid gridflex">
                         <h2>Nom du vaccin</h2>
-                        <h2>Date de la derniere dose</h2>
+                        <h2>Date de la dernière dose</h2>
                         <h2>Séparation entre les doses</h2>
                         <h2>Votre prochaine dose</h2>
                         <h2>Obligatoire</h2>
