@@ -367,7 +367,6 @@ background-color: var(--jaune);
     align-items: center;
     padding: 20px;
     margin: 0 1rem;
-    box-shadow: 0 1px 10px 5px var(--bleu);
 }
 
 .card-body{
