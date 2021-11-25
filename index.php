@@ -35,7 +35,7 @@ include ('inc/header.php');
                 <span class="error"><?= returnError($error,'password')?></span>
                 <input type="submit" name="submitted" value="Connexion" class="submit input2">
                 <a href="lost-pwd.php">Mot de passe oublié ?</a>
-                <p class="inscription">Si vous n'êtes pas inscrit <a href="inscription.php">inscrivez vous-ici</a></p>
+                <p class="inscription">Si vous n'avez pas de compte <a href="inscription.php">inscrivez vous-ici</a></p>
             </form>
         </div>
     </div>

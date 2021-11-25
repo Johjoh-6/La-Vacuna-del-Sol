@@ -53,7 +53,7 @@ include ('inc/header.php');
         <form action="" method="post" class="wrapform" novalidate>
             <div class="contact1">
                 <div class="nom colonne">
-                    <label for="name">Nom :</label>
+                    <label for="name">Prénom :</label>
                     <input type="text" id="name" name="name" value="<?= returnValue('name') ?>" class="nom" placeholder="&#xf007;  Entrez votre prénom : " style="font-family:Arial, FontAwesome">
                     <span class="error"><?= returnError($error,'name')?> </span>
                 </div>
