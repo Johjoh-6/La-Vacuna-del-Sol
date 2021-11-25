@@ -60,7 +60,7 @@ $listName = $table[0];
                             ?>
                             <td class="btn-<?= $funcName; ?>">
                                 <div class="my-2"></div>
-                                <a href="<?= $funcName; ?>.php?table=<?= $tableName; ?>&id=<?php echo $list['id']; ?>"
+                                <a href="<?= $funcName; ?>.php?table=<?= urlencode($tableName); ?>&id=<?php echo $list['id']; ?>"
                                    class="btn btn-info" <?php if ($funcName == 'delete') {
                                     echo 'onclick="return confirm(\'Voulez vous vraiment effacer cet article ?\')" ';
                                 }; ?>>
@@ -76,7 +76,7 @@ $listName = $table[0];
             </table>
         </div>
         <?php if (!empty($add)) { ?>
-            <a href="inc/redict.php?table=<?= $tableName; ?>" class="btn btn-secondary btn-icon-split">
+            <a href="inc/redict.php?table=<?= urlencode($tableName); ?>" class="btn btn-secondary btn-icon-split">
           <span class="icon text-white-50">
            <i class="fas fa-plus"></i>
           </span>

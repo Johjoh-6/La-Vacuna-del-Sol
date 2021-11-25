@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!isAdmin()){
     header('Location: 403.php');
 } else {
