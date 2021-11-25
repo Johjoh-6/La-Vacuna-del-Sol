@@ -92,32 +92,16 @@ header .wrap nav ul li .box_header{
 header .wrap nav ul li .admin_link {
     border: solid 2px var(--yellow);
 }
-header .wrap nav ul li a:hover{
+header .wrap nav ul li:hover a{
     color: var(--jaune);
-    transition: .5s;
+    transition: all .5s;
 }
 
 header .wrap nav ul li .box_header:hover{
     background-color: var(--jaune);
-    transition: .5s;
+    transition: all .5s;
     color: white;
 }
-
-header .wrap nav ul li {
-    color: #fff !important;
-    text-decoration: none;
-    padding: .6rem;
-    border-radius: .3rem;
-    display: inline-block;
-    border: none;
-}
-header .wrap nav ul li:hover {
-    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    transition: all 0.4s ease 0s;
-}
-
 
 header .wrap nav ul li .admin_link:hover{
     background-color: var(--yellow);
