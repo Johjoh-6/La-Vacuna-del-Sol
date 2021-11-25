@@ -2,9 +2,9 @@
     <div class="wrap6">
         <nav>
             <ul>
-                <li><a href="legal-mention.php">Mentions légals </a></li>
+                <li><a href="legal-mention.php">Mentions légales</a></li>
                 <li><a href="contact.php">Nous contacter</a></li>
-                <li><a href="tel:+33658564"> Appelez nous </a></li>
+                <li><a href="tel:+33658564">Appelez nous</a></li>
             </ul>
         </nav>
         <div class="copy">&copy; Vacuna Del Sol Creator</div>

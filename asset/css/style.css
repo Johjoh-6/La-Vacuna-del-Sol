@@ -308,7 +308,7 @@ background-color: var(--jaune);
 
 #details .wrap3 .cards .card h3{
     font-weight: 600;
-    height: 15%;
+    height: 20%;
 }
 #details .wrap3 .cards .card i{
     height: 10%;
@@ -317,7 +317,7 @@ background-color: var(--jaune);
 #details .wrap3 .cards .card p{
     font-size: 1.1rem;
     text-align: center;
-    height: 75%;
+    height: 70%;
 }
 
 
