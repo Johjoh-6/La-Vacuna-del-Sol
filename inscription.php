@@ -20,8 +20,7 @@ include ('inc/header.php');?>
             </a>
         <?php } else { ?>
         <div class="wrap_accounts">
-            <form class="wrap_account" action="" method="post">
-                <div class="form_left">
+            <form action="" method="post">
                     <div>
                         <label for="name">Nom : </label>
                         <input class="input_inscription" type="text" name="name" id="name" placeholder="Votre nom" value="<?= returnValue('name') ?>">
@@ -38,9 +37,6 @@ include ('inc/header.php');?>
                         <input class="input_date" type="date" name="dob" value="<?php if (!empty($_POST['dob'])){ echo transformDate($_POST, 'dob');} ;?>">
                         <span class="error"><?= returnError($error, 'dob');?></span>
                     </div>
-                </div>
-
-                <div class="form_right">
                     <div class="email">
                         <label for="email">Email :</label>
                         <input class="input_inscription" type="email" id="email" name="email" placeholder="Votre email" value="<?= returnValue('email') ?>">
@@ -65,8 +61,7 @@ include ('inc/header.php');?>
                             <option value="non-défini">Non-défini</option>
                         </select>
                     </div>
-                </div>
-                <div class="envoyer">
+                <div>
                     <input class ="submit_inscription" type="submit" id="submitted" name="submitted" value="Inscription">
                 </div>
             </form>
