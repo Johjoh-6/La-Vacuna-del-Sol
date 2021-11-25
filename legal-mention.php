@@ -2,8 +2,7 @@
 require ('inc/func.php');
 require ('inc/pdo.php');
 // Set PHP here
-
-
+session_start();
 
 
 include ('inc/header.php');

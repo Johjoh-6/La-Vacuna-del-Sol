@@ -215,7 +215,6 @@
     }
     #vaccin  .grid p{
         font-size: .7rem;
-        /*text-align: left;*/
         width: 100%;
         padding: 0;
     }
@@ -307,9 +306,6 @@
     #connexion .wrap2 .inscription{
         display: flex;
         flex-direction: column;
-    }
-    #vaccin  .grid p{
-        font-size: .4rem;
     }
 }
 

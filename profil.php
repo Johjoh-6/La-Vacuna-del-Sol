@@ -185,7 +185,7 @@ include ('inc/header.php');
                         <h2>Date de la dernière dose</h2>
                         <h2 class="colonne_hiden">Séparation entre les doses (mois*)</h2>
                         <h2>Votre prochaine dose</h2>
-                        <h2>Obligatoire</h2>
+                        <h2 class="colonne_hiden">Obligatoire</h2>
                         <!--Ask for, if he do a second shot. what that can do-->
                     </div>
                     <?php foreach ($listVaccinUser as $listVaccin){
@@ -195,7 +195,7 @@ include ('inc/header.php');
                             <p><?= date('d/m/Y', $date); ?></p>
                             <p class="colonne_hiden"><?= $listVaccin['rappel']; ?></p>
                             <p><?= date('d/m/Y', strtotime('+'.$listVaccin['rappel'].'month', $date)); ?></p>
-                            <p><?= ucfirst($listVaccin['obligatoire']); ?></p>
+                            <p class="colonne_hiden"><?= ucfirst($listVaccin['obligatoire']); ?></p>
                         </div>
                     <?php } ?>
                     <div class="footer_grid gridflex">
@@ -203,7 +203,7 @@ include ('inc/header.php');
                         <h2>Date de la dernière dose</h2>
                         <h2 class="colonne_hiden">Séparation entre les doses</h2>
                         <h2>Votre prochaine dose</h2>
-                        <h2>Obligatoire</h2>
+                        <h2 class="colonne_hiden">Obligatoire</h2>
 
                     </div>
                 </div>
