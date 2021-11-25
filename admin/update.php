@@ -172,7 +172,7 @@ include ('inc/header_b.php');
             </div>
 
             <label for="rappel" class="form-label small">Année entre deux doses</label>
-            <input class="form-control" type="number" placeholder="Rappel" name="rappel" aria-label="rappel" id="rappel" value="<?= showForUpdate('rappel', $item['rappel']);?>" min="0" max="100" >
+            <input class="form-control" type="number" placeholder="Rappel" name="rappel" aria-label="rappel" id="rappel" value="<?= showForUpdate('rappel', $item['rappel']);?>" min="0" max="600" >
             <span class="error-input"><?= returnError($error, 'rappel');?></span>
 
             <label for="obligatoire" class="form-label small">La vaccin est-il obligatoire ?</label>

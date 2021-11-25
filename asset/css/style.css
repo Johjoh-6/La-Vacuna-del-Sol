@@ -330,7 +330,7 @@ background-color: var(--jaune);
 }
 .container{
     position: relative;
-    min-width: 350px;
+    min-width: 300px;
     min-height: 250px;
     padding-bottom: 40px;
     overflow: hidden;
