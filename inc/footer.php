@@ -10,9 +10,9 @@
         <div class="copy">&copy; Vacuna Del Sol Creator</div>
         <div class="reseau">
             <ul>
-                <li><a href="#" target="_blank"><img src="asset/img/facebook-svgrepo-com (1).svg" alt=""></a></li>
-                <li><a href="#"target="_blank"><img src="asset/img/instagram-svgrepo-com.svg" alt=""></a></li>
-                <li><a href="#" target="_blank"><img src="asset/img/twitter-svgrepo-com.svg" alt=""></a></li>
+                <li><a href="#" target="_blank"<i class="fab fa-facebook" style="font-size: 30px"></i></a></li>
+                <li><a href="#"target="_blank"><i class="fab fa-instagram" style="font-size: 30px"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter" style="font-size: 30px"></i></a></li>
             </ul>
         </div>
 </div>

@@ -103,9 +103,27 @@ header .wrap nav ul li .box_header:hover{
     transition: .5s;
     color: white;
 }
+
+header .wrap nav ul li {
+    color: #fff !important;
+    text-decoration: none;
+    padding: .6rem;
+    border-radius: .3rem;
+    display: inline-block;
+    border: none;
+}
+header .wrap nav ul li:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+
 header .wrap nav ul li .admin_link:hover{
     background-color: var(--yellow);
 }
+
 /**********************************INDEX **********************************************/
 #connexion {
     padding-top: 6rem;
@@ -137,6 +155,7 @@ header .wrap nav ul li .admin_link:hover{
     /*border-radius: 10%;*/
     padding: 2rem;
     border-radius: 3rem;
+    box-shadow: 3px 3px 8px 2px
 }
 #connexion .wrap2 .inscription{
     display: flex;
@@ -343,12 +362,12 @@ background-color: var(--jaune);
     width: 100%;
     background: #fff;
     border-radius: .3rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     margin: 0 1rem;
+    box-shadow: 0 1px 10px 5px var(--bleu);
 }
 
 .card-body{
@@ -1069,10 +1088,6 @@ button.active{
 #footer .reseau ul li{
     padding: .5rem;
 }
-#footer .reseau img{
-    width: 1.4rem;
-}
-
 
 
 
