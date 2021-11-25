@@ -777,6 +777,13 @@ button.active{
     padding: 10rem;
 }
 
+#contact_head2 {
+    background: url("../img/bg-contact.jpg") top/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 10rem;
+}
+
 .text_contact span{
     background-color: var(--bleu);
     height: 6rem;

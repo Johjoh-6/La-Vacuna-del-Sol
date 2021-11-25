@@ -36,7 +36,7 @@ include ('inc/header.php');
 ?>
 <!--FINIR LE PHP-->
 <!--Contact -->
-<section id="contact_head">
+<section id="contact_head2">
     <div class="text_contact">
         <h2 class="title">Contact</h2>
     </div>
