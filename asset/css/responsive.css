@@ -73,7 +73,6 @@
     #profil .profil_name {
         padding: 1rem 0 0 1rem;
         display: flex;
-        /*flex-direction: column;*/
         align-items: flex-start;
         margin-bottom: 2rem;
         justify-content: space-between;
@@ -90,12 +89,10 @@
 
     #vaccin .grid h2 {
         font-size: 1rem;
-        /*text-align: left;*/
     }
 
     #vaccin .grid p {
         font-size: 1rem;
-        /*text-align: left;*/
     }
 }
     @media screen and (max-width: 640px){
@@ -118,6 +115,16 @@
     }
 
     @media screen and (max-width: 800px){
+
+     #lost-pwd .back {
+        display: flex;
+        flex-direction: column;
+    }
+        #lost-pwd .back a{
+         margin-bottom: 1rem;
+        }
+
+
     .title h2 {
         font-size: 1.7rem;
     }
@@ -208,8 +215,8 @@
     }
     #vaccin  .grid p{
         font-size: .7rem;
-        text-align: left;
-        width: 99.3333%;
+        /*text-align: left;*/
+        width: 100%;
         padding: 0;
     }
     #vaccin .addnew {
@@ -279,8 +286,8 @@
     }
     #vaccin  .grid p{
         font-size: .7rem;
-        text-align: left;
-        width: 99.3333%;
+        text-align: center;
+        width: 100%;
         padding: 0;
     }
     #vaccin .addnew {
@@ -300,6 +307,9 @@
     #connexion .wrap2 .inscription{
         display: flex;
         flex-direction: column;
+    }
+    #vaccin  .grid p{
+        font-size: .4rem;
     }
 }
 

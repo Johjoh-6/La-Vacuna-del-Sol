@@ -61,22 +61,22 @@ if (!empty($token) && !empty($email)) {
 include('inc/header.php');
 ?>
 
-    <section id="lost-pwd">
+    <section id="lost-token">
         <div class="wrap_contact">
             <?php if ($succes) { ?>
                 <div class="msg">
                     <p>Mots de passe modifier</p>
-                    <a href="index.php"><p>Retour à l'accueil</p></a>
+                    <a href="index.php">Retour à l'accueil</a>
                 </div>
             <?php } else { ?>
                 <form action="" method="post" class="wrapform" novalidate>
                     <label for="pwd">Saissisez votre nouveau mots de passe :</label>
-                    <input type="email" name="pwd" id="pwd" placeholder="Votre mots de passe ...">
+                    <input type="password" name="pwd" id="pwd" placeholder="Votre mots de passe ...">
                     <label for="pwd_confirmed">Saissisez à nouveau votre mots de passe :</label>
-                    <input type="email" name="pwd_confirmed" id="pwd_confirmed"
+                    <input type="password" name="pwd_confirmed" id="pwd_confirmed"
                            placeholder="Confirmer votre mots de passe...">
                     <span class="error"><?= returnError($error, 'pwd_confirmed'); ?></span>
-                    <input type="submit" name="submitted" value="Demander">
+                    <input type="submit" class="submit" name="submitted" value="Demander">
                 </form>
             <?php } ?>
         </div>

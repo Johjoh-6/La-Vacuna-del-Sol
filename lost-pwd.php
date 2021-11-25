@@ -46,16 +46,19 @@ include ('inc/header.php');
         <div class="wrap_contact">
             <?php if ($succes){ ?>
                 <div class="msg">
-                    <p>Email envoyé</p>
-                    <a href="index.php"><p>Retour à l'accueil</p></a>
-                    <a href="recup.php?token=<?= urlencode($verifEmail['token']);?>&email=<?= urlencode($verifEmail['email']);?>"><p style="color: black">Token URL !</p></a>
+                    <p>L'email a bien été envoyé.</p>
+                    <div class="back">
+                        <a href="index.php">Retour à l'accueil</a>
+                        <a href="recup.php?token=<?= urlencode($verifEmail['token']);?>&email=<?= urlencode($verifEmail['email']);?>">Nouveau mot de passe ici (Token Url)</a>
+                    </div>
+
                 </div>
             <?php }else { ?>
                 <form action="" method="post" class="wrapform" novalidate>
                     <label for="email">Votre Email :</label>
-                    <input type="email" name="email" id="email" placeholder="Votre email...">
+                    <input type="email" class="input_email" name="email" id="email" placeholder="Votre email...">
                     <span class="error"><?= returnError($error, 'email');?></span>
-                    <input type="submit" name="submitted" value="Demander">
+                    <input type="submit" class="submit" name="submitted" value="Demander">
                 </form>
             <?php }?>
         </div>

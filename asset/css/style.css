@@ -140,7 +140,10 @@ header .wrap nav ul li .admin_link:hover{
     border-radius: 3rem;
     box-shadow: 3px 3px 8px 2px
 }
-#connexion .wrap2 .cription{
+#connexion .wrap2 .cadre a{
+    color: var(--jaune);
+}
+#connexion .wrap2 .inscription{
     display: flex;
     margin-bottom: 2rem;
 }
@@ -473,7 +476,11 @@ button.active{
 }
 #formulaire .submit_inscription{
     background-color: transparent;
-    font-size: 2rem;
+    color: white;
+    transition: all .5s;
+}
+#formulaire .submit_inscription:s{
+    background-color: transparent;
     color: white;
     transition: all .5s;
 }
@@ -903,10 +910,165 @@ button.active{
 }
 
 
+/*****************************LOST PASSWORD ********************/
+#lost-pwd .wrap_contact{
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10.5rem;
+}
+#lost-pwd {
+    padding: 6rem;
+}
+/*#lost-pwd .wrap_contact{*/
+/*    text-align: left;*/
+/*}*/
+#lost-pwd .wrap_contact form{
+   display: flex;
+    flex-direction: column;
+}
+#lost-pwd .wrap_contact form label{
+    margin-bottom: 1rem;
+}
+#lost-pwd .wrap_contact form .input_email{
+   padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    border-radius: .3rem;
+    border: solid 1px grey;
+}
+#lost-pwd .wrap_contact form .submit {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: .3rem;
+    border: solid 2px var(--jaune) ;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+#lost-pwd .wrap_contact form .submit:hover {
+    background-color: var(--jaune);
+    transition: .5s;
+    color: white;
+}
+#lost-pwd .wrap_contact .msg{
+    text-align: center;
+    margin-bottom: 16rem;
+}
+#lost-pwd .wrap_contact .msg p{
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+#lost-pwd .wrap_contact a {
+    font-size: 1.3rem;
+    color: black;
+    padding: 1rem;
+    border-radius: .3rem;
+    border: solid 2px var(--jaune) ;
+}
+#lost-pwd .wrap_contact a:hover {
+    background-color: var(--jaune);
+    transition: .5s;
+    color: white;
+}
+
+#lost-token {
+    padding: 6rem;
+
+}
+#lost-token .wrap_contact{
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
 
 
+}
+#lost-token .wrap_contact form{
+    display: flex;
+    flex-direction: column;
+
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+#lost-token .wrap_contact label{
+  margin-bottom: 1rem;
+}
+#lost-token .wrap_contact input{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2.8rem;
+}
+
+#lost-token .wrap_contact form .submit {
+    margin-bottom: 1rem;
+    width: 50%;
+    padding: 1rem;
+    border-radius: .3rem;
+    border: solid 2px var(--jaune) ;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+#lost-token .wrap_contact form .submit:hover {
+    background-color: var(--jaune);
+    transition: .5s;
+    color: white;
+}
+#lost-token .msg p{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+#lost-token .msg {
+    margin-bottom: 15rem;
+}
+#lost-token .msg a{
+    font-size: 1.3rem;
+    color: black;
+    padding: 1rem;
+    border-radius: .3rem;
+    border: solid 2px var(--jaune) ;
+}
 
 
+/*LEGAL MENTION*/
+
+#mention {
+    text-align: center;
+    padding: 2rem;
+    text-justify: auto;
+    margin: 0 auto;
+    background-color: var(--bleu);
+}
+
+#mention .wrap {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px -2px rgba(0,0,0,0.75);
+    max-width: 1100px;
+    padding: 3rem;
+
+
+}
+#mention h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#mention h3{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#mention p{
+    font-size: 0.8rem;
+}
+
+#mention .bold_text{
+    font-size: 0.9rem;
+    font-weight: bold;
+}
 
 
 
@@ -1073,7 +1235,6 @@ button.active{
 #footer .reseau ul li:hover a{
     color: var(--jaune);
 }
-
 
 
 
