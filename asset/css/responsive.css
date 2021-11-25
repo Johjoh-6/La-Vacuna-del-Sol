@@ -301,6 +301,12 @@
         display: flex;
         flex-direction: column;
     }
+    #profil .profil_left {
+        margin-left: 0;
+    }
+    #profil .information_contact {
+        padding: 0;
+    }
 }
 @media (max-width: 370px){
     #connexion .wrap2 .inscription{
