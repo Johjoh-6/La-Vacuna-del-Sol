@@ -118,6 +118,16 @@
     }
 
     @media screen and (max-width: 800px){
+
+     #lost-pwd .back {
+        display: flex;
+        flex-direction: column;
+    }
+        #lost-pwd .back a{
+         margin-bottom: 1rem;
+        }
+
+
     .title h2 {
         font-size: 1.7rem;
     }

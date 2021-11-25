@@ -34,6 +34,7 @@ include ('inc/header.php');
                 <input type="password" id="password" name="password" value="<?= returnValue('password') ?>" class="input" placeholder="&#xf023; Entrez votre mot de passe" style="font-family:Arial, FontAwesome">
                 <span class="error"><?= returnError($error,'password')?></span>
                 <input type="submit" name="submitted" value="Connexion" class="submit input2">
+                <a href="lost-pwd.php">Mot de passe oublié ?</a>
                 <p class="inscription">Si vous n'êtes pas inscrit <a href="inscription.php">inscrivez vous-ici</a></p>
             </form>
         </div>
