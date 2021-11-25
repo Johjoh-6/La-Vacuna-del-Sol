@@ -101,7 +101,7 @@ include ('inc/header.php');
                     <?php foreach ($testimonialRandom as $testi) { ?>
                     <div class="card">
                         <div class="card-body">
-                            <p class="review"><i class="fas fa-quote-left"></i><?= substr($testi['content'], 0, 150); ?><i class="fas fa-quote-right"></i></p>
+                            <p class="review"><i class="fas fa-quote-left"></i> <?= substr($testi['content'], 0, 150); ?> <i class="fas fa-quote-right"></i></p>
                             <p><?= $testi['name'];?></p>
                             <p><?= $testi['prenom'];?></p>
                         </div>
