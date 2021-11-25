@@ -56,12 +56,14 @@ include ('inc/header.php');?>
                         <input class="input_inscription" type="password" name="password_confirm" placeholder="Mot de passe">
                         <span class="error"><?= returnError($error, 'password_confirm');?></span>
                     </div>
-                    <h3>Sexe :</h3>
                     <div class="sex">
-                        <label for="sexe">Femme</label>
-                        <input type="radio" name="sexe" class="sexe" id="sexe" value="femme" >
-                        <label for="sexe">Homme</label>
-                        <input type="radio" name="sexe" id="sexe" class="sexe" value="homme" checked>
+                    <label for="sexe">Sexe : </label>
+                        <select name="sexe" id="sexe">
+                            <option value="">--- Sélectionner ---</option>
+                            <option value="homme">Homme</option>
+                            <option value="femme">Femme</option>
+                            <option value="non-défini">Non-défini</option>
+                        </select>
                     </div>
                 </div>
                 <div class="envoyer">
