@@ -23,7 +23,7 @@
         background-size: 180%;
     }
 
-    #profil .information_contact{
+    #profil .information_contact > *:not(.title_profil){
         padding-right: 1rem;
     }
 }
