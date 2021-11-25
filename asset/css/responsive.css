@@ -152,19 +152,14 @@
         padding: 1rem;
     }
 
-    #formulaire .wrap_accounts .wrap_account{
+    #formulaire form{
         display: flex;
         flex-direction: column;
     }
-    #formulaire .wrap_accounts .wrap_account .sex{
-        display: flex;
-        margin-bottom: 1rem;
-    }
-    #formulaire .envoyer{
-       bottom: -10%;
-        left: 0;
-        width: 100%;
-    }
+        #formulaire form > *{
+            width: 100%;
+        }
+
 
     #contact .contact1 {
         display: flex;
