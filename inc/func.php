@@ -130,12 +130,13 @@ function joinUserId($join){
     return  $query->fetchAll();
 }
 
-function getTestiRandomLimit( $limit){
+function getTestiRandomLimit($limit){
     global $pdo;
     $sql= "SELECT vds_users.id,vds_users.name as name, vds_users.prenom as prenom, vds_testimonial.* 
     FROM vds_users 
     INNER JOIN vds_testimonial
     ON vds_users.id = vds_testimonial.id_user
+    WHERE status = 'publish'
     ORDER BY vds_testimonial.created_at LIMIT :limit
     ";
     $query = $pdo->prepare($sql);

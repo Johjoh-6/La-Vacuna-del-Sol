@@ -59,9 +59,9 @@ include ('inc/header.php');?>
                     <h3>Sexe :</h3>
                     <div class="sex">
                         <label for="sexe">Femme</label>
-                        <input type="radio" name="sexe" class="sexe" id="sexe" value="femme" >
+                        <input type="radio" name="sexe" class="sexe" id="sexe" value="femme">
                         <label for="sexe">Homme</label>
-                        <input type="radio" name="sexe" id="sexe" class="sexe" value="homme" checked>
+                        <input type="radio" name="sexe" id="sexe" class="sexe" value="homme">
                     </div>
                 </div>
                 <div class="envoyer">
