@@ -24,6 +24,21 @@ header('Location: ' . $_SERVER['HTTP_REFERER']);;
 abort404();
 }
 }
+function changeRole($id, $from, $role  = 'user'){
+if (!empty($id)) {
+global $pdo;
+$sql = "UPDATE $from
+SET modified_at	= NOW(), role = :role
+WHERE  id = :id";
+$query = $pdo->prepare($sql);
+$query->bindValue(':id', $id, PDO::PARAM_INT);
+$query->bindValue(':role', $role, PDO::PARAM_STR);
+$query->execute();
+header('Location: ' . $_SERVER['HTTP_REFERER']);;
+} else{
+abort404();
+}
+}
 
 function tableName($table){
     $tablesList = ['vds_msg' => 'Message', 'vds_testimonial'=> 'Avis', 'vds_users' => 'Utilisateur', 'vds_vaccin' =>'Vaccin', 'vds_user_vaccin' => 'Find name'];

@@ -89,7 +89,6 @@ if (!empty($_POST['submitted-new'])) {
         // return to the table
 
         $lastAdd = $pdo->lastInsertId();
-        debug(getById('vds_vaccin',$lastAdd));
         if (!empty($lastAdd)){
             $sql = "INSERT INTO vds_user_vaccin (id_user, id_vaccin, vaccin_at, created_at) 
                 VALUES (:id_user, :id_vaccin, :vaccin_at, NOW())";
@@ -208,7 +207,7 @@ include ('inc/header.php');
                     </div>
                 </div>
                 <?php if($newVaccin){ ?>
-                    <?php  debug(getById('vds_vaccin',$lastAdd));?>
+
 
 
                     <p>Merci pour l'ajout, nous allons vérifier ces informations, retrouvez le dans la liste de vaccin !</p>

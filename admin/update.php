@@ -82,8 +82,6 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])&& !empty($_GET['table']) && i
                     }
                 }
             }
-            debug($error);
-            debug($_POST);
             /*If not error*/
             if (count($error) == 0) {
                 $sql = "UPDATE vds_users SET 
