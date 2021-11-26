@@ -11,7 +11,19 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])&& !empty($_GET['table']) && i
     if ($tableName = 'vds_users'){
         getById($tableName, $id);
         changeRole($id, $tableName, 'ejected');
-    } else {
+    } if($tableName = 'vds_vaccin')  {
+        getById($tableName, $id);
+        changeStatus($id, $tableName, 'draft');
+    }
+    if($tableName = 'vds_testimonial')  {
+        getById($tableName, $id);
+        changeStatus($id, $tableName, 'draft');
+    }
+    if($tableName = 'vds_user_vaccin' )  {
+        getById($tableName, $id);
+        changeStatus($id, $tableName, 'draft');
+    }
+    if( $tableName = 'vds_msg')  {
         getById($tableName, $id);
         changeStatus($id, $tableName, 'draft');
     }
