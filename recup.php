@@ -65,7 +65,7 @@ include('inc/header.php');
         <div class="wrap_contact">
             <?php if ($succes) { ?>
                 <div class="msg">
-                    <p>Mots de passe modifier</p>
+                    <p>Mot de passe modifié</p>
                     <a href="index.php">Retour à l'accueil</a>
                 </div>
             <?php } else { ?>

@@ -2,4 +2,4 @@
 composer.phar
 vendor/
 DS_Store
-.inc/pdo.php
+inc/pdo.php
